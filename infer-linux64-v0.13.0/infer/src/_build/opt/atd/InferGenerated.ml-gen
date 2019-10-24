@@ -1,0 +1,32 @@
+(** @canonical InferGenerated.Clang_ast_b *)
+module Clang_ast_b = InferGenerated__Clang_ast_b
+
+(** @canonical InferGenerated.Clang_ast_j *)
+module Clang_ast_j = InferGenerated__Clang_ast_j
+
+(** @canonical InferGenerated.Clang_ast_proj *)
+module Clang_ast_proj = InferGenerated__Clang_ast_proj
+
+(** @canonical InferGenerated.Clang_ast_t *)
+module Clang_ast_t = InferGenerated__Clang_ast_t
+
+(** @canonical InferGenerated.Clang_ast_types *)
+module Clang_ast_types = InferGenerated__Clang_ast_types
+
+(** @canonical InferGenerated.Clang_ast_v *)
+module Clang_ast_v = InferGenerated__Clang_ast_v
+
+(** @canonical InferGenerated.Clang_ast_visit *)
+module Clang_ast_visit = InferGenerated__Clang_ast_visit
+
+(** @canonical InferGenerated.Jsonbug_j *)
+module Jsonbug_j = InferGenerated__Jsonbug_j
+
+(** @canonical InferGenerated.Jsonbug_t *)
+module Jsonbug_t = InferGenerated__Jsonbug_t
+
+(** @canonical InferGenerated.Stacktree_j *)
+module Stacktree_j = InferGenerated__Stacktree_j
+
+(** @canonical InferGenerated.Stacktree_t *)
+module Stacktree_t = InferGenerated__Stacktree_t

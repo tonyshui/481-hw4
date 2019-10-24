@@ -1,0 +1,362 @@
+.\" Pipe this output to groff -Tutf8 | less
+.\"
+.mso an.tmac
+.TH "infer-analyze" 1 "2017-10-18" "v0.13.0" "Infer Analysis"
+.\" Disable hyphenation and ragged-right
+.nh
+.ad l
+.SH NAME
+.P
+.nf
+infer\N'45'analyze \N'45' analyze the files captured by infer
+.fi
+.SH SYNOPSIS
+.P
+.nf
+\fBinfer\fR \fBanalyze\fR \fI[options]\fR
+\fBinfer\fR \fI[options]\fR
+.fi
+.SH DESCRIPTION
+.P
+Analyze the files captured in the project results directory and report\N'46'
+.SH OPTIONS
+.TP 4
+\fB\N'45'\N'45'analyzer\fR,\fB\N'45'a\fR \fI{ infer | biabduction | capture | checkers | compile | crashcontext | linters }\fR
+Specify which analyzer to run (only one at a time is supported):
+.sp -1
+.P
+.nf
+    \N'45' \fBbiabduction\fR: run the bi\N'45'abduction based checker only, in
+.fi
+.sp -1
+.P
+.nf
+    particular to check for memory errors
+.fi
+.sp -1
+.P
+.nf
+    \N'45' \fBcheckers\fR: run the default checkers, including the bi\N'45'abduction
+.fi
+.sp -1
+.P
+.nf
+    based checker for memory errors (default)
+.fi
+.sp -1
+.P
+.nf
+    \N'45' \fBinfer\fR: alias for \fBbiabduction\fR
+.fi
+.sp -1
+.P
+.nf
+    \N'45' \fBlinters\fR: run linters based on the ast only (clang only,
+.fi
+.sp -1
+.P
+.nf
+    activated by default)
+.fi
+.sp -1
+.P
+.nf
+    \N'45' \fBcapture\fR: similar to specifying the \fBcapture\fR subcommand
+.fi
+.sp -1
+.P
+.nf
+    (DEPRECATED)
+.fi
+.sp -1
+.P
+.nf
+    \N'45' \fBcompile\fR: similar to specifying the \fBcompile\fR subcommand
+.fi
+.sp -1
+.P
+.nf
+    (DEPRECATED)
+.fi
+.sp -1
+.P
+.nf
+    \N'45' \fBcrashcontext\fR: experimental (see \fB\N'45'\N'45'crashcontext\fR)
+.fi
+.TP 4
+\fB\N'45'\N'45'no\N'45'annotation\N'45'reachability\fR
+Deactivates: the annotation reachability checker\N'46' Given a pair of source and sink annotation, e\N'46'g\N'46' @PerformanceCritical and @Expensive, this checker will warn whenever some method annotated with @PerformanceCritical calls, directly or indirectly, another method annotated with @Expensive (Conversely: \fB\N'45'\N'45'annotation\N'45'reachability\fR)
+.TP 4
+\fB\N'45'\N'45'annotation\N'45'reachability\N'45'only\fR
+Activates: Enable \fB\N'45'\N'45'annotation\N'45'reachability\fR and disable all other checkers (Conversely: \fB\N'45'\N'45'no\N'45'annotation\N'45'reachability\N'45'only\fR)
+.TP 4
+\fB\N'45'\N'45'no\N'45'biabduction\fR
+Deactivates: the separation logic based bi\N'45'abduction analysis using the checkers framework (Conversely: \fB\N'45'\N'45'biabduction\fR)
+.TP 4
+\fB\N'45'\N'45'biabduction\N'45'only\fR
+Activates: Enable \fB\N'45'\N'45'biabduction\fR and disable all other checkers (Conversely: \fB\N'45'\N'45'no\N'45'biabduction\N'45'only\fR)
+.TP 4
+\fB\N'45'\N'45'bufferoverrun\fR
+Activates: the buffer overrun analysis (Conversely: \fB\N'45'\N'45'no\N'45'bufferoverrun\fR)
+.TP 4
+\fB\N'45'\N'45'bufferoverrun\N'45'only\fR
+Activates: Enable \fB\N'45'\N'45'bufferoverrun\fR and disable all other checkers (Conversely: \fB\N'45'\N'45'no\N'45'bufferoverrun\N'45'only\fR)
+.TP 4
+\fB\N'45'\N'45'changed\N'45'files\N'45'index\fR \fIfile\fR
+Specify the file containing the list of source files from which reactive analysis should start\N'46' Source files should be specified relative to project root or be absolute
+.TP 4
+\fB\N'45'\N'45'check\N'45'nullable\fR
+Activates: checks that values annotated with nullable are always checked for null before dereference (Conversely: \fB\N'45'\N'45'no\N'45'check\N'45'nullable\fR)
+.TP 4
+\fB\N'45'\N'45'check\N'45'nullable\N'45'only\fR
+Activates: Enable \fB\N'45'\N'45'check\N'45'nullable\fR and disable all other checkers (Conversely: \fB\N'45'\N'45'no\N'45'check\N'45'nullable\N'45'only\fR)
+.TP 4
+\fB\N'45'\N'45'continue\fR
+Activates: Continue the capture for the reactive analysis, increasing the changed files/procedures\N'46' (If a procedure was changed beforehand, keep the changed marking\N'46') (Conversely: \fB\N'45'\N'45'no\N'45'continue\fR)
+.TP 4
+\fB\N'45'\N'45'crashcontext\fR
+Activates: the crashcontext checker for Java stack trace context reconstruction (Conversely: \fB\N'45'\N'45'no\N'45'crashcontext\fR)
+.TP 4
+\fB\N'45'\N'45'crashcontext\N'45'only\fR
+Activates: Enable \fB\N'45'\N'45'crashcontext\fR and disable all other checkers (Conversely: \fB\N'45'\N'45'no\N'45'crashcontext\N'45'only\fR)
+.TP 4
+\fB\N'45'\N'45'debug\fR,\fB\N'45'g\fR
+Activates: Debug mode (also sets \fB\N'45'\N'45'debug\N'45'level 2\fR, \fB\N'45'\N'45'developer\N'45'mode\fR, \fB\N'45'\N'45'no\N'45'filtering\fR, \fB\N'45'\N'45'print\N'45'buckets\fR, \fB\N'45'\N'45'print\N'45'types\fR, \fB\N'45'\N'45'reports\N'45'include\N'45'ml\N'45'loc\fR, \fB\N'45'\N'45'no\N'45'only\N'45'cheap\N'45'debug\fR, \fB\N'45'\N'45'trace\N'45'error\fR, \fB\N'45'\N'45'write\N'45'dotty\fR, \fB\N'45'\N'45'write\N'45'html\fR) (Conversely: \fB\N'45'\N'45'no\N'45'debug\fR | \fB\N'45'G\fR)
+.TP 4
+\fB\N'45'\N'45'debug\N'45'level\fR \fIlevel\fR
+Debug level (sets \fB\N'45'\N'45'bo\N'45'debug\fR \fIlevel\fR, \fB\N'45'\N'45'debug\N'45'level\N'45'analysis\fR \fIlevel\fR, \fB\N'45'\N'45'debug\N'45'level\N'45'capture\fR \fIlevel\fR, \fB\N'45'\N'45'debug\N'45'level\N'45'linters\fR \fIlevel\fR):
+.sp -1
+.P
+.nf
+      \N'45' 0: only basic debugging enabled
+.fi
+.sp -1
+.P
+.nf
+      \N'45' 1: verbose debugging enabled
+.fi
+.sp -1
+.P
+.nf
+      \N'45' 2: very verbose debugging enabled
+.fi
+.TP 4
+\fB\N'45'\N'45'debug\N'45'level\N'45'analysis\fR \fIint\fR
+Debug level for the analysis\N'46' See \fB\N'45'\N'45'debug\N'45'level\fR for accepted values\N'46' (default: \fI0\fR)
+.TP 4
+\fB\N'45'\N'45'debug\N'45'level\N'45'capture\fR \fIint\fR
+Debug level for the capture\N'46' See \fB\N'45'\N'45'debug\N'45'level\fR for accepted values\N'46' (default: \fI0\fR)
+.TP 4
+\fB\N'45'\N'45'debug\N'45'level\N'45'linters\fR \fIint\fR
+Debug level for the linters\N'46' See \fB\N'45'\N'45'debug\N'45'level\fR for accepted values\N'46' (default: \fI0\fR)
+.TP 4
+\fB\N'45'\N'45'no\N'45'default\N'45'checkers\fR
+Deactivates: Default checkers: \fB\N'45'\N'45'annotation\N'45'reachability\fR, \fB\N'45'\N'45'biabduction\fR, \fB\N'45'\N'45'fragment\N'45'retains\N'45'view\fR, \fB\N'45'\N'45'immutable\N'45'cast\fR, \fB\N'45'\N'45'liveness\fR, \fB\N'45'\N'45'printf\N'45'args\fR, \fB\N'45'\N'45'quandary\fR, \fB\N'45'\N'45'racerd\fR, \fB\N'45'\N'45'siof\fR (Conversely: \fB\N'45'\N'45'default\N'45'checkers\fR)
+.TP 4
+\fB\N'45'\N'45'eradicate\fR
+Activates: the eradicate @Nullable checker for Java annotations (Conversely: \fB\N'45'\N'45'no\N'45'eradicate\fR)
+.TP 4
+\fB\N'45'\N'45'eradicate\N'45'only\fR
+Activates: Enable \fB\N'45'\N'45'eradicate\fR and disable all other checkers (Conversely: \fB\N'45'\N'45'no\N'45'eradicate\N'45'only\fR)
+.TP 4
+\fB\N'45'\N'45'no\N'45'fragment\N'45'retains\N'45'view\fR
+Deactivates: detects when Android fragments are not explicitly nullified before becoming unreabable (Conversely: \fB\N'45'\N'45'fragment\N'45'retains\N'45'view\fR)
+.TP 4
+\fB\N'45'\N'45'fragment\N'45'retains\N'45'view\N'45'only\fR
+Activates: Enable \fB\N'45'\N'45'fragment\N'45'retains\N'45'view\fR and disable all other checkers (Conversely: \fB\N'45'\N'45'no\N'45'fragment\N'45'retains\N'45'view\N'45'only\fR)
+.TP 4
+\fB\N'45'\N'45'help\fR
+Show this manual
+.TP 4
+\fB\N'45'\N'45'help\N'45'format\fR \fI{ auto | groff | pager | plain }\fR
+Show this help in the specified format\N'46' \fBauto\fR sets the format to \fBplain\fR if the environment variable \fBTERM\fR is "dumb" or undefined, and to \fBpager\fR otherwise\N'46' (default: \fIauto\fR)
+.TP 4
+\fB\N'45'\N'45'help\N'45'full\fR
+Show this manual with all internal options in the INTERNAL OPTIONS section
+.TP 4
+\fB\N'45'\N'45'no\N'45'immutable\N'45'cast\fR
+Deactivates: the detection of object cast from immutable type to mutable type\N'46' For instance, it will detect cast from ImmutableList to List, ImmutableMap to Map, and ImmutableSet to Set\N'46' (Conversely: \fB\N'45'\N'45'immutable\N'45'cast\fR)
+.TP 4
+\fB\N'45'\N'45'immutable\N'45'cast\N'45'only\fR
+Activates: Enable \fB\N'45'\N'45'immutable\N'45'cast\fR and disable all other checkers (Conversely: \fB\N'45'\N'45'no\N'45'immutable\N'45'cast\N'45'only\fR)
+.TP 4
+\fB\N'45'\N'45'jobs\fR,\fB\N'45'j\fR \fIint\fR
+Run the specified number of analysis jobs simultaneously (default: \fI16\fR)
+.TP 4
+\fB\N'45'\N'45'keep\N'45'going\fR
+Activates: Keep going when the analysis encounters a failure (Conversely: \fB\N'45'\N'45'no\N'45'keep\N'45'going\fR)
+.TP 4
+\fB\N'45'\N'45'no\N'45'liveness\fR
+Deactivates: the detection of dead stores and unused variables (Conversely: \fB\N'45'\N'45'liveness\fR)
+.TP 4
+\fB\N'45'\N'45'liveness\N'45'only\fR
+Activates: Enable \fB\N'45'\N'45'liveness\fR and disable all other checkers (Conversely: \fB\N'45'\N'45'no\N'45'liveness\N'45'only\fR)
+.TP 4
+\fB\N'45'\N'45'print\N'45'active\N'45'checkers\fR
+Activates: Print the active checkers before starting the analysis (Conversely: \fB\N'45'\N'45'no\N'45'print\N'45'active\N'45'checkers\fR)
+.TP 4
+\fB\N'45'\N'45'print\N'45'logs\fR
+Activates: Also log messages to stdout and stderr (Conversely: \fB\N'45'\N'45'no\N'45'print\N'45'logs\fR)
+.TP 4
+\fB\N'45'\N'45'no\N'45'printf\N'45'args\fR
+Deactivates: the detection of mismatch between the Java printf format strings and the argument types For, example, this checker will warn about the type error in `printf("Hello %d", "world")` (Conversely: \fB\N'45'\N'45'printf\N'45'args\fR)
+.TP 4
+\fB\N'45'\N'45'printf\N'45'args\N'45'only\fR
+Activates: Enable \fB\N'45'\N'45'printf\N'45'args\fR and disable all other checkers (Conversely: \fB\N'45'\N'45'no\N'45'printf\N'45'args\N'45'only\fR)
+.TP 4
+\fB\N'45'\N'45'project\N'45'root\fR,\fB\N'45'C\fR \fIdir\fR
+Specify the root directory of the project (default: \fI/home/weimer/src/infer\N'45'linux64\N'45'v0\N'46'13\N'46'0\fR)
+.TP 4
+\fB\N'45'\N'45'no\N'45'quandary\fR
+Deactivates: the quandary taint analysis (Conversely: \fB\N'45'\N'45'quandary\fR)
+.TP 4
+\fB\N'45'\N'45'quandary\N'45'only\fR
+Activates: Enable \fB\N'45'\N'45'quandary\fR and disable all other checkers (Conversely: \fB\N'45'\N'45'no\N'45'quandary\N'45'only\fR)
+.TP 4
+\fB\N'45'\N'45'quiet\fR,\fB\N'45'q\fR
+Activates: Do not print specs on standard output (default: only print for the \fBreport\fR command) (Conversely: \fB\N'45'\N'45'no\N'45'quiet\fR | \fB\N'45'Q\fR)
+.TP 4
+\fB\N'45'\N'45'no\N'45'racerd\fR
+Deactivates: the RacerD thread safety analysis (Conversely: \fB\N'45'\N'45'racerd\fR)
+.TP 4
+\fB\N'45'\N'45'racerd\N'45'only\fR
+Activates: Enable \fB\N'45'\N'45'racerd\fR and disable all other checkers (Conversely: \fB\N'45'\N'45'no\N'45'racerd\N'45'only\fR)
+.TP 4
+\fB\N'45'\N'45'reactive\fR,\fB\N'45'r\fR
+Activates: Reactive mode: the analysis starts from the files captured since the \fIinfer\fR command started (Conversely: \fB\N'45'\N'45'no\N'45'reactive\fR | \fB\N'45'R\fR)
+.TP 4
+\fB\N'45'\N'45'repeated\N'45'calls\fR
+Activates: check for repeated calls (Conversely: \fB\N'45'\N'45'no\N'45'repeated\N'45'calls\fR)
+.TP 4
+\fB\N'45'\N'45'repeated\N'45'calls\N'45'only\fR
+Activates: Enable \fB\N'45'\N'45'repeated\N'45'calls\fR and disable all other checkers (Conversely: \fB\N'45'\N'45'no\N'45'repeated\N'45'calls\N'45'only\fR)
+.TP 4
+\fB\N'45'\N'45'no\N'45'report\fR
+Deactivates: Run the reporting phase once the analysis has completed (Conversely: \fB\N'45'\N'45'report\fR)
+.TP 4
+\fB\N'45'\N'45'report\N'45'hook\fR \fIscript\fR
+Specify a script to be executed after the analysis results are written\N'46' This script will be passed \fB\N'45'\N'45'issues\N'45'csv\fR, \fB\N'45'\N'45'issues\N'45'json\fR, \fB\N'45'\N'45'issues\N'45'txt\fR, \fB\N'45'\N'45'issues\N'45'xml\fR, \fB\N'45'\N'45'project\N'45'root\fR, and \fB\N'45'\N'45'results\N'45'dir\fR\N'46' (default: \fI/home/weimer/src/infer\N'45'linux64\N'45'v0\N'46'13\N'46'0/infer/bin/\N'46'\N'46'/lib/python/report\N'46'py\fR)
+.TP 4
+\fB\N'45'\N'45'results\N'45'dir\fR,\fB\N'45'o\fR \fIdir\fR
+Write results and internal files in the specified directory (default: \fI/home/weimer/src/infer\N'45'linux64\N'45'v0\N'46'13\N'46'0/infer\N'45'out\fR)
+.TP 4
+\fB\N'45'\N'45'no\N'45'siof\fR
+Deactivates: the Static Initialization Order Fiasco analysis (C++ only) (Conversely: \fB\N'45'\N'45'siof\fR)
+.TP 4
+\fB\N'45'\N'45'siof\N'45'only\fR
+Activates: Enable \fB\N'45'\N'45'siof\fR and disable all other checkers (Conversely: \fB\N'45'\N'45'no\N'45'siof\N'45'only\fR)
+.TP 4
+\fB\N'45'\N'45'suggest\N'45'nullable\fR
+Activates: Nullable annotation sugesstions analysis (Conversely: \fB\N'45'\N'45'no\N'45'suggest\N'45'nullable\fR)
+.TP 4
+\fB\N'45'\N'45'suggest\N'45'nullable\N'45'only\fR
+Activates: Enable \fB\N'45'\N'45'suggest\N'45'nullable\fR and disable all other checkers (Conversely: \fB\N'45'\N'45'no\N'45'suggest\N'45'nullable\N'45'only\fR)
+.TP 4
+\fB\N'45'\N'45'uninit\fR
+Activates: checker for use of uninitialized values (Conversely: \fB\N'45'\N'45'no\N'45'uninit\fR)
+.TP 4
+\fB\N'45'\N'45'uninit\N'45'only\fR
+Activates: Enable \fB\N'45'\N'45'uninit\fR and disable all other checkers (Conversely: \fB\N'45'\N'45'no\N'45'uninit\N'45'only\fR)
+.SH BUCK FLAVORS OPTIONS
+.TP 4
+\fB\N'45'\N'45'merge\fR
+Activates: Merge the captured results directories specified in the dependency file (Conversely: \fB\N'45'\N'45'no\N'45'merge\fR)
+.SH BUFFER OVERRUN OPTIONS
+.TP 4
+\fB\N'45'\N'45'bo\N'45'debug\fR \fIint\fR
+Debug level for buffer\N'45'overrun checker (0\N'45'4) (default: \fI0\fR)
+.SH CLANG OPTIONS
+.TP 4
+\fB\N'45'\N'45'ml\N'45'buckets\fR \fI,\N'45'separated sequence of { all | cf | arc | narc | cpp | unknown_origin }\fR
+Specify the memory leak buckets to be checked in Objective\N'45'C/C++:
+.sp -1
+.P
+.nf
+    \N'45' \fBcf\fR checks leaks from Core Foundation (activated by default),
+.fi
+.sp -1
+.P
+.nf
+    \N'45' \fBarc\fR from code compiled in ARC mode,
+.fi
+.sp -1
+.P
+.nf
+    \N'45' \fBnarc\fR from code not compiled in ARC mode,
+.fi
+.sp -1
+.P
+.nf
+    \N'45' \fBcpp\fR from C++ code
+.fi
+.sp -1
+.P
+.nf
+    (default: \fIcf\fR)
+.fi
+.TP 4
+\fB\N'45'\N'45'unsafe\N'45'malloc\fR
+Activates: Assume that malloc(3) never returns null\N'46' (Conversely: \fB\N'45'\N'45'no\N'45'unsafe\N'45'malloc\fR)
+.SH CRASHCONTEXT OPTIONS
+.TP 4
+\fB\N'45'\N'45'stacktrace\fR \fIfile\fR
+File path containing a json\N'45'encoded Java crash stacktrace\N'46' Used to guide the analysis (only with \N'39'\N'45'a crashcontext\N'39')\N'46' See tests/codetoanalyze/java/crashcontext/*\N'46'json for examples of the expected format\N'46'
+.TP 4
+\fB\N'45'\N'45'stacktraces\N'45'dir\fR \fIdir\fR
+Directory path containing multiple json\N'45'encoded Java crash stacktraces\N'46' Used to guide the analysis (only with \N'39'\N'45'a crashcontext\N'39')\N'46' See tests/codetoanalyze/java/crashcontext/*\N'46'json for examples of the expected format\N'46'
+.SH JAVA OPTIONS
+.TP 4
+\fB\N'45'\N'45'annotation\N'45'reachability\N'45'custom\N'45'pairs\fR \fIjson\fR
+Specify custom sources/sink for the annotation reachability checker
+.sp -1
+.P
+.nf
+    Example format: for custom annotations
+.fi
+.sp -1
+.P
+.nf
+    com\N'46'my\N'46'annotation\N'46'{Source1,Source2,Sink1}
+.fi
+.sp -1
+.P
+.nf
+    { "sources" : ["Source1", "Source2"], "sink" : "Sink1" }
+.fi
+.sp -1
+.P
+.nf
+    (default: \fI[]\fR)
+.fi
+.SH QUANDARY CHECKER OPTIONS
+.TP 4
+\fB\N'45'\N'45'quandary\N'45'endpoints\fR \fIjson\fR
+Specify endpoint classes for Quandary (default: \fI[]\fR)
+.TP 4
+\fB\N'45'\N'45'quandary\N'45'sanitizers\fR \fIjson\fR
+Specify custom sanitizers for Quandary (default: \fI[]\fR)
+.TP 4
+\fB\N'45'\N'45'quandary\N'45'sinks\fR \fIjson\fR
+Specify custom sinks for Quandary (default: \fI[]\fR)
+.TP 4
+\fB\N'45'\N'45'quandary\N'45'sources\fR \fIjson\fR
+Specify custom sources for Quandary (default: \fI[]\fR)
+.SH RACERD CHECKER OPTIONS
+.TP 4
+\fB\N'45'\N'45'threadsafe\N'45'aliases\fR \fIjson\fR
+Specify custom annotations that should be considered aliases of @ThreadSafe (default: \fI[]\fR)
+.SH SIOF CHECKER OPTIONS
+.TP 4
+\fB\N'45'\N'45'siof\N'45'safe\N'45'methods\fR \fI+string\fR
+Methods that are SIOF\N'45'safe; "foo::bar" will match "foo::bar()", "foo<int>::bar()", etc\N'46' (can be specified multiple times)
+.SH ENVIRONMENT
+.TP 4
+\fBINFER_ARGS\fR, \fBINFERCONFIG\fR, \fBINFER_STRICT_MODE\fR
+See the ENVIRONMENT section in the manual of \fBinfer\fR(1)\N'46'
+.SH FILES
+.TP 4
+\fB\N'46'inferconfig\fR
+See the FILES section in the manual of \fBinfer\fR(1)\N'46'
+.SH SEE ALSO
+.P
+\fBinfer\N'45'report\fR(1), \fBinfer\N'45'run\fR(1)

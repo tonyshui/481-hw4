@@ -1,0 +1,12 @@
+atd/InferGenerated.ml-gen: InferGenerated__Clang_ast_b InferGenerated__Clang_ast_j InferGenerated__Clang_ast_proj InferGenerated__Clang_ast_t InferGenerated__Clang_ast_types InferGenerated__Clang_ast_v InferGenerated__Clang_ast_visit InferGenerated__Jsonbug_j InferGenerated__Jsonbug_t InferGenerated__Stacktree_j InferGenerated__Stacktree_t
+atd/clang_ast_b.ml: Ag_ob_run Bi_inbuf Bi_io Bi_outbuf Bi_vint Char Clang_ast_t Clang_ast_types Obj Sys
+atd/clang_ast_j.ml: Ag_oj_run Bi_outbuf Clang_ast_t Clang_ast_types Lexing Obj String Sys Yojson
+atd/clang_ast_proj.ml: Clang_ast_t
+atd/clang_ast_t.ml: Clang_ast_types
+atd/clang_ast_types.ml:
+atd/clang_ast_v.ml: Ag_ov_run Clang_ast_t Clang_ast_visit
+atd/clang_ast_visit.ml: Ag_util Clang_ast_t
+atd/jsonbug_j.ml: Ag_oj_run Bi_outbuf Jsonbug_t Lexing Obj String Sys Yojson
+atd/jsonbug_t.ml:
+atd/stacktree_j.ml: Ag_oj_run Bi_outbuf Lexing Obj Stacktree_t String Sys Yojson
+atd/stacktree_t.ml:

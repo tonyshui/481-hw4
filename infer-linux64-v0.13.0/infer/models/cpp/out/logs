@@ -1,0 +1,346 @@
+[707][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp
+[707][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[707][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp
+[707][environment] INFER_ARGS = @/tmp/args_.tmp.5cca50
+[707][environment]   Contents of '/tmp/args_.tmp.5cca50'
+[707][environment]   -a
+[707][environment]   checkers
+[707][environment]   --biabduction-only
+[707][environment]   -o
+[707][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp/out
+[707][environment]   --models-mode
+[707][environment]   /Contents of '/tmp/args_.tmp.5cca50'
+[707][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer^-a^checkers^--biabduction-only^-o^out^--models-mode^--^make^INTERACTIVE=1^-C^src^clean^all
+[707][environment] Analyzer: checkers
+[707][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[707][   progress] Capturing in make/cc mode...
+[707][environment] Infer version v0.13.0
+[707][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[707][environment] Running command make with env:
+[707][environment] CAML_LD_LIBRARY_PATH=/home/weimer/.opam/4.05.0/lib/stublibs
+[707][environment] INSIDE_SILENT_ON_SUCCESS=1
+[707][environment] MANPATH=/home/weimer/.opam/4.05.0/man:
+[707][environment] XDG_SESSION_ID=141489
+[707][environment] TERM=xterm
+[707][environment] SHELL=/bin/bash
+[707][environment] XDG_SESSION_COOKIE=071072090489bf836e8dfe4100000014-1515196550.874115-398925791
+[707][environment] SSH_CLIENT=68.43.179.26 52908 22
+[707][environment] PERL5LIB=/home/weimer/.opam/4.05.0/lib/perl5
+[707][environment] SSH_TTY=/dev/pts/10
+[707][environment] OCAML_TOPLEVEL_PATH=/home/weimer/.opam/4.05.0/lib/toplevel
+[707][environment] USER=weimer
+[707][environment] MAKEOVERRIDES=${-*-command-variables-*-}
+[707][environment] LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+[707][environment] OCAMLPARAM=safe-string=0,_
+[707][environment] MAKE_TERMOUT=/dev/pts/10
+[707][environment] MAKELEVEL=4
+[707][environment] MFLAGS=-w
+[707][environment] CIL=/home/weimer/src/cil-1.6.0
+[707][environment] MAIL=/var/mail/weimer
+[707][environment] PWD=/home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp
+[707][environment] EDITOR=vim
+[707][environment] LANG=en_US.UTF-8
+[707][environment] SHLVL=5
+[707][environment] HOME=/home/weimer
+[707][environment] LOGNAME=weimer
+[707][environment] MAKE_TERMERR=/dev/pts/10
+[707][environment] INTERACTIVE=1
+[707][environment] SSH_CONNECTION=68.43.179.26 52908 141.212.106.221 22
+[707][environment] LESSOPEN=| /usr/bin/lesspipe %s
+[707][environment] INFER_STRICT_MODE=1
+[707][environment] XDG_RUNTIME_DIR=/run/user/1005
+[707][environment] LESSCLOSE=/usr/bin/lesspipe %s %s
+[707][environment] _=/home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer
+[707][environment] INFER_CWD=/home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp
+[707][environment] INFER_ARGS=@/tmp/args_.tmp.5cca50
+[707][environment] INFER_TOP_RESULTS_DIR=/home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp/out
+[707][environment] PATH=/home/weimer/src/infer-linux64-v0.13.0/infer/bin/../lib/wrappers:/home/weimer/.opam/4.05.0/bin:/home/weimer/src/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-4_9-2015q3/bin:/home/weimer/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/share/java/mysql-connector-java.jar:/usr/share/java/mysql.jar:/snap/bin:/opt/dell/srvadmin/bin:/home/weimer/src/defects4j/framework/bin:/home/weimer/src/codesonar-4.5p1/codesonar/bin
+[707][environment] INFER_OLD_PATH=/home/weimer/.opam/4.05.0/bin:/home/weimer/src/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-4_9-2015q3/bin:/home/weimer/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/share/java/mysql-connector-java.jar:/usr/share/java/mysql.jar:/snap/bin:/opt/dell/srvadmin/bin:/home/weimer/src/defects4j/framework/bin:/home/weimer/src/codesonar-4.5p1/codesonar/bin
+[707][environment] 
+
+[712][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp/src
+[712][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[712][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp
+[712][environment] INFER_ARGS = @/tmp/args_.tmp.216612
+[712][environment]   Contents of '/tmp/args_.tmp.216612'
+[712][environment]   @/tmp/args_.tmp.5cca50
+[712][environment]   -c
+[712][environment]   -w
+[712][environment]   -std=c++11
+[712][environment]   -isystem../include
+[712][environment]   c_src/glib.c
+[712][environment]   -o
+[712][environment]   c_src/glib_cxx.o
+[712][environment]   /Contents of '/tmp/args_.tmp.216612'
+[712][environment] command line arguments: clang++^-c^-w^-std=c++11^-isystem../include^c_src/glib.c^-o^c_src/glib_cxx.o
+[712][environment] Analyzer: checkers
+[712][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[712][      debug] 
+[712][      debug] *** Beginning capture of file /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp/src/c_src/glib.c ***
+[712][      debug] Clang frontend action is translating
+[712][      debug] Elapsed: 131ms.
+[712][      debug] 
+[719][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp/src
+[719][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[719][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp
+[719][environment] INFER_ARGS = @/tmp/args_.tmp.6bf99e
+[719][environment]   Contents of '/tmp/args_.tmp.6bf99e'
+[719][environment]   @/tmp/args_.tmp.5cca50
+[719][environment]   -c
+[719][environment]   -w
+[719][environment]   -std=c++11
+[719][environment]   -isystem../include
+[719][environment]   c_src/wchar.c
+[719][environment]   -o
+[719][environment]   c_src/wchar_cxx.o
+[719][environment]   /Contents of '/tmp/args_.tmp.6bf99e'
+[719][environment] command line arguments: clang++^-c^-w^-std=c++11^-isystem../include^c_src/wchar.c^-o^c_src/wchar_cxx.o
+[719][environment] Analyzer: checkers
+[719][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[719][      debug] 
+[719][      debug] *** Beginning capture of file /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp/src/c_src/wchar.c ***
+[719][      debug] Clang frontend action is translating
+[719][      debug] Elapsed: 202ms.
+[719][      debug] 
+[726][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp/src
+[726][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[726][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp
+[726][environment] INFER_ARGS = @/tmp/args_.tmp.ce527d
+[726][environment]   Contents of '/tmp/args_.tmp.ce527d'
+[726][environment]   @/tmp/args_.tmp.5cca50
+[726][environment]   -c
+[726][environment]   -w
+[726][environment]   -std=c++11
+[726][environment]   -isystem../include
+[726][environment]   c_src/xlib.c
+[726][environment]   -o
+[726][environment]   c_src/xlib_cxx.o
+[726][environment]   /Contents of '/tmp/args_.tmp.ce527d'
+[726][environment] command line arguments: clang++^-c^-w^-std=c++11^-isystem../include^c_src/xlib.c^-o^c_src/xlib_cxx.o
+[726][environment] Analyzer: checkers
+[726][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[726][      debug] 
+[726][      debug] *** Beginning capture of file /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp/src/c_src/xlib.c ***
+[726][      debug] Clang frontend action is translating
+[726][      debug] Elapsed: 94.645ms.
+[726][      debug] 
+[733][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp/src
+[733][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[733][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp
+[733][environment] INFER_ARGS = @/tmp/args_.tmp.2598aa
+[733][environment]   Contents of '/tmp/args_.tmp.2598aa'
+[733][environment]   @/tmp/args_.tmp.5cca50
+[733][environment]   -c
+[733][environment]   -w
+[733][environment]   -std=c++11
+[733][environment]   -isystem../include
+[733][environment]   c_src/math.c
+[733][environment]   -o
+[733][environment]   c_src/math_cxx.o
+[733][environment]   /Contents of '/tmp/args_.tmp.2598aa'
+[733][environment] command line arguments: clang++^-c^-w^-std=c++11^-isystem../include^c_src/math.c^-o^c_src/math_cxx.o
+[733][environment] Analyzer: checkers
+[733][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[733][      debug] 
+[733][      debug] *** Beginning capture of file /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp/src/c_src/math.c ***
+[733][      debug] Clang frontend action is translating
+[733][      debug] Elapsed: 368ms.
+[733][      debug] 
+[740][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp/src
+[740][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[740][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp
+[740][environment] INFER_ARGS = @/tmp/args_.tmp.f18bda
+[740][environment]   Contents of '/tmp/args_.tmp.f18bda'
+[740][environment]   @/tmp/args_.tmp.5cca50
+[740][environment]   -c
+[740][environment]   -w
+[740][environment]   -std=c++11
+[740][environment]   -isystem../include
+[740][environment]   c_src/wctype.c
+[740][environment]   -o
+[740][environment]   c_src/wctype_cxx.o
+[740][environment]   /Contents of '/tmp/args_.tmp.f18bda'
+[740][environment] command line arguments: clang++^-c^-w^-std=c++11^-isystem../include^c_src/wctype.c^-o^c_src/wctype_cxx.o
+[740][environment] Analyzer: checkers
+[740][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[740][      debug] 
+[740][      debug] *** Beginning capture of file /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp/src/c_src/wctype.c ***
+[740][      debug] Clang frontend action is translating
+[740][      debug] Elapsed: 127ms.
+[740][      debug] 
+[747][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp/src
+[747][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[747][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp
+[747][environment] INFER_ARGS = @/tmp/args_.tmp.1db81e
+[747][environment]   Contents of '/tmp/args_.tmp.1db81e'
+[747][environment]   @/tmp/args_.tmp.5cca50
+[747][environment]   -c
+[747][environment]   -w
+[747][environment]   -std=c++11
+[747][environment]   -isystem../include
+[747][environment]   c_src/libc_basic.c
+[747][environment]   -o
+[747][environment]   c_src/libc_basic_cxx.o
+[747][environment]   /Contents of '/tmp/args_.tmp.1db81e'
+[747][environment] command line arguments: clang++^-c^-w^-std=c++11^-isystem../include^c_src/libc_basic.c^-o^c_src/libc_basic_cxx.o
+[747][environment] Analyzer: checkers
+[747][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[747][      debug] 
+[747][      debug] *** Beginning capture of file /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp/src/c_src/libc_basic.c ***
+[747][      debug] Clang frontend action is translating
+[747][      debug] Elapsed: 672ms.
+[747][      debug] 
+[754][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp/src
+[754][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[754][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp
+[754][environment] INFER_ARGS = @/tmp/args_.tmp.ba9c7d
+[754][environment]   Contents of '/tmp/args_.tmp.ba9c7d'
+[754][environment]   @/tmp/args_.tmp.5cca50
+[754][environment]   -c
+[754][environment]   -w
+[754][environment]   -std=c++11
+[754][environment]   -isystem../include
+[754][environment]   c_src/infer_builtins.c
+[754][environment]   -o
+[754][environment]   c_src/infer_builtins_cxx.o
+[754][environment]   /Contents of '/tmp/args_.tmp.ba9c7d'
+[754][environment] command line arguments: clang++^-c^-w^-std=c++11^-isystem../include^c_src/infer_builtins.c^-o^c_src/infer_builtins_cxx.o
+[754][environment] Analyzer: checkers
+[754][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[754][      debug] 
+[754][      debug] *** Beginning capture of file /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp/src/c_src/infer_builtins.c ***
+[754][      debug] Clang frontend action is translating
+[754][      debug] Elapsed: 103ms.
+[754][      debug] 
+[761][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp/src
+[761][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[761][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp
+[761][environment] INFER_ARGS = @/tmp/args_.tmp.381ab5
+[761][environment]   Contents of '/tmp/args_.tmp.381ab5'
+[761][environment]   @/tmp/args_.tmp.5cca50
+[761][environment]   -c
+[761][environment]   -w
+[761][environment]   -std=c++11
+[761][environment]   -isystem../include
+[761][environment]   shared_ptr.cpp
+[761][environment]   -o
+[761][environment]   shared_ptr.o
+[761][environment]   /Contents of '/tmp/args_.tmp.381ab5'
+[761][environment] command line arguments: clang++^-c^-w^-std=c++11^-isystem../include^shared_ptr.cpp^-o^shared_ptr.o
+[761][environment] Analyzer: checkers
+[761][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[761][      debug] 
+[761][      debug] *** Beginning capture of file /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp/src/shared_ptr.cpp ***
+[761][      debug] Clang frontend action is translating
+[761][      debug] Elapsed: 23.006ms.
+[761][      debug] 
+[768][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp/src
+[768][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[768][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp
+[768][environment] INFER_ARGS = @/tmp/args_.tmp.89c683
+[768][environment]   Contents of '/tmp/args_.tmp.89c683'
+[768][environment]   @/tmp/args_.tmp.5cca50
+[768][environment]   -c
+[768][environment]   -w
+[768][environment]   -std=c++11
+[768][environment]   -isystem../include
+[768][environment]   folly_split.cpp
+[768][environment]   -o
+[768][environment]   folly_split.o
+[768][environment]   /Contents of '/tmp/args_.tmp.89c683'
+[768][environment] command line arguments: clang++^-c^-w^-std=c++11^-isystem../include^folly_split.cpp^-o^folly_split.o
+[768][environment] Analyzer: checkers
+[768][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[768][      debug] 
+[768][      debug] *** Beginning capture of file /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp/src/folly_split.cpp ***
+[768][      debug] Clang frontend action is translating
+[768][      debug] Elapsed: 1.447s.
+[768][      debug] 
+[775][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp/src
+[775][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[775][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp
+[775][environment] INFER_ARGS = @/tmp/args_.tmp.3b6b17
+[775][environment]   Contents of '/tmp/args_.tmp.3b6b17'
+[775][environment]   @/tmp/args_.tmp.5cca50
+[775][environment]   -c
+[775][environment]   -w
+[775][environment]   -std=c++11
+[775][environment]   -isystem../include
+[775][environment]   type_info.cpp
+[775][environment]   -o
+[775][environment]   type_info.o
+[775][environment]   /Contents of '/tmp/args_.tmp.3b6b17'
+[775][environment] command line arguments: clang++^-c^-w^-std=c++11^-isystem../include^type_info.cpp^-o^type_info.o
+[775][environment] Analyzer: checkers
+[775][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[775][      debug] 
+[775][      debug] *** Beginning capture of file /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp/src/type_info.cpp ***
+[775][      debug] Clang frontend action is translating
+[775][      debug] Elapsed: 19.023ms.
+[775][      debug] 
+[782][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp/src
+[782][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[782][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp
+[782][environment] INFER_ARGS = @/tmp/args_.tmp.765631
+[782][environment]   Contents of '/tmp/args_.tmp.765631'
+[782][environment]   @/tmp/args_.tmp.5cca50
+[782][environment]   -c
+[782][environment]   -w
+[782][environment]   -std=c++11
+[782][environment]   -isystem../include
+[782][environment]   mutex.cpp
+[782][environment]   -o
+[782][environment]   mutex.o
+[782][environment]   /Contents of '/tmp/args_.tmp.765631'
+[782][environment] command line arguments: clang++^-c^-w^-std=c++11^-isystem../include^mutex.cpp^-o^mutex.o
+[782][environment] Analyzer: checkers
+[782][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[782][      debug] 
+[782][      debug] *** Beginning capture of file /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp/src/mutex.cpp ***
+[782][      debug] Clang frontend action is translating
+[782][      debug] Elapsed: 327ms.
+[782][      debug] 
+[789][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp/src
+[789][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[789][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp
+[789][environment] INFER_ARGS = @/tmp/args_.tmp.c6215d
+[789][environment]   Contents of '/tmp/args_.tmp.c6215d'
+[789][environment]   @/tmp/args_.tmp.5cca50
+[789][environment]   -c
+[789][environment]   -w
+[789][environment]   -std=c++11
+[789][environment]   -isystem../include
+[789][environment]   throw_wrappers.cpp
+[789][environment]   -o
+[789][environment]   throw_wrappers.o
+[789][environment]   /Contents of '/tmp/args_.tmp.c6215d'
+[789][environment] command line arguments: clang++^-c^-w^-std=c++11^-isystem../include^throw_wrappers.cpp^-o^throw_wrappers.o
+[789][environment] Analyzer: checkers
+[789][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[789][      debug] 
+[789][      debug] *** Beginning capture of file /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp/src/throw_wrappers.cpp ***
+[789][      debug] Clang frontend action is translating
+[789][      debug] Elapsed: 1.209s.
+[789][      debug] [707][   progress] Found 12 source files to analyze in /home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp/out
+[707][      debug] Dynamic dispatch mode: lazy
+[707][   progress] Starting analysis...
+[707][   progress] 
+[707][   progress] legend:
+[707][   progress]   "F" analyzing a file
+[707][   progress]   "." analyzing a procedure
+[707][   progress] 
+[707][   progress] 
+[707][environment] Per-procedure parallelism jobs: 16
+[707][   progress] F
+[796][   progress] .F
+.F[797][   progress] .
+[798][   progress] ..F
+F.[799][   progress] .
+..[800][   progress] .F..
+.F...[801][   progress] ..
+..F[802][   progress] ...
+.....[803][   progress] ....F..
+...F[804][   progress] ...
+.F[805][   progress] .....
+..[806][   progress] ..............F..
+..........[807][   progress] ...........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................

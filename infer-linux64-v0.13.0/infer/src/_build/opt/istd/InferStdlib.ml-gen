@@ -1,0 +1,5 @@
+(** @canonical InferStdlib.IList *)
+module IList = InferStdlib__IList
+
+(** @canonical InferStdlib.IStd *)
+module IStd = InferStdlib__IStd

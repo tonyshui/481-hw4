@@ -1,0 +1,20 @@
+      ocamlc InferModules__TypeOrigin.{cmi,cmti} [opt]
+      ocamlc InferModules__Paths.{cmi,cmti} [opt]
+      ocamlc InferModules__PatternMatch.{cmi,cmti} [opt]
+      ocamlc InferModules__Errdesc.{cmi,cmti} [opt]
+      ocamlc InferModules__Trace.{cmi,cmti} [opt]
+      ocamlc InferModules__Exe_env.{cmi,cmti} [opt]
+      ocamlc InferModules__TransferFunctions.{cmi,cmti} [opt]
+      ocamlc InferModules__Scheduler.{cmi,cmo,cmt} [opt]
+      ocamlc InferModules__Rearrange.{cmi,cmti} [opt]
+      ocamlc InferModules__Models.{cmi,cmo,cmt} [opt] (exit 2)
+(cd _build/opt && /home/weimer/.opam/4.05.0/bin/ocamlc.opt -g -short-paths -safe-string -principal -strict-formats -strict-sequence -bin-annot -w +3+5+6+8+10+11+12+18+19+20+21+23+26+29+27+32+33+34+35+37+38+39+50+52+57-4-9-40-41-42-45-48 -open InferStdlib -open IStd -open InferGenerated -g -bin-annot -I /home/weimer/.opam/4.05.0/lib/ANSITerminal -I /home/weimer/.opam/4.05.0/lib/atd -I /home/weimer/.opam/4.05.0/lib/atdgen -I /home/weimer/.opam/4.05.0/lib/base -I /home/weimer/.opam/4.05.0/lib/base/caml -I /home/weimer/.opam/4.05.0/lib/base/md5 -I /home/weimer/.opam/4.05.0/lib/base/shadow_stdlib -I /home/weimer/.opam/4.05.0/lib/bin_prot -I /home/weimer/.opam/4.05.0/lib/bin_prot/shape -I /home/weimer/.opam/4.05.0/lib/biniou -I /home/weimer/.opam/4.05.0/lib/bytes -I /home/weimer/.opam/4.05.0/lib/camlzip/../zip -I /home/weimer/.opam/4.05.0/lib/cmdliner -I /home/weimer/.opam/4.05.0/lib/core -I /home/weimer/.opam/4.05.0/lib/core_kernel -I /home/weimer/.opam/4.05.0/lib/core_kernel/base_for_tests -I /home/weimer/.opam/4.05.0/lib/easy-format -I /home/weimer/.opam/4.05.0/lib/extlib -I /home/weimer/.opam/4.05.0/lib/fieldslib -I /home/weimer/.opam/4.05.0/lib/jane-street-headers -I /home/weimer/.opam/4.05.0/lib/javalib -I /home/weimer/.opam/4.05.0/lib/mtime -I /home/weimer/.opam/4.05.0/lib/mtime/os -I /home/weimer/.opam/4.05.0/lib/oUnit -I /home/weimer/.opam/4.05.0/lib/ocaml -I /home/weimer/.opam/4.05.0/lib/ocaml/threads -I /home/weimer/.opam/4.05.0/lib/parmap -I /home/weimer/.opam/4.05.0/lib/ppx_assert/runtime-lib -I /home/weimer/.opam/4.05.0/lib/ppx_bench/runtime-lib -I /home/weimer/.opam/4.05.0/lib/ppx_compare/runtime-lib -I /home/weimer/.opam/4.05.0/lib/ppx_expect/collector -I /home/weimer/.opam/4.05.0/lib/ppx_expect/common -I /home/weimer/.opam/4.05.0/lib/ppx_expect/config -I /home/weimer/.opam/4.05.0/lib/ppx_hash/runtime-lib -I /home/weimer/.opam/4.05.0/lib/ppx_inline_test/config -I /home/weimer/.opam/4.05.0/lib/ppx_inline_test/runtime-lib -I /home/weimer/.opam/4.05.0/lib/ptrees -I /home/weimer/.opam/4.05.0/lib/result -I /home/weimer/.opam/4.05.0/lib/sawja -I /home/weimer/.opam/4.05.0/lib/sexplib -I /home/weimer/.opam/4.05.0/lib/sexplib/0 -I /home/weimer/.opam/4.05.0/lib/sexplib/unix -I /home/weimer/.opam/4.05.0/lib/spawn -I /home/weimer/.opam/4.05.0/lib/sqlite3 -I /home/weimer/.opam/4.05.0/lib/stdio -I /home/weimer/.opam/4.05.0/lib/typerep -I /home/weimer/.opam/4.05.0/lib/variantslib -I /home/weimer/.opam/4.05.0/lib/xmlm -I /home/weimer/.opam/4.05.0/lib/yojson -I /home/weimer/.opam/4.05.0/lib/zip -I atd -I istd -no-alias-deps -I . -open InferModules -o InferModules__Models.cmo -c -impl models.pp.ml)
+File "eradicate/models.ml", line 53, characters 4-53:
+Warning 3: deprecated: InferStdlib.IStd.String.set
+[since 2017-10] Use [Bytes.set] instead
+File "eradicate/models.ml", line 53, characters 4-5:
+Error: This expression has type string but an expression was expected of type
+         bytes
+
+Waiting for 1 job to finish.
+make[1]: *** [_build/opt/infer.exe] Error 1

@@ -1,0 +1,9 @@
+atd/clang_ast_b.mli: Bi_inbuf Bi_io Bi_outbuf Clang_ast_t
+atd/clang_ast_j.mli: Bi_outbuf Clang_ast_t Lexing Yojson
+atd/clang_ast_proj.mli: Clang_ast_t
+atd/clang_ast_t.mli: Clang_ast_types
+atd/clang_ast_v.mli: Ag_util Clang_ast_t
+atd/jsonbug_j.mli: Bi_outbuf Jsonbug_t Lexing Yojson
+atd/jsonbug_t.mli:
+atd/stacktree_j.mli: Bi_outbuf Lexing Stacktree_t Yojson
+atd/stacktree_t.mli:

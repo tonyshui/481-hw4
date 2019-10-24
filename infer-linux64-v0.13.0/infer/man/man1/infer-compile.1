@@ -1,0 +1,98 @@
+.\" Pipe this output to groff -Tutf8 | less
+.\"
+.mso an.tmac
+.TH "infer-compile" 1 "2017-10-18" "v0.13.0" "Infer Project Compilation"
+.\" Disable hyphenation and ragged-right
+.nh
+.ad l
+.SH NAME
+.P
+.nf
+infer\N'45'compile \N'45' compile project from within the infer environment
+.fi
+.SH SYNOPSIS
+.P
+.nf
+\fBinfer\fR \fBcompile\fR \fB\N'45'\N'45'\fR \fI[compile command]\fR
+.fi
+.SH DESCRIPTION
+.P
+Intercepts compilation commands similarly to \fBinfer\N'45'capture\fR, but simply execute these compilation commands and do not perform any translation of the source files\N'46' This can be useful to configure build systems or for debugging purposes\N'46'
+.SH OPTIONS
+.TP 4
+\fB\N'45'\N'45'debug\fR,\fB\N'45'g\fR
+Activates: Debug mode (also sets \fB\N'45'\N'45'debug\N'45'level 2\fR, \fB\N'45'\N'45'developer\N'45'mode\fR, \fB\N'45'\N'45'no\N'45'filtering\fR, \fB\N'45'\N'45'print\N'45'buckets\fR, \fB\N'45'\N'45'print\N'45'types\fR, \fB\N'45'\N'45'reports\N'45'include\N'45'ml\N'45'loc\fR, \fB\N'45'\N'45'no\N'45'only\N'45'cheap\N'45'debug\fR, \fB\N'45'\N'45'trace\N'45'error\fR, \fB\N'45'\N'45'write\N'45'dotty\fR, \fB\N'45'\N'45'write\N'45'html\fR) (Conversely: \fB\N'45'\N'45'no\N'45'debug\fR | \fB\N'45'G\fR)
+.TP 4
+\fB\N'45'\N'45'debug\N'45'level\fR \fIlevel\fR
+Debug level (sets \fB\N'45'\N'45'bo\N'45'debug\fR \fIlevel\fR, \fB\N'45'\N'45'debug\N'45'level\N'45'analysis\fR \fIlevel\fR, \fB\N'45'\N'45'debug\N'45'level\N'45'capture\fR \fIlevel\fR, \fB\N'45'\N'45'debug\N'45'level\N'45'linters\fR \fIlevel\fR):
+.sp -1
+.P
+.nf
+      \N'45' 0: only basic debugging enabled
+.fi
+.sp -1
+.P
+.nf
+      \N'45' 1: verbose debugging enabled
+.fi
+.sp -1
+.P
+.nf
+      \N'45' 2: very verbose debugging enabled
+.fi
+.TP 4
+\fB\N'45'\N'45'debug\N'45'level\N'45'analysis\fR \fIint\fR
+Debug level for the analysis\N'46' See \fB\N'45'\N'45'debug\N'45'level\fR for accepted values\N'46' (default: \fI0\fR)
+.TP 4
+\fB\N'45'\N'45'debug\N'45'level\N'45'capture\fR \fIint\fR
+Debug level for the capture\N'46' See \fB\N'45'\N'45'debug\N'45'level\fR for accepted values\N'46' (default: \fI0\fR)
+.TP 4
+\fB\N'45'\N'45'debug\N'45'level\N'45'linters\fR \fIint\fR
+Debug level for the linters\N'46' See \fB\N'45'\N'45'debug\N'45'level\fR for accepted values\N'46' (default: \fI0\fR)
+.TP 4
+\fB\N'45'\N'45'force\N'45'delete\N'45'results\N'45'dir\fR
+Activates: Do not refuse to delete the results directory if it doesn\N'39't look like an infer results directory\N'46' (Conversely: \fB\N'45'\N'45'no\N'45'force\N'45'delete\N'45'results\N'45'dir\fR)
+.TP 4
+\fB\N'45'\N'45'help\fR
+Show this manual
+.TP 4
+\fB\N'45'\N'45'help\N'45'format\fR \fI{ auto | groff | pager | plain }\fR
+Show this help in the specified format\N'46' \fBauto\fR sets the format to \fBplain\fR if the environment variable \fBTERM\fR is "dumb" or undefined, and to \fBpager\fR otherwise\N'46' (default: \fIauto\fR)
+.TP 4
+\fB\N'45'\N'45'help\N'45'full\fR
+Show this manual with all internal options in the INTERNAL OPTIONS section
+.SH ENVIRONMENT
+.TP 4
+\fBINFER_ARGS\fR, \fBINFERCONFIG\fR, \fBINFER_STRICT_MODE\fR
+See the ENVIRONMENT section in the manual of \fBinfer\fR(1)\N'46'
+.SH FILES
+.TP 4
+\fB\N'46'inferconfig\fR
+See the FILES section in the manual of \fBinfer\fR(1)\N'46'
+.SH EXAMPLES
+.P
+\fBcmake\fR(1) hardcodes the absolute paths to the compiler inside the Makefiles it generates, which defeats the later capture of compilation commands by infer\N'46' Thus, to capture a CMake project, one should configure the project from within the infer build environment, for instance:
+.P
+.nf
+  mkdir build && cd build
+  infer compile \N'45'\N'45' cmake \N'46'\N'46'
+  infer capture \N'45'\N'45' make
+.fi
+.P
+The same solution can be used for projects whose "\N'46'/configure" script hardcodes the paths to the compilers, for instance:
+.P
+.nf
+  infer compile \N'45'\N'45' \N'46'/configure
+  infer capture \N'45'\N'45' make
+.fi
+.P
+Another solution for CMake projects is to use CMake\N'39's compilation databases, for instance:
+.P
+.nf
+  mkdir build && cd build
+  cmake \N'45'DCMAKE_EXPORT_COMPILE_COMMANDS=1 \N'46'\N'46'
+  infer capture \N'45'\N'45'compilation\N'45'database compile_commands\N'46'json
+.fi
+.SH SEE ALSO
+.P
+\fBinfer\N'45'capture\fR(1)

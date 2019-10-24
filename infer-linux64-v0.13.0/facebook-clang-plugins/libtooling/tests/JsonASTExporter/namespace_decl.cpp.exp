@@ -1,0 +1,691 @@
+["TranslationUnitDecl" , [
+  {
+    "pointer" : 1,
+    "source_range" : [
+      {
+      },
+      {
+      }
+    ]
+  },
+  [
+    ["TypedefDecl" , [
+      {
+        "pointer" : 2,
+        "source_range" : [
+          {
+          },
+          {
+          }
+        ],
+        "is_implicit" : true
+      },
+      {
+        "name" : "__int128_t",
+        "qual_name" : [
+          "__int128_t"
+        ]
+      },
+      0,
+      {
+      }
+    ]],
+    ["TypedefDecl" , [
+      {
+        "pointer" : 3,
+        "source_range" : [
+          {
+          },
+          {
+          }
+        ],
+        "is_implicit" : true
+      },
+      {
+        "name" : "__uint128_t",
+        "qual_name" : [
+          "__uint128_t"
+        ]
+      },
+      0,
+      {
+      }
+    ]],
+    ["TypedefDecl" , [
+      {
+        "pointer" : 4,
+        "source_range" : [
+          {
+          },
+          {
+          }
+        ],
+        "is_implicit" : true
+      },
+      {
+        "name" : "__NSConstantString",
+        "qual_name" : [
+          "__NSConstantString"
+        ]
+      },
+      0,
+      {
+      }
+    ]],
+    ["TypedefDecl" , [
+      {
+        "pointer" : 5,
+        "source_range" : [
+          {
+          },
+          {
+          }
+        ],
+        "is_implicit" : true
+      },
+      {
+        "name" : "__builtin_ms_va_list",
+        "qual_name" : [
+          "__builtin_ms_va_list"
+        ]
+      },
+      0,
+      {
+      }
+    ]],
+    ["TypedefDecl" , [
+      {
+        "pointer" : 6,
+        "source_range" : [
+          {
+          },
+          {
+          }
+        ],
+        "is_implicit" : true
+      },
+      {
+        "name" : "__builtin_va_list",
+        "qual_name" : [
+          "__builtin_va_list"
+        ]
+      },
+      0,
+      {
+      }
+    ]],
+    ["NamespaceDecl" , [
+      {
+        "pointer" : 7,
+        "source_range" : [
+          {
+            "file" : "tests/namespace_decl.cpp",
+            "line" : 1,
+            "column" : 1
+          },
+          {
+            "line" : 9,
+            "column" : 1
+          }
+        ]
+      },
+      {
+        "name" : "Q",
+        "qual_name" : [
+          "Q"
+        ]
+      },
+      [
+        ["NamespaceDecl" , [
+          {
+            "pointer" : 8,
+            "source_range" : [
+              {
+                "line" : 2,
+                "column" : 3
+              },
+              {
+                "line" : 3,
+                "column" : 3
+              }
+            ]
+          },
+          {
+            "name" : "V",
+            "qual_name" : [
+              "V",
+              "Q"
+            ]
+          },
+          [
+          ],
+          {
+          },
+          {
+          }
+        ]],
+        ["NamespaceDecl" , [
+          {
+            "pointer" : 9,
+            "source_range" : [
+              {
+                "line" : 4,
+                "column" : 3
+              },
+              {
+                "line" : 5,
+                "column" : 3
+              }
+            ]
+          },
+          {
+            "name" : "V",
+            "qual_name" : [
+              "V",
+              "Q"
+            ]
+          },
+          [
+          ],
+          {
+          },
+          {
+            "original_namespace" : {
+              "kind" : "Namespace",
+              "decl_pointer" : 8,
+              "name" : {
+                "name" : "V",
+                "qual_name" : [
+                  "V",
+                  "Q"
+                ]
+              }
+            }
+          }
+        ]],
+        ["NamespaceDecl" , [
+          {
+            "pointer" : 10,
+            "source_range" : [
+              {
+                "line" : 6,
+                "column" : 3
+              },
+              {
+                "line" : 8,
+                "column" : 3
+              }
+            ]
+          },
+          {
+            "name" : "I",
+            "qual_name" : [
+              "I",
+              "Q"
+            ]
+          },
+          [
+            ["VarDecl" , [
+              {
+                "pointer" : 11,
+                "source_range" : [
+                  {
+                    "line" : 7,
+                    "column" : 5
+                  },
+                  {
+                    "column" : 9
+                  }
+                ]
+              },
+              {
+                "name" : "i",
+                "qual_name" : [
+                  "i",
+                  "Q"
+                ]
+              },
+              {
+                "type_ptr" : 12
+              },
+              {
+                "is_global" : true
+              }
+            ]]
+          ],
+          {
+          },
+          {
+            "is_inline" : true
+          }
+        ]]
+      ],
+      {
+      },
+      {
+      }
+    ]],
+    ["NamespaceDecl" , [
+      {
+        "pointer" : 13,
+        "source_range" : [
+          {
+            "line" : 11,
+            "column" : 1
+          },
+          {
+            "line" : 13,
+            "column" : 1
+          }
+        ]
+      },
+      {
+        "name" : "",
+        "qual_name" : [
+          "anonymous_namespace_tests/namespace_decl.cpp"
+        ]
+      },
+      [
+      ],
+      {
+      },
+      {
+      }
+    ]],
+    ["UsingDirectiveDecl" , [
+      {
+        "pointer" : 14,
+        "source_range" : [
+          {
+            "line" : 11,
+            "column" : 11
+          },
+          {
+          }
+        ],
+        "is_implicit" : true
+      },
+      {
+        "name" : "<using-directive>",
+        "qual_name" : [
+          "<using-directive>"
+        ]
+      },
+      {
+        "using_location" : {
+          "column" : 11
+        },
+        "namespace_key_location" : {
+        },
+        "nested_name_specifier_locs" : [
+        ],
+        "nominated_namespace" : {
+          "kind" : "Namespace",
+          "decl_pointer" : 13,
+          "name" : {
+            "name" : "",
+            "qual_name" : [
+              "anonymous_namespace_tests/namespace_decl.cpp"
+            ]
+          }
+        }
+      }
+    ]],
+    ["TypedefDecl" , [
+      {
+        "pointer" : 15,
+        "source_range" : [
+          {
+          },
+          {
+          }
+        ],
+        "is_implicit" : true
+      },
+      {
+        "name" : "instancetype",
+        "qual_name" : [
+          "instancetype"
+        ]
+      },
+      16,
+      {
+      }
+    ]]
+  ],
+  {
+  },
+  {
+    "input_path" : "tests/namespace_decl.cpp",
+    "input_kind" : "IK_CXX",
+    "types" : [
+      ["BuiltinType" , [
+        {
+          "pointer" : 17
+        },
+        "Void"
+      ]],
+      ["BuiltinType" , [
+        {
+          "pointer" : 18
+        },
+        "Bool"
+      ]],
+      ["BuiltinType" , [
+        {
+          "pointer" : 19
+        },
+        "Char_S"
+      ]],
+      ["BuiltinType" , [
+        {
+          "pointer" : 20
+        },
+        "SChar"
+      ]],
+      ["BuiltinType" , [
+        {
+          "pointer" : 21
+        },
+        "Short"
+      ]],
+      ["BuiltinType" , [
+        {
+          "pointer" : 12
+        },
+        "Int"
+      ]],
+      ["BuiltinType" , [
+        {
+          "pointer" : 22
+        },
+        "Long"
+      ]],
+      ["BuiltinType" , [
+        {
+          "pointer" : 23
+        },
+        "LongLong"
+      ]],
+      ["BuiltinType" , [
+        {
+          "pointer" : 24
+        },
+        "UChar"
+      ]],
+      ["BuiltinType" , [
+        {
+          "pointer" : 25
+        },
+        "UShort"
+      ]],
+      ["BuiltinType" , [
+        {
+          "pointer" : 26
+        },
+        "UInt"
+      ]],
+      ["BuiltinType" , [
+        {
+          "pointer" : 27
+        },
+        "ULong"
+      ]],
+      ["BuiltinType" , [
+        {
+          "pointer" : 28
+        },
+        "ULongLong"
+      ]],
+      ["BuiltinType" , [
+        {
+          "pointer" : 29
+        },
+        "Float"
+      ]],
+      ["BuiltinType" , [
+        {
+          "pointer" : 30
+        },
+        "Double"
+      ]],
+      ["BuiltinType" , [
+        {
+          "pointer" : 31
+        },
+        "LongDouble"
+      ]],
+      ["BuiltinType" , [
+        {
+          "pointer" : 32
+        },
+        "Float128"
+      ]],
+      ["BuiltinType" , [
+        {
+          "pointer" : 33
+        },
+        "Int128"
+      ]],
+      ["BuiltinType" , [
+        {
+          "pointer" : 34
+        },
+        "UInt128"
+      ]],
+      ["BuiltinType" , [
+        {
+          "pointer" : 35
+        },
+        "WChar_S"
+      ]],
+      ["BuiltinType" , [
+        {
+          "pointer" : 36
+        },
+        "Char16"
+      ]],
+      ["BuiltinType" , [
+        {
+          "pointer" : 37
+        },
+        "Char32"
+      ]],
+      ["BuiltinType" , [
+        {
+          "pointer" : 38
+        },
+        "Dependent"
+      ]],
+      ["BuiltinType" , [
+        {
+          "pointer" : 39
+        },
+        "Overload"
+      ]],
+      ["BuiltinType" , [
+        {
+          "pointer" : 40
+        },
+        "BoundMember"
+      ]],
+      ["BuiltinType" , [
+        {
+          "pointer" : 41
+        },
+        "PseudoObject"
+      ]],
+      ["BuiltinType" , [
+        {
+          "pointer" : 42
+        },
+        "UnknownAny"
+      ]],
+      ["BuiltinType" , [
+        {
+          "pointer" : 43
+        },
+        "ARCUnbridgedCast"
+      ]],
+      ["BuiltinType" , [
+        {
+          "pointer" : 44
+        },
+        "BuiltinFn"
+      ]],
+      ["ComplexType" , [
+        {
+          "pointer" : 45
+        }
+      ]],
+      ["ComplexType" , [
+        {
+          "pointer" : 46
+        }
+      ]],
+      ["ComplexType" , [
+        {
+          "pointer" : 47
+        }
+      ]],
+      ["ComplexType" , [
+        {
+          "pointer" : 48
+        }
+      ]],
+      ["BuiltinType" , [
+        {
+          "pointer" : 49
+        },
+        "ObjCId"
+      ]],
+      ["BuiltinType" , [
+        {
+          "pointer" : 50
+        },
+        "ObjCClass"
+      ]],
+      ["BuiltinType" , [
+        {
+          "pointer" : 51
+        },
+        "ObjCSel"
+      ]],
+      ["PointerType" , [
+        {
+          "pointer" : 52
+        },
+        {
+          "type_ptr" : 17
+        }
+      ]],
+      ["BuiltinType" , [
+        {
+          "pointer" : 53
+        },
+        "NullPtr"
+      ]],
+      ["BuiltinType" , [
+        {
+          "pointer" : 54
+        },
+        "Half"
+      ]],
+      ["RecordType" , [
+        {
+          "pointer" : 55
+        },
+        56
+      ]],
+      ["PointerType" , [
+        {
+          "pointer" : 57
+        },
+        {
+          "type_ptr" : 12,
+          "is_const" : true
+        }
+      ]],
+      ["PointerType" , [
+        {
+          "pointer" : 58
+        },
+        {
+          "type_ptr" : 19,
+          "is_const" : true
+        }
+      ]],
+      ["PointerType" , [
+        {
+          "pointer" : 59
+        },
+        {
+          "type_ptr" : 19
+        }
+      ]],
+      ["RecordType" , [
+        {
+          "pointer" : 60
+        },
+        61
+      ]],
+      ["ConstantArrayType" , [
+        {
+          "pointer" : 62
+        },
+        {
+          "element_type" : {
+            "type_ptr" : 60
+          },
+          "stride" : 24
+        },
+        1
+      ]],
+      ["ObjCObjectType" , [
+        {
+          "pointer" : 63
+        },
+        {
+          "base_type" : 49
+        }
+      ]],
+      ["ObjCObjectPointerType" , [
+        {
+          "pointer" : 64
+        },
+        {
+          "type_ptr" : 63
+        }
+      ]],
+      ["TypedefType" , [
+        {
+          "pointer" : 65,
+          "desugared_type" : 64
+        },
+        {
+          "child_type" : {
+            "type_ptr" : 64
+          },
+          "decl_ptr" : 66
+        }
+      ]],
+      ["TypedefType" , [
+        {
+          "pointer" : 16,
+          "desugared_type" : 64
+        },
+        {
+          "child_type" : {
+            "type_ptr" : 65
+          },
+          "decl_ptr" : 15
+        }
+      ]],
+      ["NoneType" , [
+        {
+          "pointer" : 0
+        }
+      ]]
+    ]
+  }
+]]

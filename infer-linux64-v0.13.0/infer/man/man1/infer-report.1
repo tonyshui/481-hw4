@@ -1,0 +1,206 @@
+.\" Pipe this output to groff -Tutf8 | less
+.\"
+.mso an.tmac
+.TH "infer-report" 1 "2017-10-18" "v0.13.0" "Infer Reporting"
+.\" Disable hyphenation and ragged-right
+.nh
+.ad l
+.SH NAME
+.P
+.nf
+infer\N'45'report \N'45' compute and manipulate infer results
+.fi
+.SH SYNOPSIS
+.P
+.nf
+\fBinfer\fR \fBreport\fR \fI[options]\fR [\fIfile\N'46'specs\fR\N'46'\N'46'\N'46']
+.fi
+.SH DESCRIPTION
+.P
+Read, convert, and print \N'46'specs files in the results directory\N'46' Each spec is printed to standard output unless option \N'45'q is used\N'46'
+.P
+If no specs file are passed on the command line, process all the \N'46'specs in the results directory\N'46'
+.SH OPTIONS
+.TP 4
+\fB\N'45'\N'45'<analyzer>\N'45'blacklist\N'45'files\N'45'containing\fR \fI+string\fR
+blacklist files containing the specified string for the given analyzer (see \fB\N'45'\N'45'analyzer\fR for valid values)
+.TP 4
+\fB\N'45'\N'45'<analyzer>\N'45'blacklist\N'45'path\N'45'regex\fR \fI+path_regex\fR
+blacklist the analysis of files whose relative path matches the specified OCaml\N'45'style regex (to whitelist: \fB\N'45'\N'45'<analyzer>\N'45'whitelist\N'45'path\N'45'regex\fR)
+.TP 4
+\fB\N'45'\N'45'<analyzer>\N'45'suppress\N'45'errors\fR \fI+error_name\fR
+do not report a type of errors
+.TP 4
+\fB\N'45'\N'45'calls\N'45'csv\fR \fIfile\fR
+Write individual calls in CSV format to \fIfile\fR
+.TP 4
+\fB\N'45'\N'45'debug\fR,\fB\N'45'g\fR
+Activates: Debug mode (also sets \fB\N'45'\N'45'debug\N'45'level 2\fR, \fB\N'45'\N'45'developer\N'45'mode\fR, \fB\N'45'\N'45'no\N'45'filtering\fR, \fB\N'45'\N'45'print\N'45'buckets\fR, \fB\N'45'\N'45'print\N'45'types\fR, \fB\N'45'\N'45'reports\N'45'include\N'45'ml\N'45'loc\fR, \fB\N'45'\N'45'no\N'45'only\N'45'cheap\N'45'debug\fR, \fB\N'45'\N'45'trace\N'45'error\fR, \fB\N'45'\N'45'write\N'45'dotty\fR, \fB\N'45'\N'45'write\N'45'html\fR) (Conversely: \fB\N'45'\N'45'no\N'45'debug\fR | \fB\N'45'G\fR)
+.TP 4
+\fB\N'45'\N'45'debug\N'45'level\fR \fIlevel\fR
+Debug level (sets \fB\N'45'\N'45'bo\N'45'debug\fR \fIlevel\fR, \fB\N'45'\N'45'debug\N'45'level\N'45'analysis\fR \fIlevel\fR, \fB\N'45'\N'45'debug\N'45'level\N'45'capture\fR \fIlevel\fR, \fB\N'45'\N'45'debug\N'45'level\N'45'linters\fR \fIlevel\fR):
+.sp -1
+.P
+.nf
+      \N'45' 0: only basic debugging enabled
+.fi
+.sp -1
+.P
+.nf
+      \N'45' 1: verbose debugging enabled
+.fi
+.sp -1
+.P
+.nf
+      \N'45' 2: very verbose debugging enabled
+.fi
+.TP 4
+\fB\N'45'\N'45'debug\N'45'level\N'45'analysis\fR \fIint\fR
+Debug level for the analysis\N'46' See \fB\N'45'\N'45'debug\N'45'level\fR for accepted values\N'46' (default: \fI0\fR)
+.TP 4
+\fB\N'45'\N'45'debug\N'45'level\N'45'capture\fR \fIint\fR
+Debug level for the capture\N'46' See \fB\N'45'\N'45'debug\N'45'level\fR for accepted values\N'46' (default: \fI0\fR)
+.TP 4
+\fB\N'45'\N'45'debug\N'45'level\N'45'linters\fR \fIint\fR
+Debug level for the linters\N'46' See \fB\N'45'\N'45'debug\N'45'level\fR for accepted values\N'46' (default: \fI0\fR)
+.TP 4
+\fB\N'45'\N'45'differential\N'45'filter\N'45'files\fR \fIstring\fR
+Specify the file containing the list of source files for which a differential report is desired\N'46' Source files should be specified relative to project root or be absolute
+.TP 4
+\fB\N'45'\N'45'disable\N'45'issue\N'45'type\fR \fI+issue_type\fR
+Do not show reports coming from this type of issue\N'46' Each checker can report a range of issue types\N'46' This option provides fine\N'45'grained filtering over which types of issue should be reported once the checkers have run\N'46' In particular, note that disabling issue types does not make the corresponding checker not run\N'46'
+.sp -1
+.P
+.nf
+     By default, the following issue types are disabled:
+.fi
+.sp -1
+.P
+.nf
+    ANALYSIS_STOPS, ARRAY_OUT_OF_BOUNDS_L1, ARRAY_OUT_OF_BOUNDS_L2,
+.fi
+.sp -1
+.P
+.nf
+    ARRAY_OUT_OF_BOUNDS_L3, BUFFER_OVERRUN_L4, BUFFER_OVERRUN_L5,
+.fi
+.sp -1
+.P
+.nf
+    CLASS_CAST_EXCEPTION, CONDITION_ALWAYS_FALSE,
+.fi
+.sp -1
+.P
+.nf
+    CONDITION_ALWAYS_TRUE, DANGLING_POINTER_DEREFERENCE,
+.fi
+.sp -1
+.P
+.nf
+    DIVIDE_BY_ZERO,
+.fi
+.sp -1
+.P
+.nf
+    GLOBAL_VARIABLE_INITIALIZED_WITH_FUNCTION_OR_METHOD_CALL,
+.fi
+.sp -1
+.P
+.nf
+    NULL_TEST_AFTER_DEREFERENCE, RETAIN_CYCLE, RETURN_VALUE_IGNORED,
+.fi
+.sp -1
+.P
+.nf
+    STACK_VARIABLE_ADDRESS_ESCAPE,
+.fi
+.sp -1
+.P
+.nf
+    UNARY_MINUS_APPLIED_TO_UNSIGNED_EXPRESSION, UNINITIALIZED_VALUE\N'46'
+.fi
+.sp -1
+.P
+.nf
+    
+.fi
+.sp -1
+.P
+.nf
+     See also \fB\N'45'\N'45'report\N'45'issue\N'45'type\fR\N'46'
+.fi
+.sp -1
+.P
+.nf
+    (default:
+.fi
+.sp -1
+.P
+.nf
+    \fIANALYSIS_STOPS,ARRAY_OUT_OF_BOUNDS_L1,ARRAY_OUT_OF_BOUNDS_L2,ARRAY_OUT_OF_BOUNDS_L3,BUFFER_OVERRUN_L4,BUFFER_OVERRUN_L5,CLASS_CAST_EXCEPTION,CONDITION_ALWAYS_FALSE,CONDITION_ALWAYS_TRUE,DANGLING_POINTER_DEREFERENCE,DIVIDE_BY_ZERO,GLOBAL_VARIABLE_INITIALIZED_WITH_FUNCTION_OR_METHOD_CALL,NULL_TEST_AFTER_DEREFERENCE,RETAIN_CYCLE,RETURN_VALUE_IGNORED,STACK_VARIABLE_ADDRESS_ESCAPE,UNARY_MINUS_APPLIED_TO_UNSIGNED_EXPRESSION,UNINITIALIZED_VALUE\fR)
+.fi
+.TP 4
+\fB\N'45'\N'45'enable\N'45'issue\N'45'type\fR \fI+issue_type\fR
+Show reports coming from this type of issue\N'46' By default, all issue types are enabled except the ones listed in \fB\N'45'\N'45'disable\N'45'issue\N'45'type\fR\N'46' Note that enabling issue types does not make the corresponding checker run; see individual checker options to turn them on or off\N'46'
+.TP 4
+\fB\N'45'\N'45'no\N'45'filtering\fR,\fB\N'45'F\fR
+Deactivates: Do not show the experimental and blacklisted issue types (Conversely: \fB\N'45'\N'45'filtering\fR | \fB\N'45'f\fR)
+.TP 4
+\fB\N'45'\N'45'from\N'45'json\N'45'report\fR \fIreport\N'46'json\fR
+Load analysis results from a report file (default is to load the results from the specs files generated by the analysis)\N'46'
+.TP 4
+\fB\N'45'\N'45'help\fR
+Show this manual
+.TP 4
+\fB\N'45'\N'45'help\N'45'format\fR \fI{ auto | groff | pager | plain }\fR
+Show this help in the specified format\N'46' \fBauto\fR sets the format to \fBplain\fR if the environment variable \fBTERM\fR is "dumb" or undefined, and to \fBpager\fR otherwise\N'46' (default: \fIauto\fR)
+.TP 4
+\fB\N'45'\N'45'help\N'45'full\fR
+Show this manual with all internal options in the INTERNAL OPTIONS section
+.TP 4
+\fB\N'45'\N'45'issues\N'45'csv\fR \fIfile\fR
+Write a list of issues in CSV format to \fIfile\fR
+.TP 4
+\fB\N'45'\N'45'issues\N'45'fields\fR \fI,\N'45'separated sequence of { bug_class | kind | bug_type | qualifier | severity | visibility | line | column | procedure | procedure_id | procedure_start_line | file | bug_trace | key | hash | line_offset | procedure_id_without_crc | qualifier_contains_potential_exception_note }\fR
+Fields to emit with \fB\N'45'\N'45'issues\N'45'tests\fR (default: \fIfile procedure line_offset bug_type bug_trace\fR)
+.TP 4
+\fB\N'45'\N'45'issues\N'45'tests\fR \fIfile\fR
+Write a list of issues in a format suitable for tests to \fIfile\fR
+.TP 4
+\fB\N'45'\N'45'issues\N'45'txt\fR \fIfile\fR
+Write a list of issues in text format to \fIfile\fR (default: infer\N'45'out/bugs\N'46'txt)
+.TP 4
+\fB\N'45'\N'45'load\N'45'results\fR \fIfile\N'46'iar\fR
+Load analysis results from Infer Analysis Results file file\N'46'iar
+.TP 4
+\fB\N'45'\N'45'print\N'45'logs\fR
+Activates: Also log messages to stdout and stderr (Conversely: \fB\N'45'\N'45'no\N'45'print\N'45'logs\fR)
+.TP 4
+\fB\N'45'\N'45'project\N'45'root\fR,\fB\N'45'C\fR \fIdir\fR
+Specify the root directory of the project (default: \fI/home/weimer/src/infer\N'45'linux64\N'45'v0\N'46'13\N'46'0\fR)
+.TP 4
+\fB\N'45'\N'45'quiet\fR,\fB\N'45'q\fR
+Activates: Do not print specs on standard output (default: only print for the \fBreport\fR command) (Conversely: \fB\N'45'\N'45'no\N'45'quiet\fR | \fB\N'45'Q\fR)
+.TP 4
+\fB\N'45'\N'45'report\N'45'formatter\fR \fI{ none | phabricator }\fR
+Which formatter to use when emitting the report (default: \fIphabricator\fR)
+.TP 4
+\fB\N'45'\N'45'results\N'45'dir\fR,\fB\N'45'o\fR \fIdir\fR
+Write results and internal files in the specified directory (default: \fI/home/weimer/src/infer\N'45'linux64\N'45'v0\N'46'13\N'46'0/infer\N'45'out\fR)
+.TP 4
+\fB\N'45'\N'45'save\N'45'results\fR \fIfile\N'46'iar\fR
+Save analysis results to Infer Analysis Results file file\N'46'iar
+.TP 4
+\fB\N'45'\N'45'skip\N'45'analysis\N'45'in\N'45'path\N'45'skips\N'45'compilation\fR
+Activates: Whether paths in \N'45'\N'45'skip\N'45'analysis\N'45'in\N'45'path should be compiled or not (Conversely: \fB\N'45'\N'45'no\N'45'skip\N'45'analysis\N'45'in\N'45'path\N'45'skips\N'45'compilation\fR)
+.SH ENVIRONMENT
+.TP 4
+\fBINFER_ARGS\fR, \fBINFERCONFIG\fR, \fBINFER_STRICT_MODE\fR
+See the ENVIRONMENT section in the manual of \fBinfer\fR(1)\N'46'
+.SH FILES
+.TP 4
+\fB\N'46'inferconfig\fR
+See the FILES section in the manual of \fBinfer\fR(1)\N'46'
+.SH SEE ALSO
+.P
+\fBinfer\N'45'reportdiff\fR(1), \fBinfer\N'45'run\fR(1)

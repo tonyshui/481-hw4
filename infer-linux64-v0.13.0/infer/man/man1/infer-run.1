@@ -1,0 +1,202 @@
+.\" Pipe this output to groff -Tutf8 | less
+.\"
+.mso an.tmac
+.TH "infer-run" 1 "2017-10-18" "v0.13.0" "Infer Analysis of a Project"
+.\" Disable hyphenation and ragged-right
+.nh
+.ad l
+.SH NAME
+.P
+.nf
+infer\N'45'run \N'45' capture source files, analyze, and report
+.fi
+.SH SYNOPSIS
+.P
+.nf
+\fBinfer\fR \fBrun\fR \fI[options]\fR
+\fBinfer\fR \fI[options]\fR \fB\N'45'\N'45'\fR \fIcompile command\fR
+.fi
+.SH DESCRIPTION
+.P
+Calling "\fBinfer\fR \fBrun\fR \fI[options]\fR" is equivalent to performing the following sequence of commands:
+.P
+.nf
+\fBinfer\fR \fBcapture\fR \fI[options]\fR
+\fBinfer\fR \fBanalyze\fR \fI[options]\fR
+.fi
+.SH OPTIONS
+.TP 4
+\fB\N'45'\N'45'analyzer\fR,\fB\N'45'a\fR \fI{ infer | biabduction | capture | checkers | compile | crashcontext | linters }\fR
+Specify which analyzer to run (only one at a time is supported):
+.sp -1
+.P
+.nf
+    \N'45' \fBbiabduction\fR: run the bi\N'45'abduction based checker only, in
+.fi
+.sp -1
+.P
+.nf
+    particular to check for memory errors
+.fi
+.sp -1
+.P
+.nf
+    \N'45' \fBcheckers\fR: run the default checkers, including the bi\N'45'abduction
+.fi
+.sp -1
+.P
+.nf
+    based checker for memory errors (default)
+.fi
+.sp -1
+.P
+.nf
+    \N'45' \fBinfer\fR: alias for \fBbiabduction\fR
+.fi
+.sp -1
+.P
+.nf
+    \N'45' \fBlinters\fR: run linters based on the ast only (clang only,
+.fi
+.sp -1
+.P
+.nf
+    activated by default)
+.fi
+.sp -1
+.P
+.nf
+    \N'45' \fBcapture\fR: similar to specifying the \fBcapture\fR subcommand
+.fi
+.sp -1
+.P
+.nf
+    (DEPRECATED)
+.fi
+.sp -1
+.P
+.nf
+    \N'45' \fBcompile\fR: similar to specifying the \fBcompile\fR subcommand
+.fi
+.sp -1
+.P
+.nf
+    (DEPRECATED)
+.fi
+.sp -1
+.P
+.nf
+    \N'45' \fBcrashcontext\fR: experimental (see \fB\N'45'\N'45'crashcontext\fR)
+.fi
+.TP 4
+\fB\N'45'\N'45'<analyzer>\N'45'blacklist\N'45'files\N'45'containing\fR \fI+string\fR
+blacklist files containing the specified string for the given analyzer (see \fB\N'45'\N'45'analyzer\fR for valid values)
+.TP 4
+\fB\N'45'\N'45'<analyzer>\N'45'blacklist\N'45'path\N'45'regex\fR \fI+path_regex\fR
+blacklist the analysis of files whose relative path matches the specified OCaml\N'45'style regex (to whitelist: \fB\N'45'\N'45'<analyzer>\N'45'whitelist\N'45'path\N'45'regex\fR)
+.TP 4
+\fB\N'45'\N'45'<analyzer>\N'45'suppress\N'45'errors\fR \fI+error_name\fR
+do not report a type of errors
+.TP 4
+\fB\N'45'\N'45'debug\fR,\fB\N'45'g\fR
+Activates: Debug mode (also sets \fB\N'45'\N'45'debug\N'45'level 2\fR, \fB\N'45'\N'45'developer\N'45'mode\fR, \fB\N'45'\N'45'no\N'45'filtering\fR, \fB\N'45'\N'45'print\N'45'buckets\fR, \fB\N'45'\N'45'print\N'45'types\fR, \fB\N'45'\N'45'reports\N'45'include\N'45'ml\N'45'loc\fR, \fB\N'45'\N'45'no\N'45'only\N'45'cheap\N'45'debug\fR, \fB\N'45'\N'45'trace\N'45'error\fR, \fB\N'45'\N'45'write\N'45'dotty\fR, \fB\N'45'\N'45'write\N'45'html\fR) (Conversely: \fB\N'45'\N'45'no\N'45'debug\fR | \fB\N'45'G\fR)
+.TP 4
+\fB\N'45'\N'45'debug\N'45'level\fR \fIlevel\fR
+Debug level (sets \fB\N'45'\N'45'bo\N'45'debug\fR \fIlevel\fR, \fB\N'45'\N'45'debug\N'45'level\N'45'analysis\fR \fIlevel\fR, \fB\N'45'\N'45'debug\N'45'level\N'45'capture\fR \fIlevel\fR, \fB\N'45'\N'45'debug\N'45'level\N'45'linters\fR \fIlevel\fR):
+.sp -1
+.P
+.nf
+      \N'45' 0: only basic debugging enabled
+.fi
+.sp -1
+.P
+.nf
+      \N'45' 1: verbose debugging enabled
+.fi
+.sp -1
+.P
+.nf
+      \N'45' 2: very verbose debugging enabled
+.fi
+.TP 4
+\fB\N'45'\N'45'debug\N'45'level\N'45'analysis\fR \fIint\fR
+Debug level for the analysis\N'46' See \fB\N'45'\N'45'debug\N'45'level\fR for accepted values\N'46' (default: \fI0\fR)
+.TP 4
+\fB\N'45'\N'45'debug\N'45'level\N'45'capture\fR \fIint\fR
+Debug level for the capture\N'46' See \fB\N'45'\N'45'debug\N'45'level\fR for accepted values\N'46' (default: \fI0\fR)
+.TP 4
+\fB\N'45'\N'45'debug\N'45'level\N'45'linters\fR \fIint\fR
+Debug level for the linters\N'46' See \fB\N'45'\N'45'debug\N'45'level\fR for accepted values\N'46' (default: \fI0\fR)
+.TP 4
+\fB\N'45'\N'45'fail\N'45'on\N'45'issue\fR
+Activates: Exit with error code 2 if Infer found something to report (Conversely: \fB\N'45'\N'45'no\N'45'fail\N'45'on\N'45'issue\fR)
+.TP 4
+\fB\N'45'\N'45'force\N'45'delete\N'45'results\N'45'dir\fR
+Activates: Do not refuse to delete the results directory if it doesn\N'39't look like an infer results directory\N'46' (Conversely: \fB\N'45'\N'45'no\N'45'force\N'45'delete\N'45'results\N'45'dir\fR)
+.TP 4
+\fB\N'45'\N'45'force\N'45'integration\fR \fIcommand\fR
+Proceed as if the first argument after \fB\N'45'\N'45'\fR was \fIcommand\fR\N'46' Possible values: \fIanalyze\fR, \fIant\fR, \fIbuck\fR, \fIgradle\fR, \fIgradlew\fR, \fIjava\fR, \fIjavac\fR, \fIcc\fR, \fIclang\fR, \fIgcc\fR, \fIclang++\fR, \fIc++\fR, \fIg++\fR, \fImake\fR, \fIconfigure\fR, \fIcmake\fR, \fIwaf\fR, \fImvn\fR, \fImvnw\fR, \fIndk\N'45'build\fR, \fIpython\fR, \fIxcodebuild\fR\N'46'
+.TP 4
+\fB\N'45'\N'45'help\fR
+Show this manual
+.TP 4
+\fB\N'45'\N'45'help\N'45'format\fR \fI{ auto | groff | pager | plain }\fR
+Show this help in the specified format\N'46' \fBauto\fR sets the format to \fBplain\fR if the environment variable \fBTERM\fR is "dumb" or undefined, and to \fBpager\fR otherwise\N'46' (default: \fIauto\fR)
+.TP 4
+\fB\N'45'\N'45'help\N'45'full\fR
+Show this manual with all internal options in the INTERNAL OPTIONS section
+.TP 4
+\fB\N'45'\N'45'pmd\N'45'xml\fR
+Activates: Output issues in (PMD) XML format (Conversely: \fB\N'45'\N'45'no\N'45'pmd\N'45'xml\fR)
+.TP 4
+\fB\N'45'\N'45'print\N'45'logs\fR
+Activates: Also log messages to stdout and stderr (Conversely: \fB\N'45'\N'45'no\N'45'print\N'45'logs\fR)
+.TP 4
+\fB\N'45'\N'45'no\N'45'progress\N'45'bar\fR,\fB\N'45'P\fR
+Deactivates: Show a progress bar (Conversely: \fB\N'45'\N'45'progress\N'45'bar\fR | \fB\N'45'p\fR)
+.TP 4
+\fB\N'45'\N'45'project\N'45'root\fR,\fB\N'45'C\fR \fIdir\fR
+Specify the root directory of the project (default: \fI/home/weimer/src/infer\N'45'linux64\N'45'v0\N'46'13\N'46'0\fR)
+.TP 4
+\fB\N'45'\N'45'no\N'45'report\fR
+Deactivates: Run the reporting phase once the analysis has completed (Conversely: \fB\N'45'\N'45'report\fR)
+.TP 4
+\fB\N'45'\N'45'report\N'45'hook\fR \fIscript\fR
+Specify a script to be executed after the analysis results are written\N'46' This script will be passed \fB\N'45'\N'45'issues\N'45'csv\fR, \fB\N'45'\N'45'issues\N'45'json\fR, \fB\N'45'\N'45'issues\N'45'txt\fR, \fB\N'45'\N'45'issues\N'45'xml\fR, \fB\N'45'\N'45'project\N'45'root\fR, and \fB\N'45'\N'45'results\N'45'dir\fR\N'46' (default: \fI/home/weimer/src/infer\N'45'linux64\N'45'v0\N'46'13\N'46'0/infer/bin/\N'46'\N'46'/lib/python/report\N'46'py\fR)
+.TP 4
+\fB\N'45'\N'45'results\N'45'dir\fR,\fB\N'45'o\fR \fIdir\fR
+Write results and internal files in the specified directory (default: \fI/home/weimer/src/infer\N'45'linux64\N'45'v0\N'46'13\N'46'0/infer\N'45'out\fR)
+.TP 4
+\fB\N'45'\N'45'skip\N'45'analysis\N'45'in\N'45'path\fR \fI+path_prefix_OCaml_regex\fR
+Ignore files whose path matches the given prefix (can be specified multiple times)
+.TP 4
+\fB\N'45'\N'45'version\fR
+Print version information and exit
+.TP 4
+\fB\N'45'\N'45'version\N'45'json\fR
+Print version information in json format and exit
+.TP 4
+\fB\N'45'\N'45'\fR
+Stop argument processing, use remaining arguments as a build command
+.SH BUCK FLAVORS OPTIONS
+.TP 4
+\fB\N'45'\N'45'buck\N'45'blacklist\fR \fIregex\fR
+Skip analysis of files matched by the specified regular expression
+.SH CLANG OPTIONS
+.TP 4
+\fB\N'45'\N'45'clang\N'45'frontend\N'45'action\fR \fI{ lint | capture | lint_and_capture }\fR
+Specify whether the clang frontend should capture or lint or both\N'46'
+.TP 4
+\fB\N'45'\N'45'compute\N'45'analytics\fR
+Activates: Emit analytics as info\N'45'level issues, like component kit line count and component kit file cyclomatic complexity (Conversely: \fB\N'45'\N'45'no\N'45'compute\N'45'analytics\fR)
+.SH ENVIRONMENT
+.TP 4
+\fBINFER_ARGS\fR, \fBINFERCONFIG\fR, \fBINFER_STRICT_MODE\fR
+See the ENVIRONMENT section in the manual of \fBinfer\fR(1)\N'46'
+.SH FILES
+.TP 4
+\fB\N'46'inferconfig\fR
+See the FILES section in the manual of \fBinfer\fR(1)\N'46'
+.SH SEE ALSO
+.P
+\fBinfer\N'45'analyze\fR(1), \fBinfer\N'45'capture\fR(1), \fBinfer\N'45'report\fR(1)

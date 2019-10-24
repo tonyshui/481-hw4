@@ -1,0 +1,13 @@
+make[1]: Entering directory '/home/weimer/src/infer-linux64-v0.13.0/infer/models'
+make[2]: Entering directory '/home/weimer/src/infer-linux64-v0.13.0/infer/models'
+make[3]: Entering directory '/home/weimer/src/infer-linux64-v0.13.0/infer/models/c'
+make[3]: 'out/report.json' is up to date.
+make[3]: Leaving directory '/home/weimer/src/infer-linux64-v0.13.0/infer/models/c'
+make[3]: Entering directory '/home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp'
+make[3]: 'out/report.json' is up to date.
+make[3]: Leaving directory '/home/weimer/src/infer-linux64-v0.13.0/infer/models/cpp'
+make[2]: Leaving directory '/home/weimer/src/infer-linux64-v0.13.0/infer/models'
+make[2]: Entering directory '/home/weimer/src/infer-linux64-v0.13.0/infer/models/java'
+make[2]: Nothing to be done for 'install'.
+make[2]: Leaving directory '/home/weimer/src/infer-linux64-v0.13.0/infer/models/java'
+make[1]: Leaving directory '/home/weimer/src/infer-linux64-v0.13.0/infer/models'

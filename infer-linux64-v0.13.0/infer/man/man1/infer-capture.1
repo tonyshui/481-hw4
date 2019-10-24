@@ -1,0 +1,216 @@
+.\" Pipe this output to groff -Tutf8 | less
+.\"
+.mso an.tmac
+.TH "infer-capture" 1 "2017-10-18" "v0.13.0" "Infer Compilation Capture"
+.\" Disable hyphenation and ragged-right
+.nh
+.ad l
+.SH NAME
+.P
+.nf
+infer\N'45'capture \N'45' capture source files for later analysis
+.fi
+.SH SYNOPSIS
+.P
+.nf
+\fBinfer\fR \fBcapture\fR \fI[options]\fR \fB\N'45'\N'45'\fR \fBbuck\fR \fI\N'46'\N'46'\N'46'\fR
+\fBinfer\fR \fBcapture\fR \fB\N'45'\N'45'flavors\fR \fI[options]\fR \fB\N'45'\N'45'\fR \fBbuck\fR \fI\N'46'\N'46'\N'46'\fR
+\fBinfer\fR \fBcapture\fR \fB\N'45'\N'45'buck\N'45'compilation\N'45'database\fR \fI[no\N'45']deps\fR \fI[options]\fR \fB\N'45'\N'45'\fR \fBbuck\fR \fI\N'46'\N'46'\N'46'\fR
+\fBinfer\fR \fBcapture\fR \fI[options]\fR \fB\N'45'\N'45'compilation\N'45'database\fR \fIfile\fR
+\fBinfer\fR \fBcapture\fR \fI[options]\fR \fB\N'45'\N'45'compilation\N'45'database\N'45'escaped\fR \fIfile\fR
+\fBinfer\fR \fBcapture\fR \fI[options]\fR \fB\N'45'\N'45'\fR \fBgradle\fR/\fBgradlew\fR \fI\N'46'\N'46'\N'46'\fR
+\fBinfer\fR \fBcapture\fR \fI[options]\fR \fB\N'45'\N'45'\fR \fBjavac\fR \fI\N'46'\N'46'\N'46'\fR
+\fBinfer\fR \fBcapture\fR \fI[options]\fR \fB\N'45'\N'45'\fR \fBmake\fR/\fBclang\fR/\fBgcc\fR \fI\N'46'\N'46'\N'46'\fR
+\fBinfer\fR \fBcapture\fR \fI[options]\fR \fB\N'45'\N'45'\fR \fBmvn\fR/\fBmvnw\fR \fI\N'46'\N'46'\N'46'\fR
+\fBinfer\fR \fBcapture\fR \fI[options]\fR \fB\N'45'\N'45'\fR \fBndk\N'45'build\fR \fI\N'46'\N'46'\N'46'\fR
+\fBinfer\fR \fBcapture\fR \fI[\N'45'\N'45'no\N'45'xcpretty]\fR \fI[options]\fR \fB\N'45'\N'45'\fR \fBxcodebuild\fR \fI\N'46'\N'46'\N'46'\fR
+.fi
+.SH DESCRIPTION
+.P
+Capture the build command or compilation database specified on the command line: infer intercepts calls to the compiler to read source files, translate them into infer\N'39's intermediate representation, and store the result of the translation in the results directory\N'46'
+.SH OPTIONS
+.TP 4
+\fB\N'45'\N'45'debug\fR,\fB\N'45'g\fR
+Activates: Debug mode (also sets \fB\N'45'\N'45'debug\N'45'level 2\fR, \fB\N'45'\N'45'developer\N'45'mode\fR, \fB\N'45'\N'45'no\N'45'filtering\fR, \fB\N'45'\N'45'print\N'45'buckets\fR, \fB\N'45'\N'45'print\N'45'types\fR, \fB\N'45'\N'45'reports\N'45'include\N'45'ml\N'45'loc\fR, \fB\N'45'\N'45'no\N'45'only\N'45'cheap\N'45'debug\fR, \fB\N'45'\N'45'trace\N'45'error\fR, \fB\N'45'\N'45'write\N'45'dotty\fR, \fB\N'45'\N'45'write\N'45'html\fR) (Conversely: \fB\N'45'\N'45'no\N'45'debug\fR | \fB\N'45'G\fR)
+.TP 4
+\fB\N'45'\N'45'debug\N'45'level\fR \fIlevel\fR
+Debug level (sets \fB\N'45'\N'45'bo\N'45'debug\fR \fIlevel\fR, \fB\N'45'\N'45'debug\N'45'level\N'45'analysis\fR \fIlevel\fR, \fB\N'45'\N'45'debug\N'45'level\N'45'capture\fR \fIlevel\fR, \fB\N'45'\N'45'debug\N'45'level\N'45'linters\fR \fIlevel\fR):
+.sp -1
+.P
+.nf
+      \N'45' 0: only basic debugging enabled
+.fi
+.sp -1
+.P
+.nf
+      \N'45' 1: verbose debugging enabled
+.fi
+.sp -1
+.P
+.nf
+      \N'45' 2: very verbose debugging enabled
+.fi
+.TP 4
+\fB\N'45'\N'45'debug\N'45'level\N'45'analysis\fR \fIint\fR
+Debug level for the analysis\N'46' See \fB\N'45'\N'45'debug\N'45'level\fR for accepted values\N'46' (default: \fI0\fR)
+.TP 4
+\fB\N'45'\N'45'debug\N'45'level\N'45'capture\fR \fIint\fR
+Debug level for the capture\N'46' See \fB\N'45'\N'45'debug\N'45'level\fR for accepted values\N'46' (default: \fI0\fR)
+.TP 4
+\fB\N'45'\N'45'debug\N'45'level\N'45'linters\fR \fIint\fR
+Debug level for the linters\N'46' See \fB\N'45'\N'45'debug\N'45'level\fR for accepted values\N'46' (default: \fI0\fR)
+.TP 4
+\fB\N'45'\N'45'force\N'45'delete\N'45'results\N'45'dir\fR
+Activates: Do not refuse to delete the results directory if it doesn\N'39't look like an infer results directory\N'46' (Conversely: \fB\N'45'\N'45'no\N'45'force\N'45'delete\N'45'results\N'45'dir\fR)
+.TP 4
+\fB\N'45'\N'45'force\N'45'integration\fR \fIcommand\fR
+Proceed as if the first argument after \fB\N'45'\N'45'\fR was \fIcommand\fR\N'46' Possible values: \fIanalyze\fR, \fIant\fR, \fIbuck\fR, \fIgradle\fR, \fIgradlew\fR, \fIjava\fR, \fIjavac\fR, \fIcc\fR, \fIclang\fR, \fIgcc\fR, \fIclang++\fR, \fIc++\fR, \fIg++\fR, \fImake\fR, \fIconfigure\fR, \fIcmake\fR, \fIwaf\fR, \fImvn\fR, \fImvnw\fR, \fIndk\N'45'build\fR, \fIpython\fR, \fIxcodebuild\fR\N'46'
+.TP 4
+\fB\N'45'\N'45'help\fR
+Show this manual
+.TP 4
+\fB\N'45'\N'45'help\N'45'format\fR \fI{ auto | groff | pager | plain }\fR
+Show this help in the specified format\N'46' \fBauto\fR sets the format to \fBplain\fR if the environment variable \fBTERM\fR is "dumb" or undefined, and to \fBpager\fR otherwise\N'46' (default: \fIauto\fR)
+.TP 4
+\fB\N'45'\N'45'help\N'45'full\fR
+Show this manual with all internal options in the INTERNAL OPTIONS section
+.TP 4
+\fB\N'45'\N'45'load\N'45'average\fR,\fB\N'45'l\fR \fIfloat\fR
+Do not start new parallel jobs if the load average is greater than that specified (Buck and make only)
+.TP 4
+\fB\N'45'\N'45'print\N'45'logs\fR
+Activates: Also log messages to stdout and stderr (Conversely: \fB\N'45'\N'45'no\N'45'print\N'45'logs\fR)
+.TP 4
+\fB\N'45'\N'45'project\N'45'root\fR,\fB\N'45'C\fR \fIdir\fR
+Specify the root directory of the project (default: \fI/home/weimer/src/infer\N'45'linux64\N'45'v0\N'46'13\N'46'0\fR)
+.TP 4
+\fB\N'45'\N'45'results\N'45'dir\fR,\fB\N'45'o\fR \fIdir\fR
+Write results and internal files in the specified directory (default: \fI/home/weimer/src/infer\N'45'linux64\N'45'v0\N'46'13\N'46'0/infer\N'45'out\fR)
+.TP 4
+\fB\N'45'\N'45'skip\N'45'analysis\N'45'in\N'45'path\fR \fI+path_prefix_OCaml_regex\fR
+Ignore files whose path matches the given prefix (can be specified multiple times)
+.TP 4
+\fB\N'45'\N'45'\fR
+Stop argument processing, use remaining arguments as a build command
+.SH BUCK COMPILATION DATABASE OPTIONS
+.TP 4
+\fB\N'45'\N'45'buck\N'45'compilation\N'45'database\fR \fI{ no\N'45'deps | deps }\fR
+Buck integration using the compilation database, with or without dependencies\N'46'
+.TP 4
+\fB\N'45'\N'45'buck\N'45'compilation\N'45'database\N'45'depth\fR \fIint\fR
+Depth of dependencies used by the \fB\N'45'\N'45'buck\N'45'compilation\N'45'database deps\fR option\N'46' By default, all recursive dependencies are captured\N'46'
+.SH BUCK FLAVORS OPTIONS
+.TP 4
+\fB\N'45'\N'45'append\N'45'buck\N'45'flavors\fR \fI+string\fR
+Additional Buck flavors to append to targets discovered by the \fB\N'45'\N'45'buck\N'45'compilation\N'45'database\fR option\N'46'
+.TP 4
+\fB\N'45'\N'45'buck\N'45'blacklist\fR \fIregex\fR
+Skip analysis of files matched by the specified regular expression
+.TP 4
+\fB\N'45'\N'45'flavors\fR
+Activates: Buck integration using Buck flavors (clang only), eg \fI`infer \N'45'\N'45'flavors \N'45'\N'45' buck build //foo:bar#infer`\fR (Conversely: \fB\N'45'\N'45'no\N'45'flavors\fR)
+.TP 4
+\fB\N'45'\N'45'Xbuck\fR \fI+string\fR
+Pass values as command\N'45'line arguments to invocations of \fI`buck build`\fR
+.TP 4
+\fB\N'45'\N'45'xcode\N'45'developer\N'45'dir\fR \fIXCODE_DEVELOPER_DIR\fR
+Specify the path to Xcode developer directory
+.SH BUCK FOR JAVA OPTIONS
+.TP 4
+\fB\N'45'\N'45'buck\N'45'out\fR \fIdir\fR
+Specify the root directory of buck\N'45'out
+.SH CLANG LINTERS OPTIONS
+.TP 4
+\fB\N'45'\N'45'debug\N'45'level\N'45'linters\fR \fIint\fR
+Debug level for the linters\N'46' See \fB\N'45'\N'45'debug\N'45'level\fR for accepted values\N'46' (default: \fI0\fR)
+.TP 4
+\fB\N'45'\N'45'no\N'45'default\N'45'linters\fR
+Deactivates: Use the default linters for the analysis\N'46' (Conversely: \fB\N'45'\N'45'default\N'45'linters\fR)
+.TP 4
+\fB\N'45'\N'45'iphoneos\N'45'target\N'45'sdk\N'45'version\fR \fIstring\fR
+Specify the target SDK version to use for iphoneos
+.TP 4
+\fB\N'45'\N'45'iphoneos\N'45'target\N'45'sdk\N'45'version\N'45'path\N'45'regex\fR \fI+string\fR
+To pass a specific target SDK version to use for iphoneos in a particular path, with the format path:version (can be specified multiple times)
+.TP 4
+\fB\N'45'\N'45'linter\fR \fIstring\fR
+From the linters available, only run this one linter\N'46' (Useful together with \fB\N'45'\N'45'linters\N'45'developer\N'45'mode\fR)
+.TP 4
+\fB\N'45'\N'45'linters\N'45'def\N'45'file\fR \fI+file\fR
+Specify the file containing linters definition (e\N'46'g\N'46' \N'39'linters\N'46'al\N'39')
+.TP 4
+\fB\N'45'\N'45'linters\N'45'def\N'45'folder\fR \fI+dir\fR
+Specify the folder containing linters files with extension \N'46'al
+.TP 4
+\fB\N'45'\N'45'linters\N'45'developer\N'45'mode\fR
+Activates: Debug mode for developing new linters\N'46' (Sets the analyzer to \fBlinters\fR; also sets \fB\N'45'\N'45'debug\fR, \fB\N'45'\N'45'debug\N'45'level\N'45'linters 2\fR, \fB\N'45'\N'45'developer\N'45'mode\fR, and unsets \fB\N'45'\N'45'allowed\N'45'failures\fR and \fB\N'45'\N'45'default\N'45'linters\fR\N'46' (Conversely: \fB\N'45'\N'45'no\N'45'linters\N'45'developer\N'45'mode\fR)
+.TP 4
+\fB\N'45'\N'45'linters\N'45'doc\N'45'url\fR \fI+string\fR
+Specify custom documentation URL for some linter that overrides the default one\N'46' Useful if your project has specific ways of fixing a lint error that is not true in general or public info\N'46' Format: linter_name:doc_url\N'46'
+.TP 4
+\fB\N'45'\N'45'linters\N'45'ignore\N'45'clang\N'45'failures\fR
+Activates: Continue linting files even if some compilation fails\N'46' (Conversely: \fB\N'45'\N'45'no\N'45'linters\N'45'ignore\N'45'clang\N'45'failures\fR)
+.TP 4
+\fB\N'45'\N'45'linters\N'45'validate\N'45'syntax\N'45'only\fR
+Activates: Validate syntax of AL files, then emit possible errors in JSON format to stdout (Conversely: \fB\N'45'\N'45'no\N'45'linters\N'45'validate\N'45'syntax\N'45'only\fR)
+.SH CLANG OPTIONS
+.TP 4
+\fB\N'45'\N'45'clang\N'45'biniou\N'45'file\fR \fIfile\fR
+Specify a file containing the AST of the program, in biniou format
+.TP 4
+\fB\N'45'\N'45'clang\N'45'frontend\N'45'action\fR \fI{ lint | capture | lint_and_capture }\fR
+Specify whether the clang frontend should capture or lint or both\N'46'
+.TP 4
+\fB\N'45'\N'45'compilation\N'45'database\fR \fI+path\fR
+File that contain compilation commands (can be specified multiple times)
+.TP 4
+\fB\N'45'\N'45'compilation\N'45'database\N'45'escaped\fR \fI+path\fR
+File that contain compilation commands where all entries are escaped for the shell, eg coming from Xcode (can be specified multiple times)
+.TP 4
+\fB\N'45'\N'45'compute\N'45'analytics\fR
+Activates: Emit analytics as info\N'45'level issues, like component kit line count and component kit file cyclomatic complexity (Conversely: \fB\N'45'\N'45'no\N'45'compute\N'45'analytics\fR)
+.TP 4
+\fB\N'45'\N'45'no\N'45'cxx\fR
+Deactivates: Analyze C++ methods (Conversely: \fB\N'45'\N'45'cxx\fR)
+.TP 4
+\fB\N'45'\N'45'no\N'45'cxx\N'45'infer\N'45'headers\fR
+Deactivates: Include C++ header models during compilation, set by \fB\N'45'\N'45'cxx\fR\N'46' Infer swaps some C++ headers for its own in order to get a better model of, eg, the standard library\N'46' This can sometimes cause compilation failures\N'46' (Conversely: \fB\N'45'\N'45'cxx\N'45'infer\N'45'headers\fR)
+.TP 4
+\fB\N'45'\N'45'dump\N'45'duplicate\N'45'symbols\fR
+Activates: Dump all symbols with the same name that are defined in more than one file\N'46' (Conversely: \fB\N'45'\N'45'no\N'45'dump\N'45'duplicate\N'45'symbols\fR)
+.TP 4
+\fB\N'45'\N'45'frontend\N'45'tests\fR
+Activates: Save filename\N'46'ext\N'46'test\N'46'dot with the cfg in dotty format for frontend tests (also sets \fB\N'45'\N'45'print\N'45'types\fR) (Conversely: \fB\N'45'\N'45'no\N'45'frontend\N'45'tests\fR)
+.TP 4
+\fB\N'45'\N'45'headers\fR
+Activates: Analyze code in header files (Conversely: \fB\N'45'\N'45'no\N'45'headers\fR)
+.TP 4
+\fB\N'45'\N'45'skip\N'45'translation\N'45'headers\fR \fI+path_prefix\fR
+Ignore headers whose path matches the given prefix
+.TP 4
+\fB\N'45'\N'45'no\N'45'xcpretty\fR
+Deactivates: Infer will use xcpretty together with xcodebuild to analyze an iOS app\N'46' xcpretty just needs to be in the path, infer command is still just \fI`infer \N'45'\N'45' <xcodebuild command>`\fR\N'46' (Recommended) (Conversely: \fB\N'45'\N'45'xcpretty\fR)
+.SH JAVA OPTIONS
+.TP 4
+\fB\N'45'\N'45'bootclasspath\fR \fIstring\fR
+Specify the Java bootclasspath
+.TP 4
+\fB\N'45'\N'45'dependencies\fR
+Activates: Translate all the dependencies during the capture\N'46' The classes in the given jar file will be translated\N'46' No sources needed\N'46' (Conversely: \fB\N'45'\N'45'no\N'45'dependencies\fR)
+.TP 4
+\fB\N'45'\N'45'generated\N'45'classes\fR \fIpath\fR
+Specify where to load the generated class files
+.TP 4
+\fB\N'45'\N'45'java\N'45'jar\N'45'compiler\fR \fIpath\fR
+Specify the Java compiler jar used to generate the bytecode
+.SH ENVIRONMENT
+.TP 4
+\fBINFER_ARGS\fR, \fBINFERCONFIG\fR, \fBINFER_STRICT_MODE\fR
+See the ENVIRONMENT section in the manual of \fBinfer\fR(1)\N'46'
+.SH FILES
+.TP 4
+\fB\N'46'inferconfig\fR
+See the FILES section in the manual of \fBinfer\fR(1)\N'46'
+.SH SEE ALSO
+.P
+\fBinfer\N'45'analyze\fR(1), \fBinfer\N'45'compile\fR(1), \fBinfer\N'45'run\fR(1)

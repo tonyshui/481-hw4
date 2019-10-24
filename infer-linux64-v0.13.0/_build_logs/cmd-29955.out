@@ -1,0 +1,65 @@
+make[1]: Entering directory '/home/weimer/src/infer-linux64-v0.13.0/infer/src'
+TMPFILE=$(mktemp jbuild.common.tmp.XXXX); \
+INFER_GIT_COMMIT=$(git --work-tree=../.. --git-dir=../../.git rev-parse --short HEAD || printf "unknown"); \
+INFER_GIT_BRANCH=$(git --work-tree=../.. --git-dir=../../.git rev-parse --abbrev-ref HEAD || printf "unknown"); \
+sed \
+  -e 's|@EXTRA_CFLAGS[@]||g' \
+  -e 's|@INFER_MAJOR[@]|0|g' \
+  -e 's|@INFER_MINOR[@]|13|g' \
+  -e 's|@INFER_PATCH[@]|0|g' \
+  -e 's|@IS_FACEBOOK_TREE[@]|no|g' \
+  -e 's|@IS_RELEASE_TREE[@]|yes|g' \
+  -e "s|@INFER_GIT_COMMIT[@]|$INFER_GIT_COMMIT|g" \
+  -e "s|@INFER_GIT_BRANCH[@]|$INFER_GIT_BRANCH|g" \
+  -e "s|@BUILD_C_ANALYZERS[@]|yes|g" \
+  -e "s|@BUILD_JAVA_ANALYZERS[@]|yes|g" \
+  -e "s|@BUILD_PYTHON_ANALYZERS[@]|yes|g" \
+  -e "s|@OPAMSWITCH[@]|4.05.0|g" \
+  -e "s|@XCODE_SELECT[@]|no|g" \
+  -e "s|@INFER_MAN_LAST_MODIFIED[@]|2017-10-18|g" \
+  jbuild.common.in > "$TMPFILE"; \
+cat "$TMPFILE" > jbuild.common; \
+rm -f "$TMPFILE"
+TMPFILE=$(mktemp jbuild-workspace.tmp.XXXX); \
+INFER_GIT_COMMIT=$(git --work-tree=../.. --git-dir=../../.git rev-parse --short HEAD || printf "unknown"); \
+INFER_GIT_BRANCH=$(git --work-tree=../.. --git-dir=../../.git rev-parse --abbrev-ref HEAD || printf "unknown"); \
+sed \
+  -e 's|@EXTRA_CFLAGS[@]||g' \
+  -e 's|@INFER_MAJOR[@]|0|g' \
+  -e 's|@INFER_MINOR[@]|13|g' \
+  -e 's|@INFER_PATCH[@]|0|g' \
+  -e 's|@IS_FACEBOOK_TREE[@]|no|g' \
+  -e 's|@IS_RELEASE_TREE[@]|yes|g' \
+  -e "s|@INFER_GIT_COMMIT[@]|$INFER_GIT_COMMIT|g" \
+  -e "s|@INFER_GIT_BRANCH[@]|$INFER_GIT_BRANCH|g" \
+  -e "s|@BUILD_C_ANALYZERS[@]|yes|g" \
+  -e "s|@BUILD_JAVA_ANALYZERS[@]|yes|g" \
+  -e "s|@BUILD_PYTHON_ANALYZERS[@]|yes|g" \
+  -e "s|@OPAMSWITCH[@]|4.05.0|g" \
+  -e "s|@XCODE_SELECT[@]|no|g" \
+  -e "s|@INFER_MAN_LAST_MODIFIED[@]|2017-10-18|g" \
+  jbuild-workspace.in > "$TMPFILE"; \
+cat "$TMPFILE" > jbuild-workspace; \
+rm -f "$TMPFILE"
+TMPFILE=$(mktemp base/Version.ml.tmp.XXXX); \
+INFER_GIT_COMMIT=$(git --work-tree=../.. --git-dir=../../.git rev-parse --short HEAD || printf "unknown"); \
+INFER_GIT_BRANCH=$(git --work-tree=../.. --git-dir=../../.git rev-parse --abbrev-ref HEAD || printf "unknown"); \
+sed \
+  -e 's|@EXTRA_CFLAGS[@]||g' \
+  -e 's|@INFER_MAJOR[@]|0|g' \
+  -e 's|@INFER_MINOR[@]|13|g' \
+  -e 's|@INFER_PATCH[@]|0|g' \
+  -e 's|@IS_FACEBOOK_TREE[@]|no|g' \
+  -e 's|@IS_RELEASE_TREE[@]|yes|g' \
+  -e "s|@INFER_GIT_COMMIT[@]|$INFER_GIT_COMMIT|g" \
+  -e "s|@INFER_GIT_BRANCH[@]|$INFER_GIT_BRANCH|g" \
+  -e "s|@BUILD_C_ANALYZERS[@]|yes|g" \
+  -e "s|@BUILD_JAVA_ANALYZERS[@]|yes|g" \
+  -e "s|@BUILD_PYTHON_ANALYZERS[@]|yes|g" \
+  -e "s|@OPAMSWITCH[@]|4.05.0|g" \
+  -e "s|@XCODE_SELECT[@]|no|g" \
+  -e "s|@INFER_MAN_LAST_MODIFIED[@]|2017-10-18|g" \
+  base/Version.ml.in > "$TMPFILE"; \
+cat "$TMPFILE" > base/Version.ml; \
+rm -f "$TMPFILE"
+make[1]: Leaving directory '/home/weimer/src/infer-linux64-v0.13.0/infer/src'

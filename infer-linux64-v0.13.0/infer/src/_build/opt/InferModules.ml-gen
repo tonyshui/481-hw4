@@ -1,0 +1,827 @@
+(** @canonical InferModules.ALVar *)
+module ALVar = InferModules__ALVar
+
+(** @canonical InferModules.Abs *)
+module Abs = InferModules__Abs
+
+(** @canonical InferModules.AbsLoc *)
+module AbsLoc = InferModules__AbsLoc
+
+(** @canonical InferModules.Absarray *)
+module Absarray = InferModules__Absarray
+
+(** @canonical InferModules.AbstractDomain *)
+module AbstractDomain = InferModules__AbstractDomain
+
+(** @canonical InferModules.AbstractInterpreter *)
+module AbstractInterpreter = InferModules__AbstractInterpreter
+
+(** @canonical InferModules.AbstractInterpreterTests *)
+module AbstractInterpreterTests = InferModules__AbstractInterpreterTests
+
+(** @canonical InferModules.AccessPath *)
+module AccessPath = InferModules__AccessPath
+
+(** @canonical InferModules.AccessPathDomains *)
+module AccessPathDomains = InferModules__AccessPathDomains
+
+(** @canonical InferModules.AccessPathTestUtils *)
+module AccessPathTestUtils = InferModules__AccessPathTestUtils
+
+(** @canonical InferModules.AccessPathTests *)
+module AccessPathTests = InferModules__AccessPathTests
+
+(** @canonical InferModules.AccessTree *)
+module AccessTree = InferModules__AccessTree
+
+(** @canonical InferModules.AccessTreeTests *)
+module AccessTreeTests = InferModules__AccessTreeTests
+
+(** @canonical InferModules.AddressTaken *)
+module AddressTaken = InferModules__AddressTaken
+
+(** @canonical InferModules.AddressTakenTests *)
+module AddressTakenTests = InferModules__AddressTakenTests
+
+(** @canonical InferModules.AnalyzerTester *)
+module AnalyzerTester = InferModules__AnalyzerTester
+
+(** @canonical InferModules.AndroidFramework *)
+module AndroidFramework = InferModules__AndroidFramework
+
+(** @canonical InferModules.Annot *)
+module Annot = InferModules__Annot
+
+(** @canonical InferModules.AnnotReachabilityDomain *)
+module AnnotReachabilityDomain = InferModules__AnnotReachabilityDomain
+
+(** @canonical InferModules.AnnotatedSignature *)
+module AnnotatedSignature = InferModules__AnnotatedSignature
+
+(** @canonical InferModules.AnnotationReachability *)
+module AnnotationReachability = InferModules__AnnotationReachability
+
+(** @canonical InferModules.Annotations *)
+module Annotations = InferModules__Annotations
+
+(** @canonical InferModules.ArrayBlk *)
+module ArrayBlk = InferModules__ArrayBlk
+
+(** @canonical InferModules.Ast_expressions *)
+module Ast_expressions = InferModules__Ast_expressions
+
+(** @canonical InferModules.Attribute *)
+module Attribute = InferModules__Attribute
+
+(** @canonical InferModules.Attributes *)
+module Attributes = InferModules__Attributes
+
+(** @canonical InferModules.BUILTINS *)
+module BUILTINS = InferModules__BUILTINS
+
+(** @canonical InferModules.Binop *)
+module Binop = InferModules__Binop
+
+(** @canonical InferModules.BoundedCallTree *)
+module BoundedCallTree = InferModules__BoundedCallTree
+
+(** @canonical InferModules.BoundedCallTreeTests *)
+module BoundedCallTreeTests = InferModules__BoundedCallTreeTests
+
+(** @canonical InferModules.Buck *)
+module Buck = InferModules__Buck
+
+(** @canonical InferModules.Buckets *)
+module Buckets = InferModules__Buckets
+
+(** @canonical InferModules.BufferOverrunChecker *)
+module BufferOverrunChecker = InferModules__BufferOverrunChecker
+
+(** @canonical InferModules.BufferOverrunDomain *)
+module BufferOverrunDomain = InferModules__BufferOverrunDomain
+
+(** @canonical InferModules.BufferOverrunProofObligations *)
+module BufferOverrunProofObligations = InferModules__BufferOverrunProofObligations
+
+(** @canonical InferModules.BufferOverrunSemantics *)
+module BufferOverrunSemantics = InferModules__BufferOverrunSemantics
+
+(** @canonical InferModules.BufferOverrunTrace *)
+module BufferOverrunTrace = InferModules__BufferOverrunTrace
+
+(** @canonical InferModules.Builtin *)
+module Builtin = InferModules__Builtin
+
+(** @canonical InferModules.BuiltinDecl *)
+module BuiltinDecl = InferModules__BuiltinDecl
+
+(** @canonical InferModules.BuiltinDefn *)
+module BuiltinDefn = InferModules__BuiltinDefn
+
+(** @canonical InferModules.CArithmetic_trans *)
+module CArithmetic_trans = InferModules__CArithmetic_trans
+
+(** @canonical InferModules.CAst_utils *)
+module CAst_utils = InferModules__CAst_utils
+
+(** @canonical InferModules.CContext *)
+module CContext = InferModules__CContext
+
+(** @canonical InferModules.CEnum_decl *)
+module CEnum_decl = InferModules__CEnum_decl
+
+(** @canonical InferModules.CField_decl *)
+module CField_decl = InferModules__CField_decl
+
+(** @canonical InferModules.CFrontend *)
+module CFrontend = InferModules__CFrontend
+
+(** @canonical InferModules.CFrontend_checkers *)
+module CFrontend_checkers = InferModules__CFrontend_checkers
+
+(** @canonical InferModules.CFrontend_checkers_main *)
+module CFrontend_checkers_main = InferModules__CFrontend_checkers_main
+
+(** @canonical InferModules.CFrontend_config *)
+module CFrontend_config = InferModules__CFrontend_config
+
+(** @canonical InferModules.CFrontend_decl *)
+module CFrontend_decl = InferModules__CFrontend_decl
+
+(** @canonical InferModules.CFrontend_errors *)
+module CFrontend_errors = InferModules__CFrontend_errors
+
+(** @canonical InferModules.CFrontend_errorsTests *)
+module CFrontend_errorsTests = InferModules__CFrontend_errorsTests
+
+(** @canonical InferModules.CGeneral_utils *)
+module CGeneral_utils = InferModules__CGeneral_utils
+
+(** @canonical InferModules.CIssue *)
+module CIssue = InferModules__CIssue
+
+(** @canonical InferModules.CLintersContext *)
+module CLintersContext = InferModules__CLintersContext
+
+(** @canonical InferModules.CLocation *)
+module CLocation = InferModules__CLocation
+
+(** @canonical InferModules.CMethod_signature *)
+module CMethod_signature = InferModules__CMethod_signature
+
+(** @canonical InferModules.CMethod_trans *)
+module CMethod_trans = InferModules__CMethod_trans
+
+(** @canonical InferModules.CModule_type *)
+module CModule_type = InferModules__CModule_type
+
+(** @canonical InferModules.CPredicates *)
+module CPredicates = InferModules__CPredicates
+
+(** @canonical InferModules.CProcname *)
+module CProcname = InferModules__CProcname
+
+(** @canonical InferModules.CTL *)
+module CTL = InferModules__CTL
+
+(** @canonical InferModules.CTLExceptions *)
+module CTLExceptions = InferModules__CTLExceptions
+
+(** @canonical InferModules.CTLParserHelper *)
+module CTLParserHelper = InferModules__CTLParserHelper
+
+(** @canonical InferModules.CTrans *)
+module CTrans = InferModules__CTrans
+
+(** @canonical InferModules.CTrans_models *)
+module CTrans_models = InferModules__CTrans_models
+
+(** @canonical InferModules.CTrans_utils *)
+module CTrans_utils = InferModules__CTrans_utils
+
+(** @canonical InferModules.CType *)
+module CType = InferModules__CType
+
+(** @canonical InferModules.CType_decl *)
+module CType_decl = InferModules__CType_decl
+
+(** @canonical InferModules.CType_to_sil_type *)
+module CType_to_sil_type = InferModules__CType_to_sil_type
+
+(** @canonical InferModules.CVar_decl *)
+module CVar_decl = InferModules__CVar_decl
+
+(** @canonical InferModules.CallFlags *)
+module CallFlags = InferModules__CallFlags
+
+(** @canonical InferModules.CallSite *)
+module CallSite = InferModules__CallSite
+
+(** @canonical InferModules.Callbacks *)
+module Callbacks = InferModules__Callbacks
+
+(** @canonical InferModules.Capture *)
+module Capture = InferModules__Capture
+
+(** @canonical InferModules.CaptureCompilationDatabase *)
+module CaptureCompilationDatabase = InferModules__CaptureCompilationDatabase
+
+(** @canonical InferModules.Cfg *)
+module Cfg = InferModules__Cfg
+
+(** @canonical InferModules.Cg *)
+module Cg = InferModules__Cg
+
+(** @canonical InferModules.Checkers *)
+module Checkers = InferModules__Checkers
+
+(** @canonical InferModules.CiOSVersionNumbers *)
+module CiOSVersionNumbers = InferModules__CiOSVersionNumbers
+
+(** @canonical InferModules.CiOSVersionNumbersTests *)
+module CiOSVersionNumbersTests = InferModules__CiOSVersionNumbersTests
+
+(** @canonical InferModules.Clang *)
+module Clang = InferModules__Clang
+
+(** @canonical InferModules.ClangCommand *)
+module ClangCommand = InferModules__ClangCommand
+
+(** @canonical InferModules.ClangPointers *)
+module ClangPointers = InferModules__ClangPointers
+
+(** @canonical InferModules.ClangQuotes *)
+module ClangQuotes = InferModules__ClangQuotes
+
+(** @canonical InferModules.ClangTaintAnalysis *)
+module ClangTaintAnalysis = InferModules__ClangTaintAnalysis
+
+(** @canonical InferModules.ClangTests *)
+module ClangTests = InferModules__ClangTests
+
+(** @canonical InferModules.ClangTrace *)
+module ClangTrace = InferModules__ClangTrace
+
+(** @canonical InferModules.ClangWrapper *)
+module ClangWrapper = InferModules__ClangWrapper
+
+(** @canonical InferModules.Clang_ast_extend *)
+module Clang_ast_extend = InferModules__Clang_ast_extend
+
+(** @canonical InferModules.Cluster *)
+module Cluster = InferModules__Cluster
+
+(** @canonical InferModules.ClusterMakefile *)
+module ClusterMakefile = InferModules__ClusterMakefile
+
+(** @canonical InferModules.CommandDoc *)
+module CommandDoc = InferModules__CommandDoc
+
+(** @canonical InferModules.CommandLineOption *)
+module CommandLineOption = InferModules__CommandLineOption
+
+(** @canonical InferModules.CompilationDatabase *)
+module CompilationDatabase = InferModules__CompilationDatabase
+
+(** @canonical InferModules.ComponentKit *)
+module ComponentKit = InferModules__ComponentKit
+
+(** @canonical InferModules.Config *)
+module Config = InferModules__Config
+
+(** @canonical InferModules.Const *)
+module Const = InferModules__Const
+
+(** @canonical InferModules.ConstantPropagation *)
+module ConstantPropagation = InferModules__ConstantPropagation
+
+(** @canonical InferModules.Crashcontext *)
+module Crashcontext = InferModules__Crashcontext
+
+(** @canonical InferModules.Ctl_lexer *)
+module Ctl_lexer = InferModules__Ctl_lexer
+
+(** @canonical InferModules.Ctl_parser *)
+module Ctl_parser = InferModules__Ctl_parser
+
+(** @canonical InferModules.Ctl_parser_types *)
+module Ctl_parser_types = InferModules__Ctl_parser_types
+
+(** @canonical InferModules.DB *)
+module DB = InferModules__DB
+
+(** @canonical InferModules.Dataflow *)
+module Dataflow = InferModules__Dataflow
+
+(** @canonical InferModules.DecompiledExp *)
+module DecompiledExp = InferModules__DecompiledExp
+
+(** @canonical InferModules.Die *)
+module Die = InferModules__Die
+
+(** @canonical InferModules.Diff *)
+module Diff = InferModules__Diff
+
+(** @canonical InferModules.Differential *)
+module Differential = InferModules__Differential
+
+(** @canonical InferModules.DifferentialFilters *)
+module DifferentialFilters = InferModules__DifferentialFilters
+
+(** @canonical InferModules.DifferentialFiltersTests *)
+module DifferentialFiltersTests = InferModules__DifferentialFiltersTests
+
+(** @canonical InferModules.DifferentialTests *)
+module DifferentialTests = InferModules__DifferentialTests
+
+(** @canonical InferModules.DifferentialTestsUtils *)
+module DifferentialTestsUtils = InferModules__DifferentialTestsUtils
+
+(** @canonical InferModules.Dom *)
+module Dom = InferModules__Dom
+
+(** @canonical InferModules.Dotty *)
+module Dotty = InferModules__Dotty
+
+(** @canonical InferModules.Driver *)
+module Driver = InferModules__Driver
+
+(** @canonical InferModules.Epilogues *)
+module Epilogues = InferModules__Epilogues
+
+(** @canonical InferModules.Eradicate *)
+module Eradicate = InferModules__Eradicate
+
+(** @canonical InferModules.EradicateChecks *)
+module EradicateChecks = InferModules__EradicateChecks
+
+(** @canonical InferModules.Errdesc *)
+module Errdesc = InferModules__Errdesc
+
+(** @canonical InferModules.Errlog *)
+module Errlog = InferModules__Errlog
+
+(** @canonical InferModules.Escape *)
+module Escape = InferModules__Escape
+
+(** @canonical InferModules.Exceptions *)
+module Exceptions = InferModules__Exceptions
+
+(** @canonical InferModules.Exe_env *)
+module Exe_env = InferModules__Exe_env
+
+(** @canonical InferModules.Exp *)
+module Exp = InferModules__Exp
+
+(** @canonical InferModules.FbThreadSafety *)
+module FbThreadSafety = InferModules__FbThreadSafety
+
+(** @canonical InferModules.FbTraceCalls *)
+module FbTraceCalls = InferModules__FbTraceCalls
+
+(** @canonical InferModules.FormalMap *)
+module FormalMap = InferModules__FormalMap
+
+(** @canonical InferModules.FragmentRetainsViewChecker *)
+module FragmentRetainsViewChecker = InferModules__FragmentRetainsViewChecker
+
+(** @canonical InferModules.Harness *)
+module Harness = InferModules__Harness
+
+(** @canonical InferModules.HilExp *)
+module HilExp = InferModules__HilExp
+
+(** @canonical InferModules.HilInstr *)
+module HilInstr = InferModules__HilInstr
+
+(** @canonical InferModules.IdAccessPathMapDomain *)
+module IdAccessPathMapDomain = InferModules__IdAccessPathMapDomain
+
+(** @canonical InferModules.Ident *)
+module Ident = InferModules__Ident
+
+(** @canonical InferModules.Idenv *)
+module Idenv = InferModules__Idenv
+
+(** @canonical InferModules.ImmutableChecker *)
+module ImmutableChecker = InferModules__ImmutableChecker
+
+(** @canonical InferModules.InferAnalyze *)
+module InferAnalyze = InferModules__InferAnalyze
+
+(** @canonical InferModules.InferPrint *)
+module InferPrint = InferModules__InferPrint
+
+(** @canonical InferModules.Inferconfig *)
+module Inferconfig = InferModules__Inferconfig
+
+(** @canonical InferModules.Inhabit *)
+module Inhabit = InferModules__Inhabit
+
+(** @canonical InferModules.IntLit *)
+module IntLit = InferModules__IntLit
+
+(** @canonical InferModules.Interproc *)
+module Interproc = InferModules__Interproc
+
+(** @canonical InferModules.Io_infer *)
+module Io_infer = InferModules__Io_infer
+
+(** @canonical InferModules.IssueType *)
+module IssueType = InferModules__IssueType
+
+(** @canonical InferModules.Itv *)
+module Itv = InferModules__Itv
+
+(** @canonical InferModules.JAnnotation *)
+module JAnnotation = InferModules__JAnnotation
+
+(** @canonical InferModules.JClasspath *)
+module JClasspath = InferModules__JClasspath
+
+(** @canonical InferModules.JConfig *)
+module JConfig = InferModules__JConfig
+
+(** @canonical InferModules.JContext *)
+module JContext = InferModules__JContext
+
+(** @canonical InferModules.JFrontend *)
+module JFrontend = InferModules__JFrontend
+
+(** @canonical InferModules.JMain *)
+module JMain = InferModules__JMain
+
+(** @canonical InferModules.JTrans *)
+module JTrans = InferModules__JTrans
+
+(** @canonical InferModules.JTransExn *)
+module JTransExn = InferModules__JTransExn
+
+(** @canonical InferModules.JTransType *)
+module JTransType = InferModules__JTransType
+
+(** @canonical InferModules.JavaTaintAnalysis *)
+module JavaTaintAnalysis = InferModules__JavaTaintAnalysis
+
+(** @canonical InferModules.JavaTrace *)
+module JavaTrace = InferModules__JavaTrace
+
+(** @canonical InferModules.Javac *)
+module Javac = InferModules__Javac
+
+(** @canonical InferModules.JoinState *)
+module JoinState = InferModules__JoinState
+
+(** @canonical InferModules.Latex *)
+module Latex = InferModules__Latex
+
+(** @canonical InferModules.LintIssues *)
+module LintIssues = InferModules__LintIssues
+
+(** @canonical InferModules.Liveness *)
+module Liveness = InferModules__Liveness
+
+(** @canonical InferModules.LivenessTests *)
+module LivenessTests = InferModules__LivenessTests
+
+(** @canonical InferModules.Localise *)
+module Localise = InferModules__Localise
+
+(** @canonical InferModules.Location *)
+module Location = InferModules__Location
+
+(** @canonical InferModules.Logging *)
+module Logging = InferModules__Logging
+
+(** @canonical InferModules.LowerHil *)
+module LowerHil = InferModules__LowerHil
+
+(** @canonical InferModules.Mangled *)
+module Mangled = InferModules__Mangled
+
+(** @canonical InferModules.MarkupFormatter *)
+module MarkupFormatter = InferModules__MarkupFormatter
+
+(** @canonical InferModules.Match *)
+module Match = InferModules__Match
+
+(** @canonical InferModules.Maven *)
+module Maven = InferModules__Maven
+
+(** @canonical InferModules.MergeCapture *)
+module MergeCapture = InferModules__MergeCapture
+
+(** @canonical InferModules.MergeResults *)
+module MergeResults = InferModules__MergeResults
+
+(** @canonical InferModules.Mleak_buckets *)
+module Mleak_buckets = InferModules__Mleak_buckets
+
+(** @canonical InferModules.ModelTables *)
+module ModelTables = InferModules__ModelTables
+
+(** @canonical InferModules.Models *)
+module Models = InferModules__Models
+
+(** @canonical InferModules.Multilinks *)
+module Multilinks = InferModules__Multilinks
+
+(** @canonical InferModules.NodePrinter *)
+module NodePrinter = InferModules__NodePrinter
+
+(** @canonical InferModules.NullabilityCheck *)
+module NullabilityCheck = InferModules__NullabilityCheck
+
+(** @canonical InferModules.NullabilityPreanalysis *)
+module NullabilityPreanalysis = InferModules__NullabilityPreanalysis
+
+(** @canonical InferModules.NullabilitySuggest *)
+module NullabilitySuggest = InferModules__NullabilitySuggest
+
+(** @canonical InferModules.ObjcCategory_decl *)
+module ObjcCategory_decl = InferModules__ObjcCategory_decl
+
+(** @canonical InferModules.ObjcInterface_decl *)
+module ObjcInterface_decl = InferModules__ObjcInterface_decl
+
+(** @canonical InferModules.ObjcProperty_decl *)
+module ObjcProperty_decl = InferModules__ObjcProperty_decl
+
+(** @canonical InferModules.ObjcProtocol_decl *)
+module ObjcProtocol_decl = InferModules__ObjcProtocol_decl
+
+(** @canonical InferModules.Objc_models *)
+module Objc_models = InferModules__Objc_models
+
+(** @canonical InferModules.Ondemand *)
+module Ondemand = InferModules__Ondemand
+
+(** @canonical InferModules.OndemandCapture *)
+module OndemandCapture = InferModules__OndemandCapture
+
+(** @canonical InferModules.Passthrough *)
+module Passthrough = InferModules__Passthrough
+
+(** @canonical InferModules.Paths *)
+module Paths = InferModules__Paths
+
+(** @canonical InferModules.PatternMatch *)
+module PatternMatch = InferModules__PatternMatch
+
+(** @canonical InferModules.PerfStats *)
+module PerfStats = InferModules__PerfStats
+
+(** @canonical InferModules.Pp *)
+module Pp = InferModules__Pp
+
+(** @canonical InferModules.Preanal *)
+module Preanal = InferModules__Preanal
+
+(** @canonical InferModules.PredSymb *)
+module PredSymb = InferModules__PredSymb
+
+(** @canonical InferModules.PrettyPrintable *)
+module PrettyPrintable = InferModules__PrettyPrintable
+
+(** @canonical InferModules.Printer *)
+module Printer = InferModules__Printer
+
+(** @canonical InferModules.PrintfArgs *)
+module PrintfArgs = InferModules__PrintfArgs
+
+(** @canonical InferModules.ProcAttributes *)
+module ProcAttributes = InferModules__ProcAttributes
+
+(** @canonical InferModules.ProcCfg *)
+module ProcCfg = InferModules__ProcCfg
+
+(** @canonical InferModules.ProcCfgTests *)
+module ProcCfgTests = InferModules__ProcCfgTests
+
+(** @canonical InferModules.ProcData *)
+module ProcData = InferModules__ProcData
+
+(** @canonical InferModules.Procdesc *)
+module Procdesc = InferModules__Procdesc
+
+(** @canonical InferModules.Process *)
+module Process = InferModules__Process
+
+(** @canonical InferModules.ProcessPool *)
+module ProcessPool = InferModules__ProcessPool
+
+(** @canonical InferModules.Prop *)
+module Prop = InferModules__Prop
+
+(** @canonical InferModules.PropUtil *)
+module PropUtil = InferModules__PropUtil
+
+(** @canonical InferModules.Propgraph *)
+module Propgraph = InferModules__Propgraph
+
+(** @canonical InferModules.Propset *)
+module Propset = InferModules__Propset
+
+(** @canonical InferModules.Prover *)
+module Prover = InferModules__Prover
+
+(** @canonical InferModules.Pvar *)
+module Pvar = InferModules__Pvar
+
+(** @canonical InferModules.PythonMain *)
+module PythonMain = InferModules__PythonMain
+
+(** @canonical InferModules.QualifiedCppName *)
+module QualifiedCppName = InferModules__QualifiedCppName
+
+(** @canonical InferModules.QualifiedCppNameTests *)
+module QualifiedCppNameTests = InferModules__QualifiedCppNameTests
+
+(** @canonical InferModules.QuandaryConfig *)
+module QuandaryConfig = InferModules__QuandaryConfig
+
+(** @canonical InferModules.QuandarySummary *)
+module QuandarySummary = InferModules__QuandarySummary
+
+(** @canonical InferModules.RacerD *)
+module RacerD = InferModules__RacerD
+
+(** @canonical InferModules.RacerDConfig *)
+module RacerDConfig = InferModules__RacerDConfig
+
+(** @canonical InferModules.RacerDDomain *)
+module RacerDDomain = InferModules__RacerDDomain
+
+(** @canonical InferModules.Rearrange *)
+module Rearrange = InferModules__Rearrange
+
+(** @canonical InferModules.RegisterCheckers *)
+module RegisterCheckers = InferModules__RegisterCheckers
+
+(** @canonical InferModules.RepeatedCallsChecker *)
+module RepeatedCallsChecker = InferModules__RepeatedCallsChecker
+
+(** @canonical InferModules.ReportDiff *)
+module ReportDiff = InferModules__ReportDiff
+
+(** @canonical InferModules.Reporting *)
+module Reporting = InferModules__Reporting
+
+(** @canonical InferModules.ResourceLeakDomain *)
+module ResourceLeakDomain = InferModules__ResourceLeakDomain
+
+(** @canonical InferModules.ResourceLeaks *)
+module ResourceLeaks = InferModules__ResourceLeaks
+
+(** @canonical InferModules.ResultsDir *)
+module ResultsDir = InferModules__ResultsDir
+
+(** @canonical InferModules.Scheduler *)
+module Scheduler = InferModules__Scheduler
+
+(** @canonical InferModules.SchedulerTests *)
+module SchedulerTests = InferModules__SchedulerTests
+
+(** @canonical InferModules.Serialization *)
+module Serialization = InferModules__Serialization
+
+(** @canonical InferModules.Sil *)
+module Sil = InferModules__Sil
+
+(** @canonical InferModules.SimpleChecker *)
+module SimpleChecker = InferModules__SimpleChecker
+
+(** @canonical InferModules.Sink *)
+module Sink = InferModules__Sink
+
+(** @canonical InferModules.SinkTrace *)
+module SinkTrace = InferModules__SinkTrace
+
+(** @canonical InferModules.Siof *)
+module Siof = InferModules__Siof
+
+(** @canonical InferModules.SiofDomain *)
+module SiofDomain = InferModules__SiofDomain
+
+(** @canonical InferModules.SiofTrace *)
+module SiofTrace = InferModules__SiofTrace
+
+(** @canonical InferModules.Source *)
+module Source = InferModules__Source
+
+(** @canonical InferModules.SourceFile *)
+module SourceFile = InferModules__SourceFile
+
+(** @canonical InferModules.Specs *)
+module Specs = InferModules__Specs
+
+(** @canonical InferModules.SqliteUtils *)
+module SqliteUtils = InferModules__SqliteUtils
+
+(** @canonical InferModules.Stacktrace *)
+module Stacktrace = InferModules__Stacktrace
+
+(** @canonical InferModules.StacktraceTests *)
+module StacktraceTests = InferModules__StacktraceTests
+
+(** @canonical InferModules.State *)
+module State = InferModules__State
+
+(** @canonical InferModules.StatisticsToolbox *)
+module StatisticsToolbox = InferModules__StatisticsToolbox
+
+(** @canonical InferModules.StatsAggregator *)
+module StatsAggregator = InferModules__StatsAggregator
+
+(** @canonical InferModules.Subtype *)
+module Subtype = InferModules__Subtype
+
+(** @canonical InferModules.Summary *)
+module Summary = InferModules__Summary
+
+(** @canonical InferModules.SymExec *)
+module SymExec = InferModules__SymExec
+
+(** @canonical InferModules.SymOp *)
+module SymOp = InferModules__SymOp
+
+(** @canonical InferModules.Tableaux *)
+module Tableaux = InferModules__Tableaux
+
+(** @canonical InferModules.Tabulation *)
+module Tabulation = InferModules__Tabulation
+
+(** @canonical InferModules.TaintAnalysis *)
+module TaintAnalysis = InferModules__TaintAnalysis
+
+(** @canonical InferModules.TaintSpec *)
+module TaintSpec = InferModules__TaintSpec
+
+(** @canonical InferModules.TaintTests *)
+module TaintTests = InferModules__TaintTests
+
+(** @canonical InferModules.Tasks *)
+module Tasks = InferModules__Tasks
+
+(** @canonical InferModules.Tenv *)
+module Tenv = InferModules__Tenv
+
+(** @canonical InferModules.Timeout *)
+module Timeout = InferModules__Timeout
+
+(** @canonical InferModules.Trace *)
+module Trace = InferModules__Trace
+
+(** @canonical InferModules.TraceElem *)
+module TraceElem = InferModules__TraceElem
+
+(** @canonical InferModules.TraceTests *)
+module TraceTests = InferModules__TraceTests
+
+(** @canonical InferModules.TransferFunctions *)
+module TransferFunctions = InferModules__TransferFunctions
+
+(** @canonical InferModules.Typ *)
+module Typ = InferModules__Typ
+
+(** @canonical InferModules.TypeAnnotation *)
+module TypeAnnotation = InferModules__TypeAnnotation
+
+(** @canonical InferModules.TypeCheck *)
+module TypeCheck = InferModules__TypeCheck
+
+(** @canonical InferModules.TypeErr *)
+module TypeErr = InferModules__TypeErr
+
+(** @canonical InferModules.TypeOrigin *)
+module TypeOrigin = InferModules__TypeOrigin
+
+(** @canonical InferModules.TypeState *)
+module TypeState = InferModules__TypeState
+
+(** @canonical InferModules.Types_lexer *)
+module Types_lexer = InferModules__Types_lexer
+
+(** @canonical InferModules.Types_parser *)
+module Types_parser = InferModules__Types_parser
+
+(** @canonical InferModules.Uninit *)
+module Uninit = InferModules__Uninit
+
+(** @canonical InferModules.UninitDomain *)
+module UninitDomain = InferModules__UninitDomain
+
+(** @canonical InferModules.Unop *)
+module Unop = InferModules__Unop
+
+(** @canonical InferModules.Utils *)
+module Utils = InferModules__Utils
+
+(** @canonical InferModules.Var *)
+module Var = InferModules__Var
+
+(** @canonical InferModules.Version *)
+module Version = InferModules__Version
+
+(** @canonical InferModules.ZipLib *)
+module ZipLib = InferModules__ZipLib

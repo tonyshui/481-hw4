@@ -1,0 +1,11 @@
+make[1]: Entering directory '/home/weimer/src/infer-linux64-v0.13.0/infer/src'
+'infer-analyze' -> 'infer'
+'infer-capture' -> 'infer'
+'infer-compile' -> 'infer'
+'infer-explore' -> 'infer'
+'infer-report' -> 'infer'
+'infer-reportdiff' -> 'infer'
+'infer-run' -> 'infer'
+/usr/bin/install -c _build/opt/infer.exe /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer
+/usr/bin/install -c _build/opt/infer.exe /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer.exe
+make[1]: Leaving directory '/home/weimer/src/infer-linux64-v0.13.0/infer/src'

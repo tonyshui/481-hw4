@@ -1,0 +1,207 @@
+         ppx DB.pp.ml [opt]
+    ocamldep InferModules.depends.ocamldep-output [opt]
+    ocamlopt InferModules__Tasks.{cmx,o} [opt]
+    ocamlopt InferModules__MergeResults.{cmx,o} [opt]
+    ocamlopt InferModules__Stacktrace.{cmx,o} [opt]
+    ocamlopt InferModules__StacktraceTests.{cmx,o} [opt]
+    ocamlopt InferModules__StatsAggregator.{cmx,o} [opt]
+    ocamlopt InferModules__CaptureCompilationDatabase.{cmx,o} [opt]
+    ocamlopt InferModules__DB.{cmx,o} [opt]
+    ocamlopt InferModules__Serialization.{cmx,o} [opt]
+    ocamlopt InferModules__Multilinks.{cmx,o} [opt]
+    ocamlopt InferModules__DifferentialFilters.{cmx,o} [opt]
+    ocamlopt InferModules__Cluster.{cmx,o} [opt]
+    ocamlopt InferModules__Crashcontext.{cmx,o} [opt]
+File "backend/crashcontext.ml", line 53, characters 8-22:
+Warning 3: deprecated: InferStdlib.IStd.String.Map.add
+[since 2017-11] Use [set] instead
+    ocamlopt InferModules__MergeCapture.{cmx,o} [opt]
+    ocamlopt InferModules__ZipLib.{cmx,o} [opt]
+    ocamlopt InferModules__ReportDiff.{cmx,o} [opt]
+    ocamlopt InferModules__ClusterMakefile.{cmx,o} [opt]
+    ocamlopt InferModules__Typ.{cmx,o} [opt]
+    ocamlopt InferModules__CallSite.{cmx,o} [opt]
+    ocamlopt InferModules__BuiltinDecl.{cmx,o} [opt]
+    ocamlopt InferModules__CallFlags.{cmx,o} [opt]
+    ocamlopt InferModules__DifferentialFiltersTests.{cmx,o} [opt]
+    ocamlopt InferModules__Const.{cmx,o} [opt]
+    ocamlopt InferModules__Cg.{cmx,o} [opt]
+    ocamlopt InferModules__Clang_ast_extend.{cmx,o} [opt]
+    ocamlopt InferModules__Objc_models.{cmx,o} [opt]
+    ocamlopt InferModules__Io_infer.{cmx,o} [opt]
+    ocamlopt InferModules__Pvar.{cmx,o} [opt]
+    ocamlopt InferModules__Passthrough.{cmx,o} [opt]
+    ocamlopt InferModules__TraceElem.{cmx,o} [opt]
+    ocamlopt InferModules__Tenv.{cmx,o} [opt]
+    ocamlopt InferModules__AnnotReachabilityDomain.{cmx,o} [opt]
+    ocamlopt InferModules__Mleak_buckets.{cmx,o} [opt]
+    ocamlopt InferModules__CFrontend_config.{cmx,o} [opt]
+    ocamlopt InferModules__Itv.{cmx,o} [opt]
+    ocamlopt InferModules__CLintersContext.{cmx,o} [opt]
+    ocamlopt InferModules__Inferconfig.{cmx,o} [opt]
+File "backend/inferconfig.ml", line 109, characters 12-26:
+Warning 3: deprecated: InferStdlib.IStd.String.Map.add
+[since 2017-11] Use [set] instead
+    ocamlopt InferModules__Subtype.{cmx,o} [opt]
+    ocamlopt InferModules__ClangCommand.{cmx,o} [opt]
+    ocamlopt InferModules__JClasspath.{cmx,o} [opt]
+File "java/jClasspath.ml", line 133, characters 2-16:
+Warning 3: deprecated: InferStdlib.IStd.String.Map.add
+[since 2017-11] Use [set] instead
+    ocamlopt InferModules__DecompiledExp.{cmx,o} [opt]
+    ocamlopt InferModules__BufferOverrunProofObligations.{cmx,o} [opt]
+    ocamlopt InferModules__PredSymb.{cmx,o} [opt]
+    ocamlopt InferModules__Exp.{cmx,o} [opt]
+    ocamlopt InferModules__Var.{cmx,o} [opt]
+    ocamlopt InferModules__UninitDomain.{cmx,o} [opt]
+    ocamlopt InferModules__AccessPath.{cmx,o} [opt]
+    ocamlopt InferModules__AccessPathDomains.{cmx,o} [opt]
+    ocamlopt InferModules__AbsLoc.{cmx,o} [opt]
+    ocamlopt InferModules__AccessPathTestUtils.{cmx,o} [opt]
+    ocamlopt InferModules__AccessTree.{cmx,o} [opt]
+    ocamlopt InferModules__IdAccessPathMapDomain.{cmx,o} [opt]
+    ocamlopt InferModules__HilExp.{cmx,o} [opt]
+    ocamlopt InferModules__AccessPathTests.{cmx,o} [opt]
+    ocamlopt InferModules__ArrayBlk.{cmx,o} [opt]
+    ocamlopt InferModules__Sil.{cmx,o} [opt]
+File "IR/Sil.ml", line 1372, characters 13-23:
+Warning 3: deprecated: InferStdlib.IStd.List.dedup
+[since 2017-04] Use [dedup_and_sort] instead
+File "IR/Sil.ml", line 1379, characters 39-49:
+Warning 3: deprecated: InferStdlib.IStd.List.dedup
+[since 2017-04] Use [dedup_and_sort] instead
+    ocamlopt InferModules__Sink.{cmx,o} [opt]
+    ocamlopt InferModules__AccessTreeTests.{cmx,o} [opt]
+    ocamlopt InferModules__BufferOverrunDomain.{cmx,o} [opt]
+    ocamlopt InferModules__HilInstr.{cmx,o} [opt]
+    ocamlopt InferModules__Localise.{cmx,o} [opt]
+    ocamlopt InferModules__Exceptions.{cmx,o} [opt]
+    ocamlopt InferModules__CIssue.{cmx,o} [opt]
+    ocamlopt InferModules__Prop.{cmx,o} [opt]
+    ocamlopt InferModules__Errlog.{cmx,o} [opt]
+File "IR/Errlog.ml", line 309, characters 22-36:
+Warning 3: deprecated: InferStdlib.IStd.String.Map.add
+[since 2017-11] Use [set] instead
+    ocamlopt InferModules__Propgraph.{cmx,o} [opt]
+    ocamlopt InferModules__Attribute.{cmx,o} [opt]
+    ocamlopt InferModules__Match.{cmx,o} [opt]
+    ocamlopt InferModules__LintIssues.{cmx,o} [opt]
+    ocamlopt InferModules__Propset.{cmx,o} [opt]
+    ocamlopt InferModules__ProcAttributes.{cmx,o} [opt]
+    ocamlopt InferModules__Attributes.{cmx,o} [opt]
+    ocamlopt InferModules__Absarray.{cmx,o} [opt]
+    ocamlopt InferModules__Procdesc.{cmx,o} [opt]
+    ocamlopt InferModules__ProcData.{cmx,o} [opt]
+    ocamlopt InferModules__FormalMap.{cmx,o} [opt]
+    ocamlopt InferModules__Annotations.{cmx,o} [opt]
+    ocamlopt InferModules__Source.{cmx,o} [opt]
+    ocamlopt InferModules__ProcCfg.{cmx,o} [opt]
+    ocamlopt InferModules__PropUtil.{cmx,o} [opt]
+    ocamlopt InferModules__Cfg.{cmx,o} [opt]
+    ocamlopt InferModules__Paths.{cmx,o} [opt]
+    ocamlopt InferModules__Scheduler.{cmx,o} [opt]
+    ocamlopt InferModules__TransferFunctions.{cmx,o} [opt]
+    ocamlopt InferModules__CAst_utils.{cmx,o} [opt]
+File "clang/cAst_utils.ml", line 102, characters 5-26:
+Warning 3: deprecated: InferModules.ClangPointers.Map.add
+[since 2017-11] Use [set] instead
+File "clang/cAst_utils.ml", line 108, characters 5-26:
+Warning 3: deprecated: InferModules.ClangPointers.Map.add
+[since 2017-11] Use [set] instead
+    ocamlopt InferModules__Trace.{cmx,o} [opt]
+    ocamlopt InferModules__ProcCfgTests.{cmx,o} [opt]
+    ocamlopt InferModules__Builtin.{cmx,o} [opt]
+    ocamlopt InferModules__Inhabit.{cmx,o} [opt]
+    ocamlopt InferModules__BufferOverrunSemantics.{cmx,o} [opt]
+    ocamlopt InferModules__CEnum_decl.{cmx,o} [opt]
+    ocamlopt InferModules__SchedulerTests.{cmx,o} [opt]
+    ocamlopt InferModules__State.{cmx,o} [opt]
+    ocamlopt InferModules__ObjcProtocol_decl.{cmx,o} [opt]
+    ocamlopt InferModules__CType.{cmx,o} [opt]
+    ocamlopt InferModules__Ctl_parser_types.{cmx,o} [opt]
+    ocamlopt InferModules__CMethod_signature.{cmx,o} [opt]
+    ocamlopt InferModules__Ast_expressions.{cmx,o} [opt]
+    ocamlopt InferModules__CType_to_sil_type.{cmx,o} [opt]
+    ocamlopt InferModules__TraceTests.{cmx,o} [opt]
+    ocamlopt InferModules__CGeneral_utils.{cmx,o} [opt]
+    ocamlopt InferModules__SinkTrace.{cmx,o} [opt]
+    ocamlopt InferModules__Buckets.{cmx,o} [opt]
+    ocamlopt InferModules__Types_parser.{cmx,o} [opt]
+    ocamlopt InferModules__ClangTrace.{cmx,o} [opt]
+    ocamlopt InferModules__CField_decl.{cmx,o} [opt]
+    ocamlopt InferModules__SiofTrace.{cmx,o} [opt]
+    ocamlopt InferModules__Types_lexer.{cmx,o} [opt]
+    ocamlopt InferModules__ObjcCategory_decl.{cmx,o} [opt]
+    ocamlopt InferModules__RacerDDomain.{cmx,o} [opt]
+    ocamlopt InferModules__ObjcInterface_decl.{cmx,o} [opt]
+    ocamlopt InferModules__SiofDomain.{cmx,o} [opt]
+    ocamlopt InferModules__Errdesc.{cmx,o} [opt]
+    ocamlopt InferModules__CArithmetic_trans.{cmx,o} [opt]
+    ocamlopt InferModules__Idenv.{cmx,o} [opt]
+    ocamlopt InferModules__Timeout.{cmx,o} [opt]
+    ocamlopt InferModules__CPredicates.{cmx,o} [opt]
+File "clang/cPredicates.ml", line 584, characters 27-41:
+Warning 3: deprecated: InferStdlib.IStd.String.Map.add
+[since 2017-11] Use [set] instead
+    ocamlopt InferModules__OndemandCapture.{cmx,o} [opt]
+    ocamlopt InferModules__PatternMatch.{cmx,o} [opt]
+    ocamlopt InferModules__Exe_env.{cmx,o} [opt]
+    ocamlopt InferModules__AndroidFramework.{cmx,o} [opt]
+    ocamlopt InferModules__AnnotatedSignature.{cmx,o} [opt]
+    ocamlopt InferModules__CTL.{cmx,o} [opt]
+    ocamlopt InferModules__Models.{cmx,o} [opt]
+File "eradicate/models.ml", line 54, characters 4-54:
+Warning 3: deprecated: InferStdlib.IStd.String.set
+[since 2017-10] Use [Bytes.set] instead
+    ocamlopt InferModules__TypeErr.{cmx,o} [opt]
+    ocamlopt InferModules__JavaTrace.{cmx,o} [opt]
+    ocamlopt InferModules__TypeOrigin.{cmx,o} [opt]
+    ocamlopt InferModules__QuandarySummary.{cmx,o} [opt]
+    ocamlopt InferModules__TypeAnnotation.{cmx,o} [opt]
+    ocamlopt InferModules__TaintSpec.{cmx,o} [opt]
+    ocamlopt InferModules__TypeState.{cmx,o} [opt]
+    ocamlopt InferModules__Ctl_parser.{cmx,o} [opt]
+    ocamlopt InferModules__Ctl_lexer.{cmx,o} [opt]
+    ocamlopt InferModules__CTLParserHelper.{cmx,o} [opt]
+    ocamlopt InferModules__Specs.{cmx,o} [opt]
+    ocamlopt InferModules__Reporting.{cmx,o} [opt]
+    ocamlopt InferModules__CTrans_models.{cmx,o} [opt]
+    ocamlopt InferModules__Printer.{cmx,o} [opt]
+    ocamlopt InferModules__CType_decl.{cmx,o} [opt]
+    ocamlopt InferModules__NodePrinter.{cmx,o} [opt]
+    ocamlopt InferModules__Checkers.{cmx,o} [opt]
+    ocamlopt InferModules__CProcname.{cmx,o} [opt]
+    ocamlopt InferModules__CContext.{cmx,o} [opt]
+    ocamlopt InferModules__LowerHil.{cmx,o} [opt]
+    ocamlopt InferModules__CLocation.{cmx,o} [opt]
+    ocamlopt InferModules__AbstractInterpreter.{cmx,o} [opt]
+    ocamlopt InferModules__EradicateChecks.{cmx,o} [opt]
+    ocamlopt InferModules__CModule_type.{cmx,o} [opt]
+    ocamlopt InferModules__Prover.{cmx,o} [opt]
+File "backend/prover.ml", line 837, characters 2-15:
+Warning 3: deprecated: module InferStdlib.IStd.Digest
+[since 2017-05] Use Md5 instead.
+File "backend/prover.ml", line 837, characters 17-28:
+Warning 3: deprecated: module InferStdlib.IStd.Digest
+[since 2017-05] Use Md5 instead.
+File "backend/prover.ml", line 837, characters 17-28:
+Warning 3: deprecated: InferStdlib.IStd.Digest.file
+[since 2017-07] blocking functions should be avoided. Use [file_blocking] if you really want this.
+    ocamlopt InferModules__CVar_decl.{cmx,o} [opt]
+    ocamlopt InferModules__AddressTaken.{cmx,o} [opt]
+    ocamlopt InferModules__CFrontend_checkers.{cmx,o} [opt]
+    ocamlopt InferModules__NullabilityPreanalysis.{cmx,o} [opt]
+    ocamlopt InferModules__AnalyzerTester.{cmx,o} [opt]
+    ocamlopt InferModules__JContext.{cmx,o} [opt]
+    ocamlopt InferModules__CMethod_trans.{cmx,o} [opt]
+    ocamlopt InferModules__Dotty.{cmx,o} [opt] (exit 2)
+(cd _build/opt && /home/weimer/.opam/4.05.0/bin/ocamlopt.opt -g -short-paths -safe-string -principal -strict-formats -strict-sequence -bin-annot -w +3+5+6+8+10+11+12+18+19+20+21+23+26+29+27+32+33+34+35+37+38+39+50+52+57-4-9-40-41-42-45-48 -open InferStdlib -open IStd -open InferGenerated -O3 -I /home/weimer/.opam/4.05.0/lib/ANSITerminal -I /home/weimer/.opam/4.05.0/lib/atd -I /home/weimer/.opam/4.05.0/lib/atdgen -I /home/weimer/.opam/4.05.0/lib/base -I /home/weimer/.opam/4.05.0/lib/base/caml -I /home/weimer/.opam/4.05.0/lib/base/md5 -I /home/weimer/.opam/4.05.0/lib/base/shadow_stdlib -I /home/weimer/.opam/4.05.0/lib/bin_prot -I /home/weimer/.opam/4.05.0/lib/bin_prot/shape -I /home/weimer/.opam/4.05.0/lib/biniou -I /home/weimer/.opam/4.05.0/lib/bytes -I /home/weimer/.opam/4.05.0/lib/camlzip/../zip -I /home/weimer/.opam/4.05.0/lib/cmdliner -I /home/weimer/.opam/4.05.0/lib/core -I /home/weimer/.opam/4.05.0/lib/core_kernel -I /home/weimer/.opam/4.05.0/lib/core_kernel/base_for_tests -I /home/weimer/.opam/4.05.0/lib/easy-format -I /home/weimer/.opam/4.05.0/lib/extlib -I /home/weimer/.opam/4.05.0/lib/fieldslib -I /home/weimer/.opam/4.05.0/lib/jane-street-headers -I /home/weimer/.opam/4.05.0/lib/javalib -I /home/weimer/.opam/4.05.0/lib/mtime -I /home/weimer/.opam/4.05.0/lib/mtime/os -I /home/weimer/.opam/4.05.0/lib/oUnit -I /home/weimer/.opam/4.05.0/lib/ocaml -I /home/weimer/.opam/4.05.0/lib/ocaml/threads -I /home/weimer/.opam/4.05.0/lib/parmap -I /home/weimer/.opam/4.05.0/lib/ppx_assert/runtime-lib -I /home/weimer/.opam/4.05.0/lib/ppx_bench/runtime-lib -I /home/weimer/.opam/4.05.0/lib/ppx_compare/runtime-lib -I /home/weimer/.opam/4.05.0/lib/ppx_expect/collector -I /home/weimer/.opam/4.05.0/lib/ppx_expect/common -I /home/weimer/.opam/4.05.0/lib/ppx_expect/config -I /home/weimer/.opam/4.05.0/lib/ppx_hash/runtime-lib -I /home/weimer/.opam/4.05.0/lib/ppx_inline_test/config -I /home/weimer/.opam/4.05.0/lib/ppx_inline_test/runtime-lib -I /home/weimer/.opam/4.05.0/lib/ptrees -I /home/weimer/.opam/4.05.0/lib/result -I /home/weimer/.opam/4.05.0/lib/sawja -I /home/weimer/.opam/4.05.0/lib/sexplib -I /home/weimer/.opam/4.05.0/lib/sexplib/0 -I /home/weimer/.opam/4.05.0/lib/sexplib/unix -I /home/weimer/.opam/4.05.0/lib/spawn -I /home/weimer/.opam/4.05.0/lib/sqlite3 -I /home/weimer/.opam/4.05.0/lib/stdio -I /home/weimer/.opam/4.05.0/lib/typerep -I /home/weimer/.opam/4.05.0/lib/variantslib -I /home/weimer/.opam/4.05.0/lib/xmlm -I /home/weimer/.opam/4.05.0/lib/yojson -I /home/weimer/.opam/4.05.0/lib/zip -I atd -I istd -no-alias-deps -I . -open InferModules -o InferModules__Dotty.cmx -c -impl dotty.pp.ml)
+File "backend/dotty.ml", line 117, characters 10-24:
+Warning 3: deprecated: InferStdlib.IStd.String.set
+[since 2017-10] Use [Bytes.set] instead
+File "backend/dotty.ml", line 117, characters 10-12:
+Error: This expression has type string but an expression was expected of type
+         Base.BytesLabels.t
+
+Waiting for 2 jobs to finish.
+make[1]: *** [_build/opt/infer.exe] Error 1

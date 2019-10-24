@@ -1,0 +1,1492 @@
+.\" Pipe this output to groff -Tutf8 | less
+.\"
+.mso an.tmac
+.TH "infer" 1 "2017-10-18" "v0.13.0" "Infer Static Analyzer"
+.\" Disable hyphenation and ragged-right
+.nh
+.ad l
+.SH NAME
+.P
+.nf
+infer \N'45' static analysis for Java and C/C++/Objective\N'45'C/Objective\N'45'C++
+.fi
+.SH SYNOPSIS
+.P
+.nf
+\fBinfer\fR \fBanalyze\fR \fI[options]\fR
+\fBinfer\fR \fBcapture\fR \fI[options]\fR
+\fBinfer\fR \fBcompile\fR \fI[options]\fR
+\fBinfer\fR \fBreport\fR \fI[options]\fR
+\fBinfer\fR \fBreportdiff\fR \fI[options]\fR
+\fBinfer\fR \fBrun\fR \fI[options]\fR
+\fBinfer\fR \fB\N'45'\N'45'compilation\N'45'database[\N'45'escaped]\fR \fIfile\fR \fI[options]\fR
+\fBinfer\fR \fI[options]\fR \fB\N'45'\N'45'\fR \fBcompile command\fR
+\fBinfer\fR \fI[options]\fR
+.fi
+.SH DESCRIPTION
+.P
+Infer is a static analyzer\N'46' Given a collection of source files written in Java or in languages of the C family, and a command to build them, infer produces a list of potential issues\N'46'
+.P
+Infer consists of a collection of tools referenced in the \fISEE ALSO\fR section of this manual\N'46' See their respective manuals for more information\N'46'
+.P
+When run without a subcommand, and if a compilation command is specified via the \fB\N'45'\N'45'\fR option or one of the \fB\N'45'\N'45'clang\N'45'compilation\N'45'database[\N'45'escaped]\fR options, then \fBinfer\fR behaves as \fBinfer\N'45'run\fR(1)\N'46' Otherwise, \fBinfer\fR behaves as \fBinfer\N'45'analyze\fR(1)\N'46'
+.SH OPTIONS
+.P
+Every infer command accepts the arguments from all the other infer commands\N'46'
+.P
+Options are read from the \fB\N'46'inferconfig\fR file, then from the \fBINFER_ARGS\fR environment variable, then from the command line\N'46' Options in \fBINFER_ARGS\fR take precedence over options in \fB\N'46'inferconfig\fR, and options passed on the command line take precedence over options in \fBINFER_ARGS\fR\N'46' See the \fIENVIRONMENT\fR and \fIFILES\fR sections of this manual for more information\N'46'
+.P
+Options can be specified inside an argument file \fIfile\fR by passing \fB@\fR\fIfile\fR as argument\N'46' The format is one option per line, and enclosing single \N'39' and double " quotes are ignored\N'46'
+.P
+Options without a default value (e\N'46'g\N'46', \fB\N'45'\N'45'linter\fR) and options with list\N'45'like values (e\N'46'g\N'46', \fB\N'45'\N'45'Xbuck\fR) all have a corresponding \fB\N'45'\N'45'option\N'45'reset\fR flag that resets their values to nothing or the empty list, respectively\N'46' For instance, \fB\N'45'\N'45'Xbuck\N'45'reset\fR will cancel any previous \fB\N'45'\N'45'Xbuck\fR option passed to infer\N'46'
+.P
+See the manuals of individual infer commands for details about their supported options\N'46' The following is a list of all the supported options (see also \fB\N'45'\N'45'help\N'45'full\fR for options reserved for internal use)\N'46'
+.TP 4
+\fB\N'45'\N'45'analyzer\fR,\fB\N'45'a\fR \fI{ infer | biabduction | capture | checkers | compile | crashcontext | linters }\fR
+Specify which analyzer to run (only one at a time is supported):
+.sp -1
+.P
+.nf
+    \N'45' \fBbiabduction\fR: run the bi\N'45'abduction based checker only, in
+.fi
+.sp -1
+.P
+.nf
+    particular to check for memory errors
+.fi
+.sp -1
+.P
+.nf
+    \N'45' \fBcheckers\fR: run the default checkers, including the bi\N'45'abduction
+.fi
+.sp -1
+.P
+.nf
+    based checker for memory errors (default)
+.fi
+.sp -1
+.P
+.nf
+    \N'45' \fBinfer\fR: alias for \fBbiabduction\fR
+.fi
+.sp -1
+.P
+.nf
+    \N'45' \fBlinters\fR: run linters based on the ast only (clang only,
+.fi
+.sp -1
+.P
+.nf
+    activated by default)
+.fi
+.sp -1
+.P
+.nf
+    \N'45' \fBcapture\fR: similar to specifying the \fBcapture\fR subcommand
+.fi
+.sp -1
+.P
+.nf
+    (DEPRECATED)
+.fi
+.sp -1
+.P
+.nf
+    \N'45' \fBcompile\fR: similar to specifying the \fBcompile\fR subcommand
+.fi
+.sp -1
+.P
+.nf
+    (DEPRECATED)
+.fi
+.sp -1
+.P
+.nf
+    \N'45' \fBcrashcontext\fR: experimental (see \fB\N'45'\N'45'crashcontext\fR)
+.fi
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1) and \fBinfer\N'45'run\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'<analyzer>\N'45'blacklist\N'45'files\N'45'containing\fR \fI+string\fR
+blacklist files containing the specified string for the given analyzer (see \fB\N'45'\N'45'analyzer\fR for valid values)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'report\fR(1) and \fBinfer\N'45'run\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'<analyzer>\N'45'blacklist\N'45'path\N'45'regex\fR \fI+path_regex\fR
+blacklist the analysis of files whose relative path matches the specified OCaml\N'45'style regex (to whitelist: \fB\N'45'\N'45'<analyzer>\N'45'whitelist\N'45'path\N'45'regex\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'report\fR(1) and \fBinfer\N'45'run\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'<analyzer>\N'45'suppress\N'45'errors\fR \fI+error_name\fR
+do not report a type of errors
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'report\fR(1) and \fBinfer\N'45'run\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'no\N'45'annotation\N'45'reachability\fR
+Deactivates: the annotation reachability checker\N'46' Given a pair of source and sink annotation, e\N'46'g\N'46' @PerformanceCritical and @Expensive, this checker will warn whenever some method annotated with @PerformanceCritical calls, directly or indirectly, another method annotated with @Expensive (Conversely: \fB\N'45'\N'45'annotation\N'45'reachability\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'annotation\N'45'reachability\N'45'custom\N'45'pairs\fR \fIjson\fR
+Specify custom sources/sink for the annotation reachability checker
+.sp -1
+.P
+.nf
+    Example format: for custom annotations
+.fi
+.sp -1
+.P
+.nf
+    com\N'46'my\N'46'annotation\N'46'{Source1,Source2,Sink1}
+.fi
+.sp -1
+.P
+.nf
+    { "sources" : ["Source1", "Source2"], "sink" : "Sink1" }
+.fi
+.sp -1
+.P
+.nf
+    (default: \fI[]\fR)
+.fi
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'annotation\N'45'reachability\N'45'only\fR
+Activates: Enable \fB\N'45'\N'45'annotation\N'45'reachability\fR and disable all other checkers (Conversely: \fB\N'45'\N'45'no\N'45'annotation\N'45'reachability\N'45'only\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'append\N'45'buck\N'45'flavors\fR \fI+string\fR
+Additional Buck flavors to append to targets discovered by the \fB\N'45'\N'45'buck\N'45'compilation\N'45'database\fR option\N'46'
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'no\N'45'biabduction\fR
+Deactivates: the separation logic based bi\N'45'abduction analysis using the checkers framework (Conversely: \fB\N'45'\N'45'biabduction\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'biabduction\N'45'only\fR
+Activates: Enable \fB\N'45'\N'45'biabduction\fR and disable all other checkers (Conversely: \fB\N'45'\N'45'no\N'45'biabduction\N'45'only\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'bo\N'45'debug\fR \fIint\fR
+Debug level for buffer\N'45'overrun checker (0\N'45'4) (default: \fI0\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'bootclasspath\fR \fIstring\fR
+Specify the Java bootclasspath
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'buck\N'45'blacklist\fR \fIregex\fR
+Skip analysis of files matched by the specified regular expression
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1) and \fBinfer\N'45'run\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'buck\N'45'compilation\N'45'database\fR \fI{ no\N'45'deps | deps }\fR
+Buck integration using the compilation database, with or without dependencies\N'46'
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'buck\N'45'compilation\N'45'database\N'45'depth\fR \fIint\fR
+Depth of dependencies used by the \fB\N'45'\N'45'buck\N'45'compilation\N'45'database deps\fR option\N'46' By default, all recursive dependencies are captured\N'46'
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'buck\N'45'out\fR \fIdir\fR
+Specify the root directory of buck\N'45'out
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'bufferoverrun\fR
+Activates: the buffer overrun analysis (Conversely: \fB\N'45'\N'45'no\N'45'bufferoverrun\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'bufferoverrun\N'45'only\fR
+Activates: Enable \fB\N'45'\N'45'bufferoverrun\fR and disable all other checkers (Conversely: \fB\N'45'\N'45'no\N'45'bufferoverrun\N'45'only\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'calls\N'45'csv\fR \fIfile\fR
+Write individual calls in CSV format to \fIfile\fR
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'report\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'changed\N'45'files\N'45'index\fR \fIfile\fR
+Specify the file containing the list of source files from which reactive analysis should start\N'46' Source files should be specified relative to project root or be absolute
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1) and \fBinfer\N'45'diff\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'check\N'45'nullable\fR
+Activates: checks that values annotated with nullable are always checked for null before dereference (Conversely: \fB\N'45'\N'45'no\N'45'check\N'45'nullable\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'check\N'45'nullable\N'45'only\fR
+Activates: Enable \fB\N'45'\N'45'check\N'45'nullable\fR and disable all other checkers (Conversely: \fB\N'45'\N'45'no\N'45'check\N'45'nullable\N'45'only\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'clang\N'45'biniou\N'45'file\fR \fIfile\fR
+Specify a file containing the AST of the program, in biniou format
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'clang\N'45'frontend\N'45'action\fR \fI{ lint | capture | lint_and_capture }\fR
+Specify whether the clang frontend should capture or lint or both\N'46'
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1) and \fBinfer\N'45'run\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'compilation\N'45'database\fR \fI+path\fR
+File that contain compilation commands (can be specified multiple times)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'compilation\N'45'database\N'45'escaped\fR \fI+path\fR
+File that contain compilation commands where all entries are escaped for the shell, eg coming from Xcode (can be specified multiple times)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'compute\N'45'analytics\fR
+Activates: Emit analytics as info\N'45'level issues, like component kit line count and component kit file cyclomatic complexity (Conversely: \fB\N'45'\N'45'no\N'45'compute\N'45'analytics\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1) and \fBinfer\N'45'run\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'continue\fR
+Activates: Continue the capture for the reactive analysis, increasing the changed files/procedures\N'46' (If a procedure was changed beforehand, keep the changed marking\N'46') (Conversely: \fB\N'45'\N'45'no\N'45'continue\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'crashcontext\fR
+Activates: the crashcontext checker for Java stack trace context reconstruction (Conversely: \fB\N'45'\N'45'no\N'45'crashcontext\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'crashcontext\N'45'only\fR
+Activates: Enable \fB\N'45'\N'45'crashcontext\fR and disable all other checkers (Conversely: \fB\N'45'\N'45'no\N'45'crashcontext\N'45'only\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'current\N'45'to\N'45'previous\N'45'script\fR \fIshell\fR
+Specify a script to checkout a previous version of the project to compare against, assuming we are on the current version already\N'46'
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'diff\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'no\N'45'cxx\fR
+Deactivates: Analyze C++ methods (Conversely: \fB\N'45'\N'45'cxx\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'no\N'45'cxx\N'45'infer\N'45'headers\fR
+Deactivates: Include C++ header models during compilation, set by \fB\N'45'\N'45'cxx\fR\N'46' Infer swaps some C++ headers for its own in order to get a better model of, eg, the standard library\N'46' This can sometimes cause compilation failures\N'46' (Conversely: \fB\N'45'\N'45'cxx\N'45'infer\N'45'headers\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'debug\fR,\fB\N'45'g\fR
+Activates: Debug mode (also sets \fB\N'45'\N'45'debug\N'45'level 2\fR, \fB\N'45'\N'45'developer\N'45'mode\fR, \fB\N'45'\N'45'no\N'45'filtering\fR, \fB\N'45'\N'45'print\N'45'buckets\fR, \fB\N'45'\N'45'print\N'45'types\fR, \fB\N'45'\N'45'reports\N'45'include\N'45'ml\N'45'loc\fR, \fB\N'45'\N'45'no\N'45'only\N'45'cheap\N'45'debug\fR, \fB\N'45'\N'45'trace\N'45'error\fR, \fB\N'45'\N'45'write\N'45'dotty\fR, \fB\N'45'\N'45'write\N'45'html\fR) (Conversely: \fB\N'45'\N'45'no\N'45'debug\fR | \fB\N'45'G\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1), \fBinfer\N'45'capture\fR(1), \fBinfer\N'45'compile\fR(1),
+.fi
+.sp -1
+.P
+.nf
+    \fBinfer\N'45'diff\fR(1), \fBinfer\N'45'report\fR(1), \fBinfer\N'45'reportdiff\fR(1), and
+.fi
+.sp -1
+.P
+.nf
+    \fBinfer\N'45'run\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'debug\N'45'level\fR \fIlevel\fR
+Debug level (sets \fB\N'45'\N'45'bo\N'45'debug\fR \fIlevel\fR, \fB\N'45'\N'45'debug\N'45'level\N'45'analysis\fR \fIlevel\fR, \fB\N'45'\N'45'debug\N'45'level\N'45'capture\fR \fIlevel\fR, \fB\N'45'\N'45'debug\N'45'level\N'45'linters\fR \fIlevel\fR):
+.sp -1
+.P
+.nf
+      \N'45' 0: only basic debugging enabled
+.fi
+.sp -1
+.P
+.nf
+      \N'45' 1: verbose debugging enabled
+.fi
+.sp -1
+.P
+.nf
+      \N'45' 2: very verbose debugging enabled
+.fi
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1), \fBinfer\N'45'capture\fR(1), \fBinfer\N'45'compile\fR(1),
+.fi
+.sp -1
+.P
+.nf
+    \fBinfer\N'45'diff\fR(1), \fBinfer\N'45'report\fR(1), \fBinfer\N'45'reportdiff\fR(1), and
+.fi
+.sp -1
+.P
+.nf
+    \fBinfer\N'45'run\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'debug\N'45'level\N'45'analysis\fR \fIint\fR
+Debug level for the analysis\N'46' See \fB\N'45'\N'45'debug\N'45'level\fR for accepted values\N'46' (default: \fI0\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1), \fBinfer\N'45'capture\fR(1), \fBinfer\N'45'compile\fR(1),
+.fi
+.sp -1
+.P
+.nf
+    \fBinfer\N'45'diff\fR(1), \fBinfer\N'45'report\fR(1), \fBinfer\N'45'reportdiff\fR(1), and
+.fi
+.sp -1
+.P
+.nf
+    \fBinfer\N'45'run\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'debug\N'45'level\N'45'capture\fR \fIint\fR
+Debug level for the capture\N'46' See \fB\N'45'\N'45'debug\N'45'level\fR for accepted values\N'46' (default: \fI0\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1), \fBinfer\N'45'capture\fR(1), \fBinfer\N'45'compile\fR(1),
+.fi
+.sp -1
+.P
+.nf
+    \fBinfer\N'45'diff\fR(1), \fBinfer\N'45'report\fR(1), \fBinfer\N'45'reportdiff\fR(1), and
+.fi
+.sp -1
+.P
+.nf
+    \fBinfer\N'45'run\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'debug\N'45'level\N'45'linters\fR \fIint\fR
+Debug level for the linters\N'46' See \fB\N'45'\N'45'debug\N'45'level\fR for accepted values\N'46' (default: \fI0\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1), \fBinfer\N'45'capture\fR(1), \fBinfer\N'45'compile\fR(1),
+.fi
+.sp -1
+.P
+.nf
+    \fBinfer\N'45'diff\fR(1), \fBinfer\N'45'report\fR(1), \fBinfer\N'45'reportdiff\fR(1), and
+.fi
+.sp -1
+.P
+.nf
+    \fBinfer\N'45'run\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'no\N'45'default\N'45'checkers\fR
+Deactivates: Default checkers: \fB\N'45'\N'45'annotation\N'45'reachability\fR, \fB\N'45'\N'45'biabduction\fR, \fB\N'45'\N'45'fragment\N'45'retains\N'45'view\fR, \fB\N'45'\N'45'immutable\N'45'cast\fR, \fB\N'45'\N'45'liveness\fR, \fB\N'45'\N'45'printf\N'45'args\fR, \fB\N'45'\N'45'quandary\fR, \fB\N'45'\N'45'racerd\fR, \fB\N'45'\N'45'siof\fR (Conversely: \fB\N'45'\N'45'default\N'45'checkers\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'no\N'45'default\N'45'linters\fR
+Deactivates: Use the default linters for the analysis\N'46' (Conversely: \fB\N'45'\N'45'default\N'45'linters\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'dependencies\fR
+Activates: Translate all the dependencies during the capture\N'46' The classes in the given jar file will be translated\N'46' No sources needed\N'46' (Conversely: \fB\N'45'\N'45'no\N'45'dependencies\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'differential\N'45'filter\N'45'files\fR \fIstring\fR
+Specify the file containing the list of source files for which a differential report is desired\N'46' Source files should be specified relative to project root or be absolute
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'report\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'disable\N'45'issue\N'45'type\fR \fI+issue_type\fR
+Do not show reports coming from this type of issue\N'46' Each checker can report a range of issue types\N'46' This option provides fine\N'45'grained filtering over which types of issue should be reported once the checkers have run\N'46' In particular, note that disabling issue types does not make the corresponding checker not run\N'46'
+.sp -1
+.P
+.nf
+     By default, the following issue types are disabled:
+.fi
+.sp -1
+.P
+.nf
+    ANALYSIS_STOPS, ARRAY_OUT_OF_BOUNDS_L1, ARRAY_OUT_OF_BOUNDS_L2,
+.fi
+.sp -1
+.P
+.nf
+    ARRAY_OUT_OF_BOUNDS_L3, BUFFER_OVERRUN_L4, BUFFER_OVERRUN_L5,
+.fi
+.sp -1
+.P
+.nf
+    CLASS_CAST_EXCEPTION, CONDITION_ALWAYS_FALSE,
+.fi
+.sp -1
+.P
+.nf
+    CONDITION_ALWAYS_TRUE, DANGLING_POINTER_DEREFERENCE,
+.fi
+.sp -1
+.P
+.nf
+    DIVIDE_BY_ZERO,
+.fi
+.sp -1
+.P
+.nf
+    GLOBAL_VARIABLE_INITIALIZED_WITH_FUNCTION_OR_METHOD_CALL,
+.fi
+.sp -1
+.P
+.nf
+    NULL_TEST_AFTER_DEREFERENCE, RETAIN_CYCLE, RETURN_VALUE_IGNORED,
+.fi
+.sp -1
+.P
+.nf
+    STACK_VARIABLE_ADDRESS_ESCAPE,
+.fi
+.sp -1
+.P
+.nf
+    UNARY_MINUS_APPLIED_TO_UNSIGNED_EXPRESSION, UNINITIALIZED_VALUE\N'46'
+.fi
+.sp -1
+.P
+.nf
+    
+.fi
+.sp -1
+.P
+.nf
+     See also \fB\N'45'\N'45'report\N'45'issue\N'45'type\fR\N'46'
+.fi
+.sp -1
+.P
+.nf
+    (default:
+.fi
+.sp -1
+.P
+.nf
+    \fIANALYSIS_STOPS,ARRAY_OUT_OF_BOUNDS_L1,ARRAY_OUT_OF_BOUNDS_L2,ARRAY_OUT_OF_BOUNDS_L3,BUFFER_OVERRUN_L4,BUFFER_OVERRUN_L5,CLASS_CAST_EXCEPTION,CONDITION_ALWAYS_FALSE,CONDITION_ALWAYS_TRUE,DANGLING_POINTER_DEREFERENCE,DIVIDE_BY_ZERO,GLOBAL_VARIABLE_INITIALIZED_WITH_FUNCTION_OR_METHOD_CALL,NULL_TEST_AFTER_DEREFERENCE,RETAIN_CYCLE,RETURN_VALUE_IGNORED,STACK_VARIABLE_ADDRESS_ESCAPE,UNARY_MINUS_APPLIED_TO_UNSIGNED_EXPRESSION,UNINITIALIZED_VALUE\fR)
+.fi
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'report\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'dump\N'45'duplicate\N'45'symbols\fR
+Activates: Dump all symbols with the same name that are defined in more than one file\N'46' (Conversely: \fB\N'45'\N'45'no\N'45'dump\N'45'duplicate\N'45'symbols\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'enable\N'45'issue\N'45'type\fR \fI+issue_type\fR
+Show reports coming from this type of issue\N'46' By default, all issue types are enabled except the ones listed in \fB\N'45'\N'45'disable\N'45'issue\N'45'type\fR\N'46' Note that enabling issue types does not make the corresponding checker run; see individual checker options to turn them on or off\N'46'
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'report\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'eradicate\fR
+Activates: the eradicate @Nullable checker for Java annotations (Conversely: \fB\N'45'\N'45'no\N'45'eradicate\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'eradicate\N'45'only\fR
+Activates: Enable \fB\N'45'\N'45'eradicate\fR and disable all other checkers (Conversely: \fB\N'45'\N'45'no\N'45'eradicate\N'45'only\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'fail\N'45'on\N'45'issue\fR
+Activates: Exit with error code 2 if Infer found something to report (Conversely: \fB\N'45'\N'45'no\N'45'fail\N'45'on\N'45'issue\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'run\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'file\N'45'renamings\fR \fIpath\fR
+JSON with a list of file renamings to use while computing differential reports
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'reportdiff\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'no\N'45'filtering\fR,\fB\N'45'F\fR
+Deactivates: Do not show the experimental and blacklisted issue types (Conversely: \fB\N'45'\N'45'filtering\fR | \fB\N'45'f\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'report\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'flavors\fR
+Activates: Buck integration using Buck flavors (clang only), eg \fI`infer \N'45'\N'45'flavors \N'45'\N'45' buck build //foo:bar#infer`\fR (Conversely: \fB\N'45'\N'45'no\N'45'flavors\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'force\N'45'delete\N'45'results\N'45'dir\fR
+Activates: Do not refuse to delete the results directory if it doesn\N'39't look like an infer results directory\N'46' (Conversely: \fB\N'45'\N'45'no\N'45'force\N'45'delete\N'45'results\N'45'dir\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1), \fBinfer\N'45'compile\fR(1), \fBinfer\N'45'diff\fR(1), and
+.fi
+.sp -1
+.P
+.nf
+    \fBinfer\N'45'run\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'force\N'45'integration\fR \fIcommand\fR
+Proceed as if the first argument after \fB\N'45'\N'45'\fR was \fIcommand\fR\N'46' Possible values: \fIanalyze\fR, \fIant\fR, \fIbuck\fR, \fIgradle\fR, \fIgradlew\fR, \fIjava\fR, \fIjavac\fR, \fIcc\fR, \fIclang\fR, \fIgcc\fR, \fIclang++\fR, \fIc++\fR, \fIg++\fR, \fImake\fR, \fIconfigure\fR, \fIcmake\fR, \fIwaf\fR, \fImvn\fR, \fImvnw\fR, \fIndk\N'45'build\fR, \fIpython\fR, \fIxcodebuild\fR\N'46'
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1) and \fBinfer\N'45'run\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'no\N'45'fragment\N'45'retains\N'45'view\fR
+Deactivates: detects when Android fragments are not explicitly nullified before becoming unreabable (Conversely: \fB\N'45'\N'45'fragment\N'45'retains\N'45'view\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'fragment\N'45'retains\N'45'view\N'45'only\fR
+Activates: Enable \fB\N'45'\N'45'fragment\N'45'retains\N'45'view\fR and disable all other checkers (Conversely: \fB\N'45'\N'45'no\N'45'fragment\N'45'retains\N'45'view\N'45'only\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'from\N'45'json\N'45'report\fR \fIreport\N'46'json\fR
+Load analysis results from a report file (default is to load the results from the specs files generated by the analysis)\N'46'
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'report\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'frontend\N'45'tests\fR
+Activates: Save filename\N'46'ext\N'46'test\N'46'dot with the cfg in dotty format for frontend tests (also sets \fB\N'45'\N'45'print\N'45'types\fR) (Conversely: \fB\N'45'\N'45'no\N'45'frontend\N'45'tests\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'gen\N'45'previous\N'45'build\N'45'command\N'45'script\fR \fIshell\fR
+Specify a script that outputs the build command to capture in the previous version of the project\N'46' The script should output the command on stdout\N'46' For example "echo make"\N'46'
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'diff\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'generated\N'45'classes\fR \fIpath\fR
+Specify where to load the generated class files
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'headers\fR
+Activates: Analyze code in header files (Conversely: \fB\N'45'\N'45'no\N'45'headers\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'help\fR
+Show this manual
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1), \fBinfer\N'45'capture\fR(1), \fBinfer\N'45'compile\fR(1),
+.fi
+.sp -1
+.P
+.nf
+    \fBinfer\N'45'diff\fR(1), \fBinfer\N'45'explore\fR(1), \fBinfer\N'45'report\fR(1),
+.fi
+.sp -1
+.P
+.nf
+    \fBinfer\N'45'reportdiff\fR(1), and \fBinfer\N'45'run\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'help\N'45'format\fR \fI{ auto | groff | pager | plain }\fR
+Show this help in the specified format\N'46' \fBauto\fR sets the format to \fBplain\fR if the environment variable \fBTERM\fR is "dumb" or undefined, and to \fBpager\fR otherwise\N'46' (default: \fIauto\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1), \fBinfer\N'45'capture\fR(1), \fBinfer\N'45'compile\fR(1),
+.fi
+.sp -1
+.P
+.nf
+    \fBinfer\N'45'diff\fR(1), \fBinfer\N'45'explore\fR(1), \fBinfer\N'45'report\fR(1),
+.fi
+.sp -1
+.P
+.nf
+    \fBinfer\N'45'reportdiff\fR(1), and \fBinfer\N'45'run\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'help\N'45'full\fR
+Show this manual with all internal options in the INTERNAL OPTIONS section
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1), \fBinfer\N'45'capture\fR(1), \fBinfer\N'45'compile\fR(1),
+.fi
+.sp -1
+.P
+.nf
+    \fBinfer\N'45'diff\fR(1), \fBinfer\N'45'explore\fR(1), \fBinfer\N'45'report\fR(1),
+.fi
+.sp -1
+.P
+.nf
+    \fBinfer\N'45'reportdiff\fR(1), and \fBinfer\N'45'run\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'html\fR
+Activates: Generate html report\N'46' (Conversely: \fB\N'45'\N'45'no\N'45'html\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'explore\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'no\N'45'immutable\N'45'cast\fR
+Deactivates: the detection of object cast from immutable type to mutable type\N'46' For instance, it will detect cast from ImmutableList to List, ImmutableMap to Map, and ImmutableSet to Set\N'46' (Conversely: \fB\N'45'\N'45'immutable\N'45'cast\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'immutable\N'45'cast\N'45'only\fR
+Activates: Enable \fB\N'45'\N'45'immutable\N'45'cast\fR and disable all other checkers (Conversely: \fB\N'45'\N'45'no\N'45'immutable\N'45'cast\N'45'only\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'iphoneos\N'45'target\N'45'sdk\N'45'version\fR \fIstring\fR
+Specify the target SDK version to use for iphoneos
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'iphoneos\N'45'target\N'45'sdk\N'45'version\N'45'path\N'45'regex\fR \fI+string\fR
+To pass a specific target SDK version to use for iphoneos in a particular path, with the format path:version (can be specified multiple times)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'issues\N'45'csv\fR \fIfile\fR
+Write a list of issues in CSV format to \fIfile\fR
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'report\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'issues\N'45'fields\fR \fI,\N'45'separated sequence of { bug_class | kind | bug_type | qualifier | severity | visibility | line | column | procedure | procedure_id | procedure_start_line | file | bug_trace | key | hash | line_offset | procedure_id_without_crc | qualifier_contains_potential_exception_note }\fR
+Fields to emit with \fB\N'45'\N'45'issues\N'45'tests\fR (default: \fIfile procedure line_offset bug_type bug_trace\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'report\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'issues\N'45'tests\fR \fIfile\fR
+Write a list of issues in a format suitable for tests to \fIfile\fR
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'report\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'issues\N'45'txt\fR \fIfile\fR
+Write a list of issues in text format to \fIfile\fR (default: infer\N'45'out/bugs\N'46'txt)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'report\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'java\N'45'jar\N'45'compiler\fR \fIpath\fR
+Specify the Java compiler jar used to generate the bytecode
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'jobs\fR,\fB\N'45'j\fR \fIint\fR
+Run the specified number of analysis jobs simultaneously (default: \fI16\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'keep\N'45'going\fR
+Activates: Keep going when the analysis encounters a failure (Conversely: \fB\N'45'\N'45'no\N'45'keep\N'45'going\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'linter\fR \fIstring\fR
+From the linters available, only run this one linter\N'46' (Useful together with \fB\N'45'\N'45'linters\N'45'developer\N'45'mode\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'linters\N'45'def\N'45'file\fR \fI+file\fR
+Specify the file containing linters definition (e\N'46'g\N'46' \N'39'linters\N'46'al\N'39')
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'linters\N'45'def\N'45'folder\fR \fI+dir\fR
+Specify the folder containing linters files with extension \N'46'al
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'linters\N'45'developer\N'45'mode\fR
+Activates: Debug mode for developing new linters\N'46' (Sets the analyzer to \fBlinters\fR; also sets \fB\N'45'\N'45'debug\fR, \fB\N'45'\N'45'debug\N'45'level\N'45'linters 2\fR, \fB\N'45'\N'45'developer\N'45'mode\fR, and unsets \fB\N'45'\N'45'allowed\N'45'failures\fR and \fB\N'45'\N'45'default\N'45'linters\fR\N'46' (Conversely: \fB\N'45'\N'45'no\N'45'linters\N'45'developer\N'45'mode\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'linters\N'45'doc\N'45'url\fR \fI+string\fR
+Specify custom documentation URL for some linter that overrides the default one\N'46' Useful if your project has specific ways of fixing a lint error that is not true in general or public info\N'46' Format: linter_name:doc_url\N'46'
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'linters\N'45'ignore\N'45'clang\N'45'failures\fR
+Activates: Continue linting files even if some compilation fails\N'46' (Conversely: \fB\N'45'\N'45'no\N'45'linters\N'45'ignore\N'45'clang\N'45'failures\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'linters\N'45'validate\N'45'syntax\N'45'only\fR
+Activates: Validate syntax of AL files, then emit possible errors in JSON format to stdout (Conversely: \fB\N'45'\N'45'no\N'45'linters\N'45'validate\N'45'syntax\N'45'only\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'no\N'45'liveness\fR
+Deactivates: the detection of dead stores and unused variables (Conversely: \fB\N'45'\N'45'liveness\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'liveness\N'45'only\fR
+Activates: Enable \fB\N'45'\N'45'liveness\fR and disable all other checkers (Conversely: \fB\N'45'\N'45'no\N'45'liveness\N'45'only\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'load\N'45'average\fR,\fB\N'45'l\fR \fIfloat\fR
+Do not start new parallel jobs if the load average is greater than that specified (Buck and make only)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'load\N'45'results\fR \fIfile\N'46'iar\fR
+Load analysis results from Infer Analysis Results file file\N'46'iar
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'report\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'max\N'45'nesting\fR \fIint\fR
+Level of nested procedure calls to show\N'46' Trace elements beyond the maximum nesting level are skipped\N'46' If omitted, all levels are shown\N'46'
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'explore\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'merge\fR
+Activates: Merge the captured results directories specified in the dependency file (Conversely: \fB\N'45'\N'45'no\N'45'merge\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'ml\N'45'buckets\fR \fI,\N'45'separated sequence of { all | cf | arc | narc | cpp | unknown_origin }\fR
+Specify the memory leak buckets to be checked in Objective\N'45'C/C++:
+.sp -1
+.P
+.nf
+    \N'45' \fBcf\fR checks leaks from Core Foundation (activated by default),
+.fi
+.sp -1
+.P
+.nf
+    \N'45' \fBarc\fR from code compiled in ARC mode,
+.fi
+.sp -1
+.P
+.nf
+    \N'45' \fBnarc\fR from code not compiled in ARC mode,
+.fi
+.sp -1
+.P
+.nf
+    \N'45' \fBcpp\fR from C++ code
+.fi
+.sp -1
+.P
+.nf
+    (default: \fIcf\fR)
+.fi
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'only\N'45'show\fR
+Activates: Show the list of reports and exit (Conversely: \fB\N'45'\N'45'no\N'45'only\N'45'show\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'explore\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'pmd\N'45'xml\fR
+Activates: Output issues in (PMD) XML format (Conversely: \fB\N'45'\N'45'no\N'45'pmd\N'45'xml\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'run\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'previous\N'45'to\N'45'current\N'45'script\fR \fIshell\fR
+Specify a script to checkout the current version of the project\N'46' The project is supposed to already be at that current version when running \fBinfer diff\fR; the script is used after having analyzed the current and previous versions of the project, to restore the project to the current version\N'46'
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'diff\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'print\N'45'active\N'45'checkers\fR
+Activates: Print the active checkers before starting the analysis (Conversely: \fB\N'45'\N'45'no\N'45'print\N'45'active\N'45'checkers\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'print\N'45'logs\fR
+Activates: Also log messages to stdout and stderr (Conversely: \fB\N'45'\N'45'no\N'45'print\N'45'logs\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1), \fBinfer\N'45'capture\fR(1), \fBinfer\N'45'report\fR(1), and
+.fi
+.sp -1
+.P
+.nf
+    \fBinfer\N'45'run\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'no\N'45'printf\N'45'args\fR
+Deactivates: the detection of mismatch between the Java printf format strings and the argument types For, example, this checker will warn about the type error in `printf("Hello %d", "world")` (Conversely: \fB\N'45'\N'45'printf\N'45'args\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'printf\N'45'args\N'45'only\fR
+Activates: Enable \fB\N'45'\N'45'printf\N'45'args\fR and disable all other checkers (Conversely: \fB\N'45'\N'45'no\N'45'printf\N'45'args\N'45'only\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'no\N'45'progress\N'45'bar\fR,\fB\N'45'P\fR
+Deactivates: Show a progress bar (Conversely: \fB\N'45'\N'45'progress\N'45'bar\fR | \fB\N'45'p\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'run\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'project\N'45'root\fR,\fB\N'45'C\fR \fIdir\fR
+Specify the root directory of the project (default: \fI/home/weimer/src/infer\N'45'linux64\N'45'v0\N'46'13\N'46'0\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1), \fBinfer\N'45'capture\fR(1), \fBinfer\N'45'report\fR(1), and
+.fi
+.sp -1
+.P
+.nf
+    \fBinfer\N'45'run\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'no\N'45'quandary\fR
+Deactivates: the quandary taint analysis (Conversely: \fB\N'45'\N'45'quandary\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'quandary\N'45'endpoints\fR \fIjson\fR
+Specify endpoint classes for Quandary (default: \fI[]\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'quandary\N'45'only\fR
+Activates: Enable \fB\N'45'\N'45'quandary\fR and disable all other checkers (Conversely: \fB\N'45'\N'45'no\N'45'quandary\N'45'only\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'quandary\N'45'sanitizers\fR \fIjson\fR
+Specify custom sanitizers for Quandary (default: \fI[]\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'quandary\N'45'sinks\fR \fIjson\fR
+Specify custom sinks for Quandary (default: \fI[]\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'quandary\N'45'sources\fR \fIjson\fR
+Specify custom sources for Quandary (default: \fI[]\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'quiet\fR,\fB\N'45'q\fR
+Activates: Do not print specs on standard output (default: only print for the \fBreport\fR command) (Conversely: \fB\N'45'\N'45'no\N'45'quiet\fR | \fB\N'45'Q\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1) and \fBinfer\N'45'report\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'no\N'45'racerd\fR
+Deactivates: the RacerD thread safety analysis (Conversely: \fB\N'45'\N'45'racerd\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'racerd\N'45'only\fR
+Activates: Enable \fB\N'45'\N'45'racerd\fR and disable all other checkers (Conversely: \fB\N'45'\N'45'no\N'45'racerd\N'45'only\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'reactive\fR,\fB\N'45'r\fR
+Activates: Reactive mode: the analysis starts from the files captured since the \fIinfer\fR command started (Conversely: \fB\N'45'\N'45'no\N'45'reactive\fR | \fB\N'45'R\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'repeated\N'45'calls\fR
+Activates: check for repeated calls (Conversely: \fB\N'45'\N'45'no\N'45'repeated\N'45'calls\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'repeated\N'45'calls\N'45'only\fR
+Activates: Enable \fB\N'45'\N'45'repeated\N'45'calls\fR and disable all other checkers (Conversely: \fB\N'45'\N'45'no\N'45'repeated\N'45'calls\N'45'only\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'no\N'45'report\fR
+Deactivates: Run the reporting phase once the analysis has completed (Conversely: \fB\N'45'\N'45'report\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1) and \fBinfer\N'45'run\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'report\N'45'current\fR \fIpath\fR
+report of the latest revision
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'reportdiff\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'report\N'45'formatter\fR \fI{ none | phabricator }\fR
+Which formatter to use when emitting the report (default: \fIphabricator\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'report\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'report\N'45'hook\fR \fIscript\fR
+Specify a script to be executed after the analysis results are written\N'46' This script will be passed \fB\N'45'\N'45'issues\N'45'csv\fR, \fB\N'45'\N'45'issues\N'45'json\fR, \fB\N'45'\N'45'issues\N'45'txt\fR, \fB\N'45'\N'45'issues\N'45'xml\fR, \fB\N'45'\N'45'project\N'45'root\fR, and \fB\N'45'\N'45'results\N'45'dir\fR\N'46' (default: \fI/home/weimer/src/infer\N'45'linux64\N'45'v0\N'46'13\N'46'0/infer/bin/\N'46'\N'46'/lib/python/report\N'46'py\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1) and \fBinfer\N'45'run\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'report\N'45'previous\fR \fIpath\fR
+Report of the base revision to use for comparison
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'reportdiff\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'results\N'45'dir\fR,\fB\N'45'o\fR \fIdir\fR
+Write results and internal files in the specified directory (default: \fI/home/weimer/src/infer\N'45'linux64\N'45'v0\N'46'13\N'46'0/infer\N'45'out\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1), \fBinfer\N'45'capture\fR(1), \fBinfer\N'45'explore\fR(1),
+.fi
+.sp -1
+.P
+.nf
+    \fBinfer\N'45'report\fR(1), and \fBinfer\N'45'run\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'save\N'45'results\fR \fIfile\N'46'iar\fR
+Save analysis results to Infer Analysis Results file file\N'46'iar
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'report\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'select\fR \fIN\fR
+Select bug number \fIN\fR\N'46' If omitted, prompt for input\N'46'
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'explore\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'no\N'45'siof\fR
+Deactivates: the Static Initialization Order Fiasco analysis (C++ only) (Conversely: \fB\N'45'\N'45'siof\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'siof\N'45'only\fR
+Activates: Enable \fB\N'45'\N'45'siof\fR and disable all other checkers (Conversely: \fB\N'45'\N'45'no\N'45'siof\N'45'only\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'siof\N'45'safe\N'45'methods\fR \fI+string\fR
+Methods that are SIOF\N'45'safe; "foo::bar" will match "foo::bar()", "foo<int>::bar()", etc\N'46' (can be specified multiple times)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'skip\N'45'analysis\N'45'in\N'45'path\fR \fI+path_prefix_OCaml_regex\fR
+Ignore files whose path matches the given prefix (can be specified multiple times)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1) and \fBinfer\N'45'run\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'skip\N'45'analysis\N'45'in\N'45'path\N'45'skips\N'45'compilation\fR
+Activates: Whether paths in \N'45'\N'45'skip\N'45'analysis\N'45'in\N'45'path should be compiled or not (Conversely: \fB\N'45'\N'45'no\N'45'skip\N'45'analysis\N'45'in\N'45'path\N'45'skips\N'45'compilation\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'report\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'no\N'45'skip\N'45'duplicated\N'45'types\fR
+Deactivates: Skip fixed\N'45'then\N'45'introduced duplicated types while computing differential reports (Conversely: \fB\N'45'\N'45'skip\N'45'duplicated\N'45'types\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'reportdiff\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'skip\N'45'translation\N'45'headers\fR \fI+path_prefix\fR
+Ignore headers whose path matches the given prefix
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'no\N'45'source\N'45'preview\fR
+Deactivates: print code excerpts around trace elements (Conversely: \fB\N'45'\N'45'source\N'45'preview\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'explore\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'stacktrace\fR \fIfile\fR
+File path containing a json\N'45'encoded Java crash stacktrace\N'46' Used to guide the analysis (only with \N'39'\N'45'a crashcontext\N'39')\N'46' See tests/codetoanalyze/java/crashcontext/*\N'46'json for examples of the expected format\N'46'
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'stacktraces\N'45'dir\fR \fIdir\fR
+Directory path containing multiple json\N'45'encoded Java crash stacktraces\N'46' Used to guide the analysis (only with \N'39'\N'45'a crashcontext\N'39')\N'46' See tests/codetoanalyze/java/crashcontext/*\N'46'json for examples of the expected format\N'46'
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'suggest\N'45'nullable\fR
+Activates: Nullable annotation sugesstions analysis (Conversely: \fB\N'45'\N'45'no\N'45'suggest\N'45'nullable\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'suggest\N'45'nullable\N'45'only\fR
+Activates: Enable \fB\N'45'\N'45'suggest\N'45'nullable\fR and disable all other checkers (Conversely: \fB\N'45'\N'45'no\N'45'suggest\N'45'nullable\N'45'only\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'threadsafe\N'45'aliases\fR \fIjson\fR
+Specify custom annotations that should be considered aliases of @ThreadSafe (default: \fI[]\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'uninit\fR
+Activates: checker for use of uninitialized values (Conversely: \fB\N'45'\N'45'no\N'45'uninit\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'uninit\N'45'only\fR
+Activates: Enable \fB\N'45'\N'45'uninit\fR and disable all other checkers (Conversely: \fB\N'45'\N'45'no\N'45'uninit\N'45'only\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'unsafe\N'45'malloc\fR
+Activates: Assume that malloc(3) never returns null\N'46' (Conversely: \fB\N'45'\N'45'no\N'45'unsafe\N'45'malloc\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'analyze\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'version\fR
+Print version information and exit
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'run\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'version\N'45'json\fR
+Print version information in json format and exit
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'run\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'Xbuck\fR \fI+string\fR
+Pass values as command\N'45'line arguments to invocations of \fI`buck build`\fR
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'xcode\N'45'developer\N'45'dir\fR \fIXCODE_DEVELOPER_DIR\fR
+Specify the path to Xcode developer directory
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'no\N'45'xcpretty\fR
+Deactivates: Infer will use xcpretty together with xcodebuild to analyze an iOS app\N'46' xcpretty just needs to be in the path, infer command is still just \fI`infer \N'45'\N'45' <xcodebuild command>`\fR\N'46' (Recommended) (Conversely: \fB\N'45'\N'45'xcpretty\fR)
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1)\N'46'
+.fi
+.TP 4
+\fB\N'45'\N'45'\fR
+Stop argument processing, use remaining arguments as a build command
+.sp -1
+.P
+.nf
+    See also \fBinfer\N'45'capture\fR(1) and \fBinfer\N'45'run\fR(1)\N'46'
+.fi
+.SH ENVIRONMENT
+.P
+Extra arguments may be passed to all infer commands using the \fBINFER_ARGS\fR environment variable (see the \fIOPTIONS\fR section)\N'46' \fBINFER_ARGS\fR is expected to contain a string of ^\N'45'separated options\N'46' For instance, calling `INFER_ARGS=\N'45'\N'45'debug^\N'45'\N'45'print\N'45'logs infer` is equivalent to calling `infer \N'45'\N'45'debug \N'45'\N'45'print\N'45'logs`\N'46'
+.P
+\fBINFERCONFIG\fR: Tells infer where to find the \N'46'inferconfig file\N'46' (See the FILES section)
+.P
+If \fBINFER_STRICT_MODE\fR is set to "1", then infer commands will exit with an error code in some cases when otherwise a simple warning would be emitted on stderr, for instance if a deprecated form of an option is used\N'46'
+.SH FILES
+.P
+\fB\N'46'inferconfig\fR can be used to store infer options\N'46' Its format is that of a JSON record, where fields are infer long\N'45'form options, without their leading "\N'45'\N'45'", and values depend on the type of the option:
+.sp -1
+.P
+\N'45' for switches options, the value is a JSON boolean (true or false, without quotes)
+.sp -1
+.P
+\N'45' for integers, the value is a JSON integer (without quotes)
+.sp -1
+.P
+\N'45' string options have string values
+.sp -1
+.P
+\N'45' path options have string values, and are interpreted relative to the location of the \N'46'inferconfig file
+.sp -1
+.P
+\N'45' cumulative options are JSON arrays of the appropriate type
+.P
+Infer will look for an \fB\N'46'inferconfig\fR file in the current directory, then its parent, etc\N'46', stopping at the first \fB\N'46'inferconfig\fR file found\N'46'
+.P
+Example:
+.P
+.nf
+  {
+    "cxx": false,
+    "infer\N'45'blacklist\N'45'files\N'45'containing": ["@generated","@Generated"]
+  }
+.fi
+.SH SEE ALSO
+.P
+\fBinfer\N'45'analyze\fR(1), \fBinfer\N'45'capture\fR(1), \fBinfer\N'45'compile\fR(1), \fBinfer\N'45'diff\fR(1), \fBinfer\N'45'explore\fR(1), \fBinfer\N'45'report\fR(1), \fBinfer\N'45'reportdiff\fR(1), \fBinfer\N'45'run\fR(1)

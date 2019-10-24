@@ -1,0 +1,14 @@
+[13023][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0
+[13023][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[13023][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0
+[13023][environment] INFER_ARGS = 
+[13023][environment] command line arguments: infer/bin/infer.exe
+[13023][environment] Analyzer: checkers
+[13023][environment] Active checkers: annotation reachability (Java), biabduction (C/C++/ObjC, Java), fragment retains view (Java), immutable cast (Java), liveness (C/C++/ObjC), printf args (Java), quandary (C/C++/ObjC, Java), RacerD (C/C++/ObjC, Java), SIOF (C/C++/ObjC)
+[13023][  user warn] 
+[13023][  user warn] Nothing to compile. Try cleaning the build first.
+[13023][   user err] There was nothing to analyze.
+[13023][   user err] 
+[13023][environment] Infer version v0.13.0
+[13023][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[13023][environment] 

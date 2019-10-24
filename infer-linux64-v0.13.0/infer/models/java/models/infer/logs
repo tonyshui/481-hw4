@@ -1,0 +1,2090 @@
+[919][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[919][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[919][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[919][environment] INFER_ARGS = @/tmp/args_.tmp.98b0d8
+[919][environment]   Contents of '/tmp/args_.tmp.98b0d8'
+[919][environment]   -a
+[919][environment]   checkers
+[919][environment]   --biabduction-only
+[919][environment]   --results-dir
+[919][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[919][environment]   --models-mode
+[919][environment]   /Contents of '/tmp/args_.tmp.98b0d8'
+[919][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer^-a^checkers^--biabduction-only^--results-dir^models/infer^--models-mode^--^javac^-bootclasspath^/home/weimer/src/infer-linux64-v0.13.0/infer/lib/java/android/android-23.jar^-d^models^-classpath^/home/weimer/src/infer-linux64-v0.13.0/infer/lib/java/android/android-23.jar:/home/weimer/src/infer-linux64-v0.13.0/dependencies/java/guava/guava-10.0.1-fork.jar:/home/weimer/src/infer-linux64-v0.13.0/dependencies/java/jackson/jackson-2.2.3.jar:/home/weimer/src/infer-linux64-v0.13.0/dependencies/java/jsr-305/jsr305.jar:/home/weimer/src/infer-linux64-v0.13.0/infer/annotations/annotations.jar^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/builtins/com/facebook/infer/builtins/InferUtils.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/builtins/com/facebook/infer/builtins/InferTaint.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/builtins/com/facebook/infer/builtins/InferCloseables.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/builtins/com/facebook/infer/builtins/InferUndefined.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/builtins/com/facebook/infer/builtins/InferBuiltins.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/android/app/Activity.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/android/app/DownloadManager.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/android/database/CrossProcessCursorWrapper.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/android/database/sqlite/SQLiteDatabaseConfiguration.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/android/database/sqlite/SQLiteCursor.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/android/database/sqlite/SQLiteConnectionPool.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/android/database/sqlite/SQLiteQueryBuilder.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/android/database/sqlite/SQLiteDatabase.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/android/database/AbstractCursor.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/android/database/Cursor.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/android/database/CrossProcessCursor.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/android/database/CursorWrapper.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/android/text/TextUtils.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/android/content/IContentService.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/android/content/ContentProviderClient.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/android/content/ContentResolver.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/android/content/IContentProvider.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/android/content/Context.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/android/content/res/TypedArray.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/android/content/res/Resources.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/android/provider/MediaStore.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/com/google/common/base/Optional.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/com/google/common/base/Preconditions.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/com/google/common/io/Closeables.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/com/google/common/collect/Iterators.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/com/facebook/infer/annotation/Assertions.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/com/fasterxml/jackson/core/JsonFactory.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/com/fasterxml/jackson/core/JsonParser.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/util/LinkedList.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/util/AbstractList.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/util/Vector.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/util/Scanner.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/util/List.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/util/ArrayList.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/util/concurrent/Lock.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/util/concurrent/ReentrantLock.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/util/HashMap.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/util/jar/JarFile.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/util/jar/JarInputStream.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/util/jar/JarOutputStream.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/util/Properties.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/util/zip/CheckedOutputStream.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/util/zip/GZIPInputStream.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/util/zip/DeflaterInputStream.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/util/zip/Inflater.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/util/zip/CheckedInputStream.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/util/zip/DeflaterOutputStream.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/util/zip/ZipInputStream.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/util/zip/Deflater.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/util/zip/InflaterOutputStream.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/util/zip/GZIPOutputStream.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/util/zip/ZipOutputStream.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/util/zip/ZipFile.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/util/zip/InflaterInputStream.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/nio/FileChannelImpl.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/nio/channels/FileChannel.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/nio/channels/spi/AbstractInterruptibleChannel.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/security/DigestOutputStream.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/security/DigestInputStream.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/io/ObjectInputStream.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/io/ObjectOutputStream.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/io/InputStreamReader.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/io/PipedOutputStream.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/io/BufferedReader.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/io/Reader.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/io/RandomAccessFile.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/io/PipedInputStream.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/io/PipedWriter.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/io/PrintWriter.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/io/ByteArrayInputStream.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/io/DataOutputStream.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/io/PushbackInputStream.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/io/InputStream.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/io/OutputStream.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/io/File.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/io/Writer.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/io/FileInputStream.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/io/PushbackReader.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/io/DataInputStream.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/io/StringWriter.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/io/StringReader.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/io/FilterInputStream.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/io/BufferedOutputStream.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/io/FilterOutputStream.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/io/BufferedWriter.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/io/BufferedInputStream.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/io/OutputStreamWriter.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/io/PipedReader.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/io/FilterReader.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/io/FileOutputStream.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/io/ByteArrayOutputStream.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/net/JarURLConnection.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/net/URL.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/net/PlainSocketImpl.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/net/Socket.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/net/ServerSocket.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/net/HttpURLConnection.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/net/URLConnection.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/lang/Process.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/lang/ProcessManager.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/lang/String.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/lang/reflect/Array.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/lang/System.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/lang/Integer.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/lang/Runtime.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/lang/Object.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/lang/NullPointerException.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/lang/Class.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/java/lang/Thread.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/junit/framework/Assert.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/dalvik/system/CloseGuard.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/javax/net/ssl/HttpsURLConnection.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/javax/net/ssl/SSLSocketFactory.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/javax/crypto/CipherInputStream.java^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/src/javax/crypto/CipherOutputStream.java
+[919][environment] Analyzer: checkers
+[919][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[919][   progress] Capturing in javac mode...
+[919][      debug] Current working directory: '/home/weimer/src/infer-linux64-v0.13.0/infer/models/java'
+[919][      debug] Trying to execute: 'javac' '-J-Duser.language=en' '@/tmp/args_.tmp.0765b5' 2>'/tmp/javac_.tmp.d1346e.out'
+[919][      debug] *** Success. Logs:
+[919][      debug] Translating 121 source files (138 classes)
+[919][      debug] done capturing all files
+[919][   progress] Found 121 source files to analyze in /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[919][      debug] Dynamic dispatch mode: lazy
+[919][   progress] Starting analysis...
+[919][   progress] 
+[919][   progress] legend:
+[919][   progress]   "F" analyzing a file
+[919][   progress]   "." analyzing a procedure
+[919][   progress] 
+[919][   progress] 
+[962][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[962][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[962][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[962][environment] INFER_ARGS = @/tmp/args_.tmp.84ab81
+[962][environment]   Contents of '/tmp/args_.tmp.84ab81'
+[962][environment]   @/tmp/args_.tmp.98b0d8
+[962][environment]   --no-report
+[962][environment]   --results-dir
+[962][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[962][environment]   --cluster
+[962][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl2.cluster
+[962][environment]   /Contents of '/tmp/args_.tmp.84ab81'
+[962][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl2.cluster
+[962][environment] Analyzer: checkers
+[962][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[962][   progress] F....
+
+[974][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[974][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[974][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[974][environment] INFER_ARGS = @/tmp/args_.tmp.72f301
+[974][environment]   Contents of '/tmp/args_.tmp.72f301'
+[974][environment]   @/tmp/args_.tmp.98b0d8
+[974][environment]   --no-report
+[974][environment]   --results-dir
+[974][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[974][environment]   --cluster
+[974][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl14.cluster
+[974][environment]   /Contents of '/tmp/args_.tmp.72f301'
+[974][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl14.cluster
+[974][environment] Analyzer: checkers
+[964][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[964][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[964][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[964][environment] INFER_ARGS = @/tmp/args_.tmp.dc14f5
+[964][environment]   Contents of '/tmp/args_.tmp.dc14f5'
+[964][environment]   @/tmp/args_.tmp.98b0d8
+[964][environment]   --no-report
+[964][environment]   --results-dir
+[964][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[964][environment]   --cluster
+[964][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl4.cluster
+[964][environment]   /Contents of '/tmp/args_.tmp.dc14f5'
+[964][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl4.cluster
+[964][environment] Analyzer: checkers
+[974][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[964][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[964][   progress] F[974][   progress] F..
+
+[976][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[976][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[976][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[976][environment] INFER_ARGS = @/tmp/args_.tmp.e5f44c
+[976][environment]   Contents of '/tmp/args_.tmp.e5f44c'
+[976][environment]   @/tmp/args_.tmp.98b0d8
+[976][environment]   --no-report
+[976][environment]   --results-dir
+[976][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[976][environment]   --cluster
+[976][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl16.cluster
+[976][environment]   /Contents of '/tmp/args_.tmp.e5f44c'
+[976][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl16.cluster
+[976][environment] Analyzer: checkers
+[976][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[967][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[967][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[967][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[967][environment] INFER_ARGS = @/tmp/args_.tmp.bda5c7
+[967][environment]   Contents of '/tmp/args_.tmp.bda5c7'
+[967][environment]   @/tmp/args_.tmp.98b0d8
+[967][environment]   --no-report
+[967][environment]   --results-dir
+[967][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[967][environment]   --cluster
+[967][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl7.cluster
+[967][environment]   /Contents of '/tmp/args_.tmp.bda5c7'
+[967][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl7.cluster
+[967][environment] Analyzer: checkers
+[967][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[967][   progress] F..
+[976][   progress] F....[961][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[961][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[961][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[961][environment] INFER_ARGS = @/tmp/args_.tmp.47fca4
+[961][environment]   Contents of '/tmp/args_.tmp.47fca4'
+[961][environment]   @/tmp/args_.tmp.98b0d8
+[961][environment]   --no-report
+[961][environment]   --results-dir
+[961][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[961][environment]   --cluster
+[961][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl1.cluster
+[961][environment]   /Contents of '/tmp/args_.tmp.47fca4'
+[961][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl1.cluster
+[961][environment] Analyzer: checkers
+[961][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[961][   progress] F
+[961][environment] Starting analysis of cluster xcl1.cluster..
+
+
+
+[969][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[969][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[969][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[969][environment] INFER_ARGS = @/tmp/args_.tmp.0f46f9
+[969][environment]   Contents of '/tmp/args_.tmp.0f46f9'
+[969][environment]   @/tmp/args_.tmp.98b0d8
+[969][environment]   --no-report
+[969][environment]   --results-dir
+[969][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[969][environment]   --cluster
+[969][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl9.cluster
+[969][environment]   /Contents of '/tmp/args_.tmp.0f46f9'
+[969][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl9.cluster
+[969][environment] Analyzer: checkers
+[969][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[975][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[975][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[975][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[975][environment] INFER_ARGS = @/tmp/args_.tmp.ad5dd3
+[975][environment]   Contents of '/tmp/args_.tmp.ad5dd3'
+[975][environment]   @/tmp/args_.tmp.98b0d8
+[975][environment]   --no-report
+[975][environment]   --results-dir
+[975][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[975][environment]   --cluster
+[975][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl15.cluster
+[975][environment]   /Contents of '/tmp/args_.tmp.ad5dd3'
+[975][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl15.cluster
+[975][environment] Analyzer: checkers
+[975][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[973][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[973][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[973][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[973][environment] INFER_ARGS = @/tmp/args_.tmp.89c98e
+[973][environment]   Contents of '/tmp/args_.tmp.89c98e'
+[973][environment]   @/tmp/args_.tmp.98b0d8
+[973][environment]   --no-report
+[973][environment]   --results-dir
+[973][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[973][environment]   --cluster
+[973][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl13.cluster
+[973][environment]   /Contents of '/tmp/args_.tmp.89c98e'
+[973][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl13.cluster
+[973][environment] Analyzer: checkers
+[963][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[963][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[963][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[963][environment] INFER_ARGS = @/tmp/args_.tmp.221a93
+[963][environment]   Contents of '/tmp/args_.tmp.221a93'
+[963][environment]   @/tmp/args_.tmp.98b0d8
+[963][environment]   --no-report
+[963][environment]   --results-dir
+[963][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[963][environment]   --cluster
+[963][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl3.cluster
+[963][environment]   /Contents of '/tmp/args_.tmp.221a93'
+[963][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl3.cluster
+[963][environment] Analyzer: checkers
+[973][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[963][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[969][   progress] F
+..[973][   progress] F.[966][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[966][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[966][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[966][environment] INFER_ARGS = @/tmp/args_.tmp.383e51
+[966][environment]   Contents of '/tmp/args_.tmp.383e51'
+[966][environment]   @/tmp/args_.tmp.98b0d8
+[966][environment]   --no-report
+[966][environment]   --results-dir
+[966][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[966][environment]   --cluster
+[966][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl6.cluster
+[966][environment]   /Contents of '/tmp/args_.tmp.383e51'
+[966][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl6.cluster
+[966][environment] Analyzer: checkers
+[966][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[963][   progress] F.[975][   progress] F..[966][   progress] F..
+.
+[969][environment] Starting analysis of cluster xcl9.cluster.[965][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[965][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[965][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[965][environment] INFER_ARGS = @/tmp/args_.tmp.948d7b
+[965][environment]   Contents of '/tmp/args_.tmp.948d7b'
+[965][environment]   @/tmp/args_.tmp.98b0d8
+[965][environment]   --no-report
+[965][environment]   --results-dir
+[965][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[965][environment]   --cluster
+[965][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl5.cluster
+[965][environment]   /Contents of '/tmp/args_.tmp.948d7b'
+[965][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl5.cluster
+[965][environment] Analyzer: checkers
+[965][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+
+[962][environment] Starting analysis of cluster xcl2.cluster..
+[965][   progress] F.
+..[972][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[972][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[972][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[972][environment] INFER_ARGS = @/tmp/args_.tmp.21c86a
+[972][environment]   Contents of '/tmp/args_.tmp.21c86a'
+[972][environment]   @/tmp/args_.tmp.98b0d8
+[972][environment]   --no-report
+[972][environment]   --results-dir
+[972][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[972][environment]   --cluster
+[972][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl12.cluster
+[972][environment]   /Contents of '/tmp/args_.tmp.21c86a'
+[972][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl12.cluster
+[972][environment] Analyzer: checkers
+[972][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+.[970][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[970][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[970][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[970][environment] INFER_ARGS = @/tmp/args_.tmp.2fd9a7
+[970][environment]   Contents of '/tmp/args_.tmp.2fd9a7'
+[970][environment]   @/tmp/args_.tmp.98b0d8
+[970][environment]   --no-report
+[970][environment]   --results-dir
+[970][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[970][environment]   --cluster
+[970][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl10.cluster
+[970][environment]   /Contents of '/tmp/args_.tmp.2fd9a7'
+[970][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl10.cluster
+[970][environment] Analyzer: checkers
+[970][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+.[972][   progress] F..[970][   progress] F.....
+[967][environment] Starting analysis of cluster xcl7.cluster......
+[976][environment] Starting analysis of cluster xcl16.cluster..
+.[968][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[968][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[968][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[968][environment] INFER_ARGS = @/tmp/args_.tmp.4a25a9
+[968][environment]   Contents of '/tmp/args_.tmp.4a25a9'
+[968][environment]   @/tmp/args_.tmp.98b0d8
+[968][environment]   --no-report
+[968][environment]   --results-dir
+[968][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[968][environment]   --cluster
+[968][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl8.cluster
+[968][environment]   /Contents of '/tmp/args_.tmp.4a25a9'
+[968][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl8.cluster
+[968][environment] Analyzer: checkers
+[968][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[968][   progress] F...
+.[971][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[971][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[971][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[971][environment] INFER_ARGS = @/tmp/args_.tmp.d0ee5a
+[971][environment]   Contents of '/tmp/args_.tmp.d0ee5a'
+[971][environment]   @/tmp/args_.tmp.98b0d8
+[971][environment]   --no-report
+[971][environment]   --results-dir
+[971][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[971][environment]   --cluster
+[971][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl11.cluster
+[971][environment]   /Contents of '/tmp/args_.tmp.d0ee5a'
+[971][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl11.cluster
+[971][environment] Analyzer: checkers
+[971][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[971][   progress] F...
+[964][environment] Starting analysis of cluster xcl4.cluster......
+[968][environment] Starting analysis of cluster xcl8.cluster...........
+[966][environment] Starting analysis of cluster xcl6.cluster..
+[970][environment] Starting analysis of cluster xcl10.cluster..
+[974][environment] Starting analysis of cluster xcl14.cluster.....
+[963][environment] Starting analysis of cluster xcl3.cluster..
+[975][environment] Starting analysis of cluster xcl15.cluster
+
+[1016][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1016][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1016][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1016][environment] INFER_ARGS = @/tmp/args_.tmp.eab133
+[1016][environment]   Contents of '/tmp/args_.tmp.eab133'
+[1016][environment]   @/tmp/args_.tmp.98b0d8
+[1016][environment]   --no-report
+[1016][environment]   --results-dir
+[1016][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1016][environment]   --cluster
+[1016][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl18.cluster
+[1016][environment]   /Contents of '/tmp/args_.tmp.eab133'
+[1016][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl18.cluster
+[1016][environment] Analyzer: checkers
+[1016][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1013][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1013][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1013][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1013][environment] INFER_ARGS = @/tmp/args_.tmp.84b215
+[1013][environment]   Contents of '/tmp/args_.tmp.84b215'
+[1013][environment]   @/tmp/args_.tmp.98b0d8
+[1013][environment]   --no-report
+[1013][environment]   --results-dir
+[1013][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1013][environment]   --cluster
+[1013][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl17.cluster
+[1013][environment]   /Contents of '/tmp/args_.tmp.84b215'
+[1013][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl17.cluster
+[1013][environment] Analyzer: checkers
+[1013][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1016][   progress] F[1013][   progress] F
+..[1017][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1017][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1017][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1017][environment] INFER_ARGS = @/tmp/args_.tmp.067c2d
+[1017][environment]   Contents of '/tmp/args_.tmp.067c2d'
+[1017][environment]   @/tmp/args_.tmp.98b0d8
+[1017][environment]   --no-report
+[1017][environment]   --results-dir
+[1017][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1017][environment]   --cluster
+[1017][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl19.cluster
+[1017][environment]   /Contents of '/tmp/args_.tmp.067c2d'
+[1017][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl19.cluster
+[1017][environment] Analyzer: checkers
+[1017][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+..[1017][   progress] F.....
+..[1021][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1021][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1021][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1021][environment] INFER_ARGS = @/tmp/args_.tmp.ea2801
+[1021][environment]   Contents of '/tmp/args_.tmp.ea2801'
+[1021][environment]   @/tmp/args_.tmp.98b0d8
+[1021][environment]   --no-report
+[1021][environment]   --results-dir
+[1021][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1021][environment]   --cluster
+[1021][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl21.cluster
+[1021][environment]   /Contents of '/tmp/args_.tmp.ea2801'
+[1021][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl21.cluster
+[1021][environment] Analyzer: checkers
+[1021][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+
+[1021][   progress] F.[1019][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1019][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1019][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1019][environment] INFER_ARGS = @/tmp/args_.tmp.24198d
+[1019][environment]   Contents of '/tmp/args_.tmp.24198d'
+[1019][environment]   @/tmp/args_.tmp.98b0d8
+[1019][environment]   --no-report
+[1019][environment]   --results-dir
+[1019][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1019][environment]   --cluster
+[1019][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl20.cluster
+[1019][environment]   /Contents of '/tmp/args_.tmp.24198d'
+[1019][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl20.cluster
+[1019][environment] Analyzer: checkers
+[1019][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+...[1019][   progress] F..........
+.[1029][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1029][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1029][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1029][environment] INFER_ARGS = @/tmp/args_.tmp.11ae57
+[1029][environment]   Contents of '/tmp/args_.tmp.11ae57'
+[1029][environment]   @/tmp/args_.tmp.98b0d8
+[1029][environment]   --no-report
+[1029][environment]   --results-dir
+[1029][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1029][environment]   --cluster
+[1029][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl22.cluster
+[1029][environment]   /Contents of '/tmp/args_.tmp.11ae57'
+[1029][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl22.cluster
+[1029][environment] Analyzer: checkers
+[1029][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+.[1029][   progress] F......
+
+
+[1039][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1039][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1039][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1039][environment] INFER_ARGS = @/tmp/args_.tmp.1eb1a9
+[1039][environment]   Contents of '/tmp/args_.tmp.1eb1a9'
+[1039][environment]   @/tmp/args_.tmp.98b0d8
+[1039][environment]   --no-report
+[1039][environment]   --results-dir
+[1039][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1039][environment]   --cluster
+[1039][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl25.cluster
+[1039][environment]   /Contents of '/tmp/args_.tmp.1eb1a9'
+[1039][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl25.cluster
+[1039][environment] Analyzer: checkers
+[1039][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1037][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1037][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1037][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1037][environment] INFER_ARGS = @/tmp/args_.tmp.da1f77
+[1037][environment]   Contents of '/tmp/args_.tmp.da1f77'
+[1037][environment]   @/tmp/args_.tmp.98b0d8
+[1037][environment]   --no-report
+[1037][environment]   --results-dir
+[1037][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1037][environment]   --cluster
+[1037][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl24.cluster
+[1037][environment]   /Contents of '/tmp/args_.tmp.da1f77'
+[1037][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl24.cluster
+[1037][environment] Analyzer: checkers
+[1037][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1036][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1036][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1036][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1036][environment] INFER_ARGS = @/tmp/args_.tmp.42db73
+[1036][environment]   Contents of '/tmp/args_.tmp.42db73'
+[1036][environment]   @/tmp/args_.tmp.98b0d8
+[1036][environment]   --no-report
+[1036][environment]   --results-dir
+[1036][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1036][environment]   --cluster
+[1036][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl23.cluster
+[1036][environment]   /Contents of '/tmp/args_.tmp.42db73'
+[1036][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl23.cluster
+[1036][environment] Analyzer: checkers
+[1036][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+.[1036][   progress] F[1037][   progress] F.[1039][   progress] F.....
+..[1041][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1041][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1041][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1041][environment] INFER_ARGS = @/tmp/args_.tmp.3c3915
+[1041][environment]   Contents of '/tmp/args_.tmp.3c3915'
+[1041][environment]   @/tmp/args_.tmp.98b0d8
+[1041][environment]   --no-report
+[1041][environment]   --results-dir
+[1041][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1041][environment]   --cluster
+[1041][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl26.cluster
+[1041][environment]   /Contents of '/tmp/args_.tmp.3c3915'
+[1041][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl26.cluster
+[1041][environment] Analyzer: checkers
+[1041][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+
+[971][environment] Starting analysis of cluster xcl11.cluster[1041][   progress] F.
+[973][environment] Starting analysis of cluster xcl13.cluster...
+[1036][environment] Starting analysis of cluster xcl23.cluster.....
+.[1044][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1044][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1044][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1044][environment] INFER_ARGS = @/tmp/args_.tmp.5f5098
+[1044][environment]   Contents of '/tmp/args_.tmp.5f5098'
+[1044][environment]   @/tmp/args_.tmp.98b0d8
+[1044][environment]   --no-report
+[1044][environment]   --results-dir
+[1044][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1044][environment]   --cluster
+[1044][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl27.cluster
+[1044][environment]   /Contents of '/tmp/args_.tmp.5f5098'
+[1044][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl27.cluster
+[1044][environment] Analyzer: checkers
+[1044][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1044][   progress] F
+.
+[1013][environment] Starting analysis of cluster xcl17.cluster[1053][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1053][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1053][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1053][environment] INFER_ARGS = @/tmp/args_.tmp.91c601
+[1053][environment]   Contents of '/tmp/args_.tmp.91c601'
+[1053][environment]   @/tmp/args_.tmp.98b0d8
+[1053][environment]   --no-report
+[1053][environment]   --results-dir
+[1053][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1053][environment]   --cluster
+[1053][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl28.cluster
+[1053][environment]   /Contents of '/tmp/args_.tmp.91c601'
+[1053][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl28.cluster
+[1053][environment] Analyzer: checkers
+[1053][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+....[1053][   progress] F..
+[1037][environment] Starting analysis of cluster xcl24.cluster..........
+[965][environment] Starting analysis of cluster xcl5.cluster.........
+[1029][environment] Starting analysis of cluster xcl22.cluster..........
+[972][environment] Starting analysis of cluster xcl12.cluster.........
+[1019][environment] Starting analysis of cluster xcl20.cluster
+[1044][environment] Starting analysis of cluster xcl27.cluster......
+[1021][environment] Starting analysis of cluster xcl21.cluster.......
+
+[1039][environment] Starting analysis of cluster xcl25.cluster[1061][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1061][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1061][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1061][environment] INFER_ARGS = @/tmp/args_.tmp.32a4e0
+[1061][environment]   Contents of '/tmp/args_.tmp.32a4e0'
+[1061][environment]   @/tmp/args_.tmp.98b0d8
+[1061][environment]   --no-report
+[1061][environment]   --results-dir
+[1061][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1061][environment]   --cluster
+[1061][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl29.cluster
+[1061][environment]   /Contents of '/tmp/args_.tmp.32a4e0'
+[1061][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl29.cluster
+[1061][environment] Analyzer: checkers
+[1061][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+.
+[1041][environment] Starting analysis of cluster xcl26.cluster.[1061][   progress] F.
+
+
+[1017][environment] Starting analysis of cluster xcl19.cluster[1065][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1065][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1065][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1065][environment] INFER_ARGS = @/tmp/args_.tmp.78813d
+[1065][environment]   Contents of '/tmp/args_.tmp.78813d'
+[1065][environment]   @/tmp/args_.tmp.98b0d8
+[1065][environment]   --no-report
+[1065][environment]   --results-dir
+[1065][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1065][environment]   --cluster
+[1065][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl31.cluster
+[1065][environment]   /Contents of '/tmp/args_.tmp.78813d'
+[1065][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl31.cluster
+[1065][environment] Analyzer: checkers
+[1065][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1063][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1063][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1063][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1063][environment] INFER_ARGS = @/tmp/args_.tmp.1f9e0a
+[1063][environment]   Contents of '/tmp/args_.tmp.1f9e0a'
+[1063][environment]   @/tmp/args_.tmp.98b0d8
+[1063][environment]   --no-report
+[1063][environment]   --results-dir
+[1063][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1063][environment]   --cluster
+[1063][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl30.cluster
+[1063][environment]   /Contents of '/tmp/args_.tmp.1f9e0a'
+[1063][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl30.cluster
+[1063][environment] Analyzer: checkers
+[1063][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1065][   progress] F.[1063][   progress] F.......
+..[1067][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1067][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1067][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1067][environment] INFER_ARGS = @/tmp/args_.tmp.f0bd4b
+[1067][environment]   Contents of '/tmp/args_.tmp.f0bd4b'
+[1067][environment]   @/tmp/args_.tmp.98b0d8
+[1067][environment]   --no-report
+[1067][environment]   --results-dir
+[1067][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1067][environment]   --cluster
+[1067][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl32.cluster
+[1067][environment]   /Contents of '/tmp/args_.tmp.f0bd4b'
+[1067][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl32.cluster
+[1067][environment] Analyzer: checkers
+[1067][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1067][   progress] F.
+[1065][environment] Starting analysis of cluster xcl31.cluster...
+[1067][environment] Starting analysis of cluster xcl32.cluster.
+[1075][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1075][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1075][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1075][environment] INFER_ARGS = @/tmp/args_.tmp.146633
+[1075][environment]   Contents of '/tmp/args_.tmp.146633'
+[1075][environment]   @/tmp/args_.tmp.98b0d8
+[1075][environment]   --no-report
+[1075][environment]   --results-dir
+[1075][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1075][environment]   --cluster
+[1075][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl34.cluster
+[1075][environment]   /Contents of '/tmp/args_.tmp.146633'
+[1075][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl34.cluster
+[1075][environment] Analyzer: checkers
+[1075][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+
+[1075][   progress] F[1070][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1070][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1070][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1070][environment] INFER_ARGS = @/tmp/args_.tmp.fa0c3f
+[1070][environment]   Contents of '/tmp/args_.tmp.fa0c3f'
+[1070][environment]   @/tmp/args_.tmp.98b0d8
+[1070][environment]   --no-report
+[1070][environment]   --results-dir
+[1070][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1070][environment]   --cluster
+[1070][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl33.cluster
+[1070][environment]   /Contents of '/tmp/args_.tmp.fa0c3f'
+[1070][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl33.cluster
+[1070][environment] Analyzer: checkers
+[1070][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+.[1070][   progress] F..
+[1079][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1079][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1079][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1079][environment] INFER_ARGS = @/tmp/args_.tmp.db6d61
+[1079][environment]   Contents of '/tmp/args_.tmp.db6d61'
+[1079][environment]   @/tmp/args_.tmp.98b0d8
+[1079][environment]   --no-report
+[1079][environment]   --results-dir
+[1079][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1079][environment]   --cluster
+[1079][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl35.cluster
+[1079][environment]   /Contents of '/tmp/args_.tmp.db6d61'
+[1079][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl35.cluster
+[1079][environment] Analyzer: checkers
+[1079][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1079][   progress] F....
+[1079][environment] Starting analysis of cluster xcl35.cluster...
+.[1084][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1084][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1084][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1084][environment] INFER_ARGS = @/tmp/args_.tmp.3a69c5
+[1084][environment]   Contents of '/tmp/args_.tmp.3a69c5'
+[1084][environment]   @/tmp/args_.tmp.98b0d8
+[1084][environment]   --no-report
+[1084][environment]   --results-dir
+[1084][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1084][environment]   --cluster
+[1084][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl36.cluster
+[1084][environment]   /Contents of '/tmp/args_.tmp.3a69c5'
+[1084][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl36.cluster
+[1084][environment] Analyzer: checkers
+[1084][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1084][   progress] F..
+[1084][environment] Starting analysis of cluster xcl36.cluster
+.[1091][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1091][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1091][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1091][environment] INFER_ARGS = @/tmp/args_.tmp.9a7a98
+[1091][environment]   Contents of '/tmp/args_.tmp.9a7a98'
+[1091][environment]   @/tmp/args_.tmp.98b0d8
+[1091][environment]   --no-report
+[1091][environment]   --results-dir
+[1091][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1091][environment]   --cluster
+[1091][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl38.cluster
+[1091][environment]   /Contents of '/tmp/args_.tmp.9a7a98'
+[1091][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl38.cluster
+[1091][environment] Analyzer: checkers
+[1091][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+
+[1061][environment] Starting analysis of cluster xcl29.cluster[1091][   progress] F...
+..[1090][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1090][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1090][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1090][environment] INFER_ARGS = @/tmp/args_.tmp.a5060f
+[1090][environment]   Contents of '/tmp/args_.tmp.a5060f'
+[1090][environment]   @/tmp/args_.tmp.98b0d8
+[1090][environment]   --no-report
+[1090][environment]   --results-dir
+[1090][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1090][environment]   --cluster
+[1090][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl37.cluster
+[1090][environment]   /Contents of '/tmp/args_.tmp.a5060f'
+[1090][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl37.cluster
+[1090][environment] Analyzer: checkers
+[1090][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+
+.[1095][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1095][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1095][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1095][environment] INFER_ARGS = @/tmp/args_.tmp.6fccec
+[1095][environment]   Contents of '/tmp/args_.tmp.6fccec'
+[1095][environment]   @/tmp/args_.tmp.98b0d8
+[1095][environment]   --no-report
+[1095][environment]   --results-dir
+[1095][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1095][environment]   --cluster
+[1095][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl39.cluster
+[1095][environment]   /Contents of '/tmp/args_.tmp.6fccec'
+[1095][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl39.cluster
+[1095][environment] Analyzer: checkers
+[1095][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1090][   progress] F[1095][   progress] F.....
+[1100][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1100][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1100][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1100][environment] INFER_ARGS = @/tmp/args_.tmp.e74906
+[1100][environment]   Contents of '/tmp/args_.tmp.e74906'
+[1100][environment]   @/tmp/args_.tmp.98b0d8
+[1100][environment]   --no-report
+[1100][environment]   --results-dir
+[1100][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1100][environment]   --cluster
+[1100][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl40.cluster
+[1100][environment]   /Contents of '/tmp/args_.tmp.e74906'
+[1100][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl40.cluster
+[1100][environment] Analyzer: checkers
+[1100][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+
+[1100][   progress] F..[1102][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1102][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1102][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1102][environment] INFER_ARGS = @/tmp/args_.tmp.47b8cf
+[1102][environment]   Contents of '/tmp/args_.tmp.47b8cf'
+[1102][environment]   @/tmp/args_.tmp.98b0d8
+[1102][environment]   --no-report
+[1102][environment]   --results-dir
+[1102][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1102][environment]   --cluster
+[1102][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl41.cluster
+[1102][environment]   /Contents of '/tmp/args_.tmp.47b8cf'
+[1102][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl41.cluster
+[1102][environment] Analyzer: checkers
+[1102][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+.[1102][   progress] F.
+.
+[1070][environment] Starting analysis of cluster xcl33.cluster
+[1095][environment] Starting analysis of cluster xcl39.cluster.[1105][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1105][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1105][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1105][environment] INFER_ARGS = @/tmp/args_.tmp.040961
+[1105][environment]   Contents of '/tmp/args_.tmp.040961'
+[1105][environment]   @/tmp/args_.tmp.98b0d8
+[1105][environment]   --no-report
+[1105][environment]   --results-dir
+[1105][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1105][environment]   --cluster
+[1105][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl42.cluster
+[1105][environment]   /Contents of '/tmp/args_.tmp.040961'
+[1105][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl42.cluster
+[1105][environment] Analyzer: checkers
+[1105][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+..[1105][   progress] F..
+[1100][environment] Starting analysis of cluster xcl40.cluster......
+...[1114][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1114][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1114][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1114][environment] INFER_ARGS = @/tmp/args_.tmp.b5e50b
+[1114][environment]   Contents of '/tmp/args_.tmp.b5e50b'
+[1114][environment]   @/tmp/args_.tmp.98b0d8
+[1114][environment]   --no-report
+[1114][environment]   --results-dir
+[1114][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1114][environment]   --cluster
+[1114][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl43.cluster
+[1114][environment]   /Contents of '/tmp/args_.tmp.b5e50b'
+[1114][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl43.cluster
+[1114][environment] Analyzer: checkers
+[1114][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+.[1114][   progress] F...
+.[1120][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1120][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1120][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1120][environment] INFER_ARGS = @/tmp/args_.tmp.96216d
+[1120][environment]   Contents of '/tmp/args_.tmp.96216d'
+[1120][environment]   @/tmp/args_.tmp.98b0d8
+[1120][environment]   --no-report
+[1120][environment]   --results-dir
+[1120][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1120][environment]   --cluster
+[1120][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl44.cluster
+[1120][environment]   /Contents of '/tmp/args_.tmp.96216d'
+[1120][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl44.cluster
+[1120][environment] Analyzer: checkers
+[1120][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+.[1120][   progress] F..........
+[1016][environment] Starting analysis of cluster xcl18.cluster..
+[1105][environment] Starting analysis of cluster xcl42.cluster.
+[1122][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1122][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1122][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1122][environment] INFER_ARGS = @/tmp/args_.tmp.b649d5
+[1122][environment]   Contents of '/tmp/args_.tmp.b649d5'
+[1122][environment]   @/tmp/args_.tmp.98b0d8
+[1122][environment]   --no-report
+[1122][environment]   --results-dir
+[1122][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1122][environment]   --cluster
+[1122][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl45.cluster
+[1122][environment]   /Contents of '/tmp/args_.tmp.b649d5'
+[1122][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl45.cluster
+[1122][environment] Analyzer: checkers
+[1122][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+..[1122][   progress] F......
+[1053][environment] Starting analysis of cluster xcl28.cluster
+[1075][environment] Starting analysis of cluster xcl34.cluster.
+[1122][environment] Starting analysis of cluster xcl45.cluster
+[1091][environment] Starting analysis of cluster xcl38.cluster
+
+.[1130][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1130][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1130][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1130][environment] INFER_ARGS = @/tmp/args_.tmp.bf9350
+[1130][environment]   Contents of '/tmp/args_.tmp.bf9350'
+[1130][environment]   @/tmp/args_.tmp.98b0d8
+[1130][environment]   --no-report
+[1130][environment]   --results-dir
+[1130][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1130][environment]   --cluster
+[1130][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl47.cluster
+[1130][environment]   /Contents of '/tmp/args_.tmp.bf9350'
+[1130][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl47.cluster
+[1130][environment] Analyzer: checkers
+[1128][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1128][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1128][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1128][environment] INFER_ARGS = @/tmp/args_.tmp.f460cc
+[1128][environment]   Contents of '/tmp/args_.tmp.f460cc'
+[1128][environment]   @/tmp/args_.tmp.98b0d8
+[1128][environment]   --no-report
+[1128][environment]   --results-dir
+[1128][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1128][environment]   --cluster
+[1128][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl46.cluster
+[1128][environment]   /Contents of '/tmp/args_.tmp.f460cc'
+[1128][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl46.cluster
+[1128][environment] Analyzer: checkers
+[1130][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1128][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+.[1128][   progress] F.[1130][   progress] F.
+[1102][environment] Starting analysis of cluster xcl41.cluster
+[1120][environment] Starting analysis of cluster xcl44.cluster...
+[1063][environment] Starting analysis of cluster xcl30.cluster...
+
+
+[1138][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1138][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1138][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1138][environment] INFER_ARGS = @/tmp/args_.tmp.2ab0a9
+[1138][environment]   Contents of '/tmp/args_.tmp.2ab0a9'
+[1138][environment]   @/tmp/args_.tmp.98b0d8
+[1138][environment]   --no-report
+[1138][environment]   --results-dir
+[1138][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1138][environment]   --cluster
+[1138][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl48.cluster
+[1138][environment]   /Contents of '/tmp/args_.tmp.2ab0a9'
+[1138][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl48.cluster
+[1138][environment] Analyzer: checkers
+[1138][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1140][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1140][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1140][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1140][environment] INFER_ARGS = @/tmp/args_.tmp.94d6e7
+[1140][environment]   Contents of '/tmp/args_.tmp.94d6e7'
+[1140][environment]   @/tmp/args_.tmp.98b0d8
+[1140][environment]   --no-report
+[1140][environment]   --results-dir
+[1140][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1140][environment]   --cluster
+[1140][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl49.cluster
+[1140][environment]   /Contents of '/tmp/args_.tmp.94d6e7'
+[1140][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl49.cluster
+[1140][environment] Analyzer: checkers
+[1140][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1142][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1142][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1142][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1142][environment] INFER_ARGS = @/tmp/args_.tmp.4ab4f8
+[1142][environment]   Contents of '/tmp/args_.tmp.4ab4f8'
+[1142][environment]   @/tmp/args_.tmp.98b0d8
+[1142][environment]   --no-report
+[1142][environment]   --results-dir
+[1142][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1142][environment]   --cluster
+[1142][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl50.cluster
+[1142][environment]   /Contents of '/tmp/args_.tmp.4ab4f8'
+[1142][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl50.cluster
+[1142][environment] Analyzer: checkers
+[1142][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+.[1138][   progress] F[1140][   progress] F..[1142][   progress] F.
+[1128][environment] Starting analysis of cluster xcl46.cluster...
+[1114][environment] Starting analysis of cluster xcl43.cluster......
+[1090][environment] Starting analysis of cluster xcl37.cluster
+.[1150][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1150][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1150][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1150][environment] INFER_ARGS = @/tmp/args_.tmp.1c2193
+[1150][environment]   Contents of '/tmp/args_.tmp.1c2193'
+[1150][environment]   @/tmp/args_.tmp.98b0d8
+[1150][environment]   --no-report
+[1150][environment]   --results-dir
+[1150][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1150][environment]   --cluster
+[1150][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl51.cluster
+[1150][environment]   /Contents of '/tmp/args_.tmp.1c2193'
+[1150][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl51.cluster
+[1150][environment] Analyzer: checkers
+[1150][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+.[1150][   progress] F..
+[1152][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1152][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1152][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1152][environment] INFER_ARGS = @/tmp/args_.tmp.a11ec5
+[1152][environment]   Contents of '/tmp/args_.tmp.a11ec5'
+[1152][environment]   @/tmp/args_.tmp.98b0d8
+[1152][environment]   --no-report
+[1152][environment]   --results-dir
+[1152][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1152][environment]   --cluster
+[1152][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl52.cluster
+[1152][environment]   /Contents of '/tmp/args_.tmp.a11ec5'
+[1152][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl52.cluster
+[1152][environment] Analyzer: checkers
+[1152][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1152][   progress] F...
+
+[1155][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1155][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1155][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1155][environment] INFER_ARGS = @/tmp/args_.tmp.8b0acd
+[1155][environment]   Contents of '/tmp/args_.tmp.8b0acd'
+[1155][environment]   @/tmp/args_.tmp.98b0d8
+[1155][environment]   --no-report
+[1155][environment]   --results-dir
+[1155][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1155][environment]   --cluster
+[1155][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl53.cluster
+[1155][environment]   /Contents of '/tmp/args_.tmp.8b0acd'
+[1155][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl53.cluster
+[1155][environment] Analyzer: checkers
+[1155][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+
+[1158][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1158][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1158][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1158][environment] INFER_ARGS = @/tmp/args_.tmp.9b8350
+[1158][environment]   Contents of '/tmp/args_.tmp.9b8350'
+[1158][environment]   @/tmp/args_.tmp.98b0d8
+[1158][environment]   --no-report
+[1158][environment]   --results-dir
+[1158][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1158][environment]   --cluster
+[1158][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl54.cluster
+[1158][environment]   /Contents of '/tmp/args_.tmp.9b8350'
+[1158][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl54.cluster
+[1158][environment] Analyzer: checkers
+[1158][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1159][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1159][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1159][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1159][environment] INFER_ARGS = @/tmp/args_.tmp.354f16
+[1159][environment]   Contents of '/tmp/args_.tmp.354f16'
+[1159][environment]   @/tmp/args_.tmp.98b0d8
+[1159][environment]   --no-report
+[1159][environment]   --results-dir
+[1159][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1159][environment]   --cluster
+[1159][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl55.cluster
+[1159][environment]   /Contents of '/tmp/args_.tmp.354f16'
+[1159][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl55.cluster
+[1159][environment] Analyzer: checkers
+
+[1159][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1155][   progress] F[1158][   progress] F..[1159][   progress] F[1160][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1160][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1160][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1160][environment] INFER_ARGS = @/tmp/args_.tmp.14d19e
+[1160][environment]   Contents of '/tmp/args_.tmp.14d19e'
+[1160][environment]   @/tmp/args_.tmp.98b0d8
+[1160][environment]   --no-report
+[1160][environment]   --results-dir
+[1160][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1160][environment]   --cluster
+[1160][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl56.cluster
+[1160][environment]   /Contents of '/tmp/args_.tmp.14d19e'
+[1160][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl56.cluster
+[1160][environment] Analyzer: checkers
+[1160][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+..[1160][   progress] F....
+.[1165][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1165][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1165][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1165][environment] INFER_ARGS = @/tmp/args_.tmp.33e0c1
+[1165][environment]   Contents of '/tmp/args_.tmp.33e0c1'
+[1165][environment]   @/tmp/args_.tmp.98b0d8
+[1165][environment]   --no-report
+[1165][environment]   --results-dir
+[1165][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1165][environment]   --cluster
+[1165][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl58.cluster
+[1165][environment]   /Contents of '/tmp/args_.tmp.33e0c1'
+[1165][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl58.cluster
+[1165][environment] Analyzer: checkers
+[1165][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1165][   progress] F...
+.[1164][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1164][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1164][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1164][environment] INFER_ARGS = @/tmp/args_.tmp.38950e
+[1164][environment]   Contents of '/tmp/args_.tmp.38950e'
+[1164][environment]   @/tmp/args_.tmp.98b0d8
+[1164][environment]   --no-report
+[1164][environment]   --results-dir
+[1164][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1164][environment]   --cluster
+[1164][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl57.cluster
+[1164][environment]   /Contents of '/tmp/args_.tmp.38950e'
+[1164][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl57.cluster
+[1164][environment] Analyzer: checkers
+[1164][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+.[1164][   progress] F.
+[1138][environment] Starting analysis of cluster xcl48.cluster.
+....[1171][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1171][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1171][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1171][environment] INFER_ARGS = @/tmp/args_.tmp.f337df
+[1171][environment]   Contents of '/tmp/args_.tmp.f337df'
+[1171][environment]   @/tmp/args_.tmp.98b0d8
+[1171][environment]   --no-report
+[1171][environment]   --results-dir
+[1171][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1171][environment]   --cluster
+[1171][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl59.cluster
+[1171][environment]   /Contents of '/tmp/args_.tmp.f337df'
+[1171][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl59.cluster
+[1171][environment] Analyzer: checkers
+[1171][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1171][   progress] F...........
+[1142][environment] Starting analysis of cluster xcl50.cluster.....
+.[1185][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1185][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1185][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1185][environment] INFER_ARGS = @/tmp/args_.tmp.66ffd0
+[1185][environment]   Contents of '/tmp/args_.tmp.66ffd0'
+[1185][environment]   @/tmp/args_.tmp.98b0d8
+[1185][environment]   --no-report
+[1185][environment]   --results-dir
+[1185][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1185][environment]   --cluster
+[1185][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl60.cluster
+[1185][environment]   /Contents of '/tmp/args_.tmp.66ffd0'
+[1185][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl60.cluster
+[1185][environment] Analyzer: checkers
+[1185][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1185][   progress] F.....
+[1171][environment] Starting analysis of cluster xcl59.cluster..
+..[1189][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1189][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1189][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1189][environment] INFER_ARGS = @/tmp/args_.tmp.7b1ca5
+[1189][environment]   Contents of '/tmp/args_.tmp.7b1ca5'
+[1189][environment]   @/tmp/args_.tmp.98b0d8
+[1189][environment]   --no-report
+[1189][environment]   --results-dir
+[1189][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1189][environment]   --cluster
+[1189][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl61.cluster
+[1189][environment]   /Contents of '/tmp/args_.tmp.7b1ca5'
+[1189][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl61.cluster
+[1189][environment] Analyzer: checkers
+[1189][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+..
+[1150][environment] Starting analysis of cluster xcl51.cluster[1189][   progress] F..
+[1165][environment] Starting analysis of cluster xcl58.cluster....
+
+[1160][environment] Starting analysis of cluster xcl56.cluster.[1192][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1192][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1192][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1192][environment] INFER_ARGS = @/tmp/args_.tmp.e8bfcc
+[1192][environment]   Contents of '/tmp/args_.tmp.e8bfcc'
+[1192][environment]   @/tmp/args_.tmp.98b0d8
+[1192][environment]   --no-report
+[1192][environment]   --results-dir
+[1192][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1192][environment]   --cluster
+[1192][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl62.cluster
+[1192][environment]   /Contents of '/tmp/args_.tmp.e8bfcc'
+[1192][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl62.cluster
+[1192][environment] Analyzer: checkers
+[1192][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+..[1192][   progress] F..
+[1155][environment] Starting analysis of cluster xcl53.cluster.......
+[1159][environment] Starting analysis of cluster xcl55.cluster.......
+[1199][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1199][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1199][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1199][environment] INFER_ARGS = @/tmp/args_.tmp.3879d7
+[1199][environment]   Contents of '/tmp/args_.tmp.3879d7'
+[1199][environment]   @/tmp/args_.tmp.98b0d8
+[1199][environment]   --no-report
+[1199][environment]   --results-dir
+[1199][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1199][environment]   --cluster
+[1199][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl63.cluster
+[1199][environment]   /Contents of '/tmp/args_.tmp.3879d7'
+[1199][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl63.cluster
+[1199][environment] Analyzer: checkers
+[1199][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+.[1199][   progress] F..........
+.[1201][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1201][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1201][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1201][environment] INFER_ARGS = @/tmp/args_.tmp.298996
+[1201][environment]   Contents of '/tmp/args_.tmp.298996'
+[1201][environment]   @/tmp/args_.tmp.98b0d8
+[1201][environment]   --no-report
+[1201][environment]   --results-dir
+[1201][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1201][environment]   --cluster
+[1201][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl64.cluster
+[1201][environment]   /Contents of '/tmp/args_.tmp.298996'
+[1201][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl64.cluster
+[1201][environment] Analyzer: checkers
+[1201][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+.[1201][   progress] F...
+[1205][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1205][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1205][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1205][environment] INFER_ARGS = @/tmp/args_.tmp.89075d
+[1205][environment]   Contents of '/tmp/args_.tmp.89075d'
+[1205][environment]   @/tmp/args_.tmp.98b0d8
+[1205][environment]   --no-report
+[1205][environment]   --results-dir
+[1205][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1205][environment]   --cluster
+[1205][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl65.cluster
+[1205][environment]   /Contents of '/tmp/args_.tmp.89075d'
+[1205][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl65.cluster
+[1205][environment] Analyzer: checkers
+[1205][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1205][   progress] F....
+..[1207][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1207][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1207][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1207][environment] INFER_ARGS = @/tmp/args_.tmp.c03d01
+[1207][environment]   Contents of '/tmp/args_.tmp.c03d01'
+[1207][environment]   @/tmp/args_.tmp.98b0d8
+[1207][environment]   --no-report
+[1207][environment]   --results-dir
+[1207][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1207][environment]   --cluster
+[1207][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl66.cluster
+[1207][environment]   /Contents of '/tmp/args_.tmp.c03d01'
+[1207][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl66.cluster
+[1207][environment] Analyzer: checkers
+[1207][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1207][   progress] F.
+.[1209][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1209][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1209][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1209][environment] INFER_ARGS = @/tmp/args_.tmp.c094e5
+[1209][environment]   Contents of '/tmp/args_.tmp.c094e5'
+[1209][environment]   @/tmp/args_.tmp.98b0d8
+[1209][environment]   --no-report
+[1209][environment]   --results-dir
+[1209][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1209][environment]   --cluster
+[1209][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl67.cluster
+[1209][environment]   /Contents of '/tmp/args_.tmp.c094e5'
+[1209][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl67.cluster
+[1209][environment] Analyzer: checkers
+[1209][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1209][   progress] F...
+
+[1207][environment] Starting analysis of cluster xcl66.cluster[1213][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1213][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1213][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1213][environment] INFER_ARGS = @/tmp/args_.tmp.6a5edf
+[1213][environment]   Contents of '/tmp/args_.tmp.6a5edf'
+[1213][environment]   @/tmp/args_.tmp.98b0d8
+[1213][environment]   --no-report
+[1213][environment]   --results-dir
+[1213][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1213][environment]   --cluster
+[1213][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl68.cluster
+[1213][environment]   /Contents of '/tmp/args_.tmp.6a5edf'
+[1213][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl68.cluster
+[1213][environment] Analyzer: checkers
+[1213][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+..[1213][   progress] F......
+[1185][environment] Starting analysis of cluster xcl60.cluster
+[1130][environment] Starting analysis of cluster xcl47.cluster.....
+[1217][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1217][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1217][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1217][environment] INFER_ARGS = @/tmp/args_.tmp.cd952e
+[1217][environment]   Contents of '/tmp/args_.tmp.cd952e'
+[1217][environment]   @/tmp/args_.tmp.98b0d8
+[1217][environment]   --no-report
+[1217][environment]   --results-dir
+[1217][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1217][environment]   --cluster
+[1217][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl69.cluster
+[1217][environment]   /Contents of '/tmp/args_.tmp.cd952e'
+[1217][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl69.cluster
+[1217][environment] Analyzer: checkers
+[1217][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+
+[1199][environment] Starting analysis of cluster xcl63.cluster..[1217][   progress] F..
+[1224][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1224][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1224][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1224][environment] INFER_ARGS = @/tmp/args_.tmp.7928b8
+[1224][environment]   Contents of '/tmp/args_.tmp.7928b8'
+[1224][environment]   @/tmp/args_.tmp.98b0d8
+[1224][environment]   --no-report
+[1224][environment]   --results-dir
+[1224][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1224][environment]   --cluster
+[1224][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl70.cluster
+[1224][environment]   /Contents of '/tmp/args_.tmp.7928b8'
+[1224][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl70.cluster
+[1224][environment] Analyzer: checkers
+[1224][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+
+[1201][environment] Starting analysis of cluster xcl64.cluster..[1224][   progress] F..........
+[1217][environment] Starting analysis of cluster xcl69.cluster...........
+[1213][environment] Starting analysis of cluster xcl68.cluster...
+[1152][environment] Starting analysis of cluster xcl52.cluster
+..[1234][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1234][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1234][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1234][environment] INFER_ARGS = @/tmp/args_.tmp.5dbda6
+[1234][environment]   Contents of '/tmp/args_.tmp.5dbda6'
+[1234][environment]   @/tmp/args_.tmp.98b0d8
+[1234][environment]   --no-report
+[1234][environment]   --results-dir
+[1234][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1234][environment]   --cluster
+[1234][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl72.cluster
+[1234][environment]   /Contents of '/tmp/args_.tmp.5dbda6'
+[1234][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl72.cluster
+[1234][environment] Analyzer: checkers
+[1234][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+
+
+[1234][   progress] F[1235][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1235][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1235][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1235][environment] INFER_ARGS = @/tmp/args_.tmp.e5b2e0
+[1235][environment]   Contents of '/tmp/args_.tmp.e5b2e0'
+[1235][environment]   @/tmp/args_.tmp.98b0d8
+[1235][environment]   --no-report
+[1235][environment]   --results-dir
+[1235][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1235][environment]   --cluster
+[1235][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl73.cluster
+[1235][environment]   /Contents of '/tmp/args_.tmp.e5b2e0'
+[1235][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl73.cluster
+[1235][environment] Analyzer: checkers
+[1231][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1231][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1231][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1231][environment] INFER_ARGS = @/tmp/args_.tmp.bad396
+[1231][environment]   Contents of '/tmp/args_.tmp.bad396'
+[1231][environment]   @/tmp/args_.tmp.98b0d8
+[1231][environment]   --no-report
+[1231][environment]   --results-dir
+[1231][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1231][environment]   --cluster
+[1231][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl71.cluster
+[1231][environment]   /Contents of '/tmp/args_.tmp.bad396'
+[1231][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl71.cluster
+[1231][environment] Analyzer: checkers
+[1235][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1231][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+.[1231][   progress] F[1235][   progress] F...
+[1234][environment] Starting analysis of cluster xcl72.cluster.
+[1231][environment] Starting analysis of cluster xcl71.cluster
+.[1237][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1237][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1237][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1237][environment] INFER_ARGS = @/tmp/args_.tmp.62408f
+[1237][environment]   Contents of '/tmp/args_.tmp.62408f'
+[1237][environment]   @/tmp/args_.tmp.98b0d8
+[1237][environment]   --no-report
+[1237][environment]   --results-dir
+[1237][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1237][environment]   --cluster
+[1237][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl74.cluster
+[1237][environment]   /Contents of '/tmp/args_.tmp.62408f'
+[1237][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl74.cluster
+[1237][environment] Analyzer: checkers
+[1237][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+..[1237][   progress] F.
+[1235][environment] Starting analysis of cluster xcl73.cluster.
+[1224][environment] Starting analysis of cluster xcl70.cluster
+.[1239][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1239][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1239][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1239][environment] INFER_ARGS = @/tmp/args_.tmp.83a8c1
+[1239][environment]   Contents of '/tmp/args_.tmp.83a8c1'
+[1239][environment]   @/tmp/args_.tmp.98b0d8
+[1239][environment]   --no-report
+[1239][environment]   --results-dir
+[1239][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1239][environment]   --cluster
+[1239][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl75.cluster
+[1239][environment]   /Contents of '/tmp/args_.tmp.83a8c1'
+[1239][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl75.cluster
+[1239][environment] Analyzer: checkers
+[1239][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1239][   progress] F...
+[1248][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1248][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1248][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1248][environment] INFER_ARGS = @/tmp/args_.tmp.892051
+[1248][environment]   Contents of '/tmp/args_.tmp.892051'
+[1248][environment]   @/tmp/args_.tmp.98b0d8
+[1248][environment]   --no-report
+[1248][environment]   --results-dir
+[1248][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1248][environment]   --cluster
+[1248][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl76.cluster
+[1248][environment]   /Contents of '/tmp/args_.tmp.892051'
+[1248][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl76.cluster
+[1248][environment] Analyzer: checkers
+[1248][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1248][   progress] F.........
+[1209][environment] Starting analysis of cluster xcl67.cluster
+[1248][environment] Starting analysis of cluster xcl76.cluster.
+[1254][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1254][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1254][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1254][environment] INFER_ARGS = @/tmp/args_.tmp.84af5d
+[1254][environment]   Contents of '/tmp/args_.tmp.84af5d'
+[1254][environment]   @/tmp/args_.tmp.98b0d8
+[1254][environment]   --no-report
+[1254][environment]   --results-dir
+[1254][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1254][environment]   --cluster
+[1254][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl77.cluster
+[1254][environment]   /Contents of '/tmp/args_.tmp.84af5d'
+[1254][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl77.cluster
+[1254][environment] Analyzer: checkers
+[1254][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1254][   progress] F....
+[1257][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1257][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1257][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1257][environment] INFER_ARGS = @/tmp/args_.tmp.d8c5d7
+[1257][environment]   Contents of '/tmp/args_.tmp.d8c5d7'
+[1257][environment]   @/tmp/args_.tmp.98b0d8
+[1257][environment]   --no-report
+[1257][environment]   --results-dir
+[1257][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1257][environment]   --cluster
+[1257][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl78.cluster
+[1257][environment]   /Contents of '/tmp/args_.tmp.d8c5d7'
+[1257][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl78.cluster
+[1257][environment] Analyzer: checkers
+[1257][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+.
+[1192][environment] Starting analysis of cluster xcl62.cluster[1257][   progress] F.....
+[1260][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1260][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1260][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1260][environment] INFER_ARGS = @/tmp/args_.tmp.65b65d
+[1260][environment]   Contents of '/tmp/args_.tmp.65b65d'
+[1260][environment]   @/tmp/args_.tmp.98b0d8
+[1260][environment]   --no-report
+[1260][environment]   --results-dir
+[1260][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1260][environment]   --cluster
+[1260][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl79.cluster
+[1260][environment]   /Contents of '/tmp/args_.tmp.65b65d'
+[1260][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl79.cluster
+[1260][environment] Analyzer: checkers
+[1260][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1260][   progress] F..
+..[1261][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1261][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1261][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1261][environment] INFER_ARGS = @/tmp/args_.tmp.4da20f
+[1261][environment]   Contents of '/tmp/args_.tmp.4da20f'
+[1261][environment]   @/tmp/args_.tmp.98b0d8
+[1261][environment]   --no-report
+[1261][environment]   --results-dir
+[1261][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1261][environment]   --cluster
+[1261][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl80.cluster
+[1261][environment]   /Contents of '/tmp/args_.tmp.4da20f'
+[1261][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl80.cluster
+[1261][environment] Analyzer: checkers
+[1261][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1261][   progress] F.
+[1237][environment] Starting analysis of cluster xcl74.cluster.
+..[1265][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1265][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1265][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1265][environment] INFER_ARGS = @/tmp/args_.tmp.a2e61e
+[1265][environment]   Contents of '/tmp/args_.tmp.a2e61e'
+[1265][environment]   @/tmp/args_.tmp.98b0d8
+[1265][environment]   --no-report
+[1265][environment]   --results-dir
+[1265][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1265][environment]   --cluster
+[1265][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl81.cluster
+[1265][environment]   /Contents of '/tmp/args_.tmp.a2e61e'
+[1265][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl81.cluster
+[1265][environment] Analyzer: checkers
+[1265][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+.[1265][   progress] F..
+[1239][environment] Starting analysis of cluster xcl75.cluster.
+[1189][environment] Starting analysis of cluster xcl61.cluster....
+[1271][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1271][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1271][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1271][environment] INFER_ARGS = @/tmp/args_.tmp.2d88be
+[1271][environment]   Contents of '/tmp/args_.tmp.2d88be'
+[1271][environment]   @/tmp/args_.tmp.98b0d8
+[1271][environment]   --no-report
+[1271][environment]   --results-dir
+[1271][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1271][environment]   --cluster
+[1271][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl82.cluster
+[1271][environment]   /Contents of '/tmp/args_.tmp.2d88be'
+[1271][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl82.cluster
+[1271][environment] Analyzer: checkers
+[1271][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+...[1271][   progress] F.
+[1257][environment] Starting analysis of cluster xcl78.cluster
+[1260][environment] Starting analysis of cluster xcl79.cluster...
+[1164][environment] Starting analysis of cluster xcl57.cluster...
+
+[1280][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1280][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1280][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1280][environment] INFER_ARGS = @/tmp/args_.tmp.bdf4be
+[1280][environment]   Contents of '/tmp/args_.tmp.bdf4be'
+[1280][environment]   @/tmp/args_.tmp.98b0d8
+[1280][environment]   --no-report
+[1280][environment]   --results-dir
+[1280][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1280][environment]   --cluster
+[1280][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl84.cluster
+[1280][environment]   /Contents of '/tmp/args_.tmp.bdf4be'
+[1280][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl84.cluster
+[1280][environment] Analyzer: checkers
+[1280][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1279][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1279][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1279][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1279][environment] INFER_ARGS = @/tmp/args_.tmp.1661d1
+[1279][environment]   Contents of '/tmp/args_.tmp.1661d1'
+[1279][environment]   @/tmp/args_.tmp.98b0d8
+[1279][environment]   --no-report
+[1279][environment]   --results-dir
+[1279][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1279][environment]   --cluster
+[1279][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl83.cluster
+[1279][environment]   /Contents of '/tmp/args_.tmp.1661d1'
+[1279][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl83.cluster
+[1279][environment] Analyzer: checkers
+[1279][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1280][   progress] F.[1279][   progress] F.
+[1254][environment] Starting analysis of cluster xcl77.cluster....
+.[1284][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1284][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1284][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1284][environment] INFER_ARGS = @/tmp/args_.tmp.ae04d6
+[1284][environment]   Contents of '/tmp/args_.tmp.ae04d6'
+[1284][environment]   @/tmp/args_.tmp.98b0d8
+[1284][environment]   --no-report
+[1284][environment]   --results-dir
+[1284][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1284][environment]   --cluster
+[1284][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl85.cluster
+[1284][environment]   /Contents of '/tmp/args_.tmp.ae04d6'
+[1284][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl85.cluster
+[1284][environment] Analyzer: checkers
+[1284][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1284][   progress] F.....
+[1140][environment] Starting analysis of cluster xcl49.cluster...
+[1284][environment] Starting analysis of cluster xcl85.cluster.
+
+[1265][environment] Starting analysis of cluster xcl81.cluster..[1290][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1290][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1290][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1290][environment] INFER_ARGS = @/tmp/args_.tmp.ac1b05
+[1290][environment]   Contents of '/tmp/args_.tmp.ac1b05'
+[1290][environment]   @/tmp/args_.tmp.98b0d8
+[1290][environment]   --no-report
+[1290][environment]   --results-dir
+[1290][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1290][environment]   --cluster
+[1290][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl86.cluster
+[1290][environment]   /Contents of '/tmp/args_.tmp.ac1b05'
+[1290][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl86.cluster
+[1290][environment] Analyzer: checkers
+[1290][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1290][   progress] F........
+..[1295][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1295][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1295][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1295][environment] INFER_ARGS = @/tmp/args_.tmp.d8c8c9
+[1295][environment]   Contents of '/tmp/args_.tmp.d8c8c9'
+[1295][environment]   @/tmp/args_.tmp.98b0d8
+[1295][environment]   --no-report
+[1295][environment]   --results-dir
+[1295][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1295][environment]   --cluster
+[1295][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl87.cluster
+[1295][environment]   /Contents of '/tmp/args_.tmp.d8c8c9'
+[1295][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl87.cluster
+[1295][environment] Analyzer: checkers
+[1295][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+.[1295][   progress] F.
+[1300][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1300][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1300][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1300][environment] INFER_ARGS = @/tmp/args_.tmp.87c791
+[1300][environment]   Contents of '/tmp/args_.tmp.87c791'
+[1300][environment]   @/tmp/args_.tmp.98b0d8
+[1300][environment]   --no-report
+[1300][environment]   --results-dir
+[1300][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1300][environment]   --cluster
+[1300][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl88.cluster
+[1300][environment]   /Contents of '/tmp/args_.tmp.87c791'
+[1300][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl88.cluster
+[1300][environment] Analyzer: checkers
+[1300][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1300][   progress] F...
+.[1304][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1304][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1304][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1304][environment] INFER_ARGS = @/tmp/args_.tmp.9a2fe9
+[1304][environment]   Contents of '/tmp/args_.tmp.9a2fe9'
+[1304][environment]   @/tmp/args_.tmp.98b0d8
+[1304][environment]   --no-report
+[1304][environment]   --results-dir
+[1304][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1304][environment]   --cluster
+[1304][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl90.cluster
+[1304][environment]   /Contents of '/tmp/args_.tmp.9a2fe9'
+[1304][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl90.cluster
+[1304][environment] Analyzer: checkers
+[1304][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1304][   progress] F.
+
+...[1305][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1305][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1305][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1305][environment] INFER_ARGS = @/tmp/args_.tmp.2c5de5
+[1305][environment]   Contents of '/tmp/args_.tmp.2c5de5'
+[1305][environment]   @/tmp/args_.tmp.98b0d8
+[1305][environment]   --no-report
+[1305][environment]   --results-dir
+[1305][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1305][environment]   --cluster
+[1305][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl91.cluster
+[1305][environment]   /Contents of '/tmp/args_.tmp.2c5de5'
+[1305][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl91.cluster
+[1305][environment] Analyzer: checkers
+[1302][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1302][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1302][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1302][environment] INFER_ARGS = @/tmp/args_.tmp.625802
+[1302][environment]   Contents of '/tmp/args_.tmp.625802'
+[1302][environment]   @/tmp/args_.tmp.98b0d8
+[1302][environment]   --no-report
+[1302][environment]   --results-dir
+[1302][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1302][environment]   --cluster
+[1302][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl89.cluster
+[1302][environment]   /Contents of '/tmp/args_.tmp.625802'
+[1302][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl89.cluster
+[1302][environment] Analyzer: checkers
+[1305][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1302][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+
+[1261][environment] Starting analysis of cluster xcl80.cluster[1302][   progress] F
+[1302][environment] Starting analysis of cluster xcl89.cluster..[1305][   progress] F......
+[1308][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1308][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1308][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1308][environment] INFER_ARGS = @/tmp/args_.tmp.7e20b2
+[1308][environment]   Contents of '/tmp/args_.tmp.7e20b2'
+[1308][environment]   @/tmp/args_.tmp.98b0d8
+[1308][environment]   --no-report
+[1308][environment]   --results-dir
+[1308][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1308][environment]   --cluster
+[1308][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl92.cluster
+[1308][environment]   /Contents of '/tmp/args_.tmp.7e20b2'
+[1308][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl92.cluster
+[1308][environment] Analyzer: checkers
+[1308][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+.
+[1290][environment] Starting analysis of cluster xcl86.cluster[1308][   progress] F...
+[1279][environment] Starting analysis of cluster xcl83.cluster.....
+[1271][environment] Starting analysis of cluster xcl82.cluster
+[1280][environment] Starting analysis of cluster xcl84.cluster
+[1300][environment] Starting analysis of cluster xcl88.cluster..
+[1317][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1317][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1317][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1317][environment] INFER_ARGS = @/tmp/args_.tmp.d44f19
+[1317][environment]   Contents of '/tmp/args_.tmp.d44f19'
+[1317][environment]   @/tmp/args_.tmp.98b0d8
+[1317][environment]   --no-report
+[1317][environment]   --results-dir
+[1317][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1317][environment]   --cluster
+[1317][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl93.cluster
+[1317][environment]   /Contents of '/tmp/args_.tmp.d44f19'
+[1317][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl93.cluster
+[1317][environment] Analyzer: checkers
+[1317][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+
+[1317][   progress] F[1319][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1319][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1319][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1319][environment] INFER_ARGS = @/tmp/args_.tmp.8ab3b8
+[1319][environment]   Contents of '/tmp/args_.tmp.8ab3b8'
+[1319][environment]   @/tmp/args_.tmp.98b0d8
+[1319][environment]   --no-report
+[1319][environment]   --results-dir
+[1319][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1319][environment]   --cluster
+[1319][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl94.cluster
+[1319][environment]   /Contents of '/tmp/args_.tmp.8ab3b8'
+[1319][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl94.cluster
+[1319][environment] Analyzer: checkers
+[1319][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+.[1319][   progress] F...
+[1308][environment] Starting analysis of cluster xcl92.cluster
+[1304][environment] Starting analysis of cluster xcl90.cluster..
+.[1323][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1323][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1323][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1323][environment] INFER_ARGS = @/tmp/args_.tmp.edd26a
+[1323][environment]   Contents of '/tmp/args_.tmp.edd26a'
+[1323][environment]   @/tmp/args_.tmp.98b0d8
+[1323][environment]   --no-report
+[1323][environment]   --results-dir
+[1323][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1323][environment]   --cluster
+[1323][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl95.cluster
+[1323][environment]   /Contents of '/tmp/args_.tmp.edd26a'
+[1323][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl95.cluster
+[1323][environment] Analyzer: checkers
+[1323][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1323][   progress] F.
+[1317][environment] Starting analysis of cluster xcl93.cluster.
+[1323][environment] Starting analysis of cluster xcl95.cluster..
+[1319][environment] Starting analysis of cluster xcl94.cluster....
+[1334][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1334][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1334][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1334][environment] INFER_ARGS = @/tmp/args_.tmp.112129
+[1334][environment]   Contents of '/tmp/args_.tmp.112129'
+[1334][environment]   @/tmp/args_.tmp.98b0d8
+[1334][environment]   --no-report
+[1334][environment]   --results-dir
+[1334][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1334][environment]   --cluster
+[1334][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl96.cluster
+[1334][environment]   /Contents of '/tmp/args_.tmp.112129'
+[1334][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl96.cluster
+[1334][environment] Analyzer: checkers
+[1334][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+.[1334][   progress] F...
+[1295][environment] Starting analysis of cluster xcl87.cluster..
+
+[1335][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1335][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1335][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1335][environment] INFER_ARGS = @/tmp/args_.tmp.24a639
+[1335][environment]   Contents of '/tmp/args_.tmp.24a639'
+[1335][environment]   @/tmp/args_.tmp.98b0d8
+[1335][environment]   --no-report
+[1335][environment]   --results-dir
+[1335][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1335][environment]   --cluster
+[1335][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl97.cluster
+[1335][environment]   /Contents of '/tmp/args_.tmp.24a639'
+[1335][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl97.cluster
+[1335][environment] Analyzer: checkers
+[1337][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1337][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1337][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1337][environment] INFER_ARGS = @/tmp/args_.tmp.3eb1d4
+[1337][environment]   Contents of '/tmp/args_.tmp.3eb1d4'
+[1337][environment]   @/tmp/args_.tmp.98b0d8
+[1337][environment]   --no-report
+[1337][environment]   --results-dir
+[1337][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1337][environment]   --cluster
+[1337][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl98.cluster
+[1337][environment]   /Contents of '/tmp/args_.tmp.3eb1d4'
+[1337][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl98.cluster
+[1337][environment] Analyzer: checkers
+[1335][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1337][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1337][   progress] F[1335][   progress] F..
+.
+[1343][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1343][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1343][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1343][environment] INFER_ARGS = @/tmp/args_.tmp.f55ca1
+[1343][environment]   Contents of '/tmp/args_.tmp.f55ca1'
+[1343][environment]   @/tmp/args_.tmp.98b0d8
+[1343][environment]   --no-report
+[1343][environment]   --results-dir
+[1343][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1343][environment]   --cluster
+[1343][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl99.cluster
+[1343][environment]   /Contents of '/tmp/args_.tmp.f55ca1'
+[1343][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl99.cluster
+[1343][environment] Analyzer: checkers
+[1343][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1343][   progress] F
+
+[1343][environment] Starting analysis of cluster xcl99.cluster[1345][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1345][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1345][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1345][environment] INFER_ARGS = @/tmp/args_.tmp.b2a764
+[1345][environment]   Contents of '/tmp/args_.tmp.b2a764'
+[1345][environment]   @/tmp/args_.tmp.98b0d8
+[1345][environment]   --no-report
+[1345][environment]   --results-dir
+[1345][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1345][environment]   --cluster
+[1345][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl100.cluster
+[1345][environment]   /Contents of '/tmp/args_.tmp.b2a764'
+[1345][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl100.cluster
+[1345][environment] Analyzer: checkers
+[1345][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1345][   progress] F[1346][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1346][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1346][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1346][environment] INFER_ARGS = @/tmp/args_.tmp.762191
+[1346][environment]   Contents of '/tmp/args_.tmp.762191'
+[1346][environment]   @/tmp/args_.tmp.98b0d8
+[1346][environment]   --no-report
+[1346][environment]   --results-dir
+[1346][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1346][environment]   --cluster
+[1346][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl101.cluster
+[1346][environment]   /Contents of '/tmp/args_.tmp.762191'
+[1346][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl101.cluster
+[1346][environment] Analyzer: checkers
+.[1346][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1346][   progress] F..
+[1347][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1347][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1347][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1347][environment] INFER_ARGS = @/tmp/args_.tmp.e67883
+[1347][environment]   Contents of '/tmp/args_.tmp.e67883'
+[1347][environment]   @/tmp/args_.tmp.98b0d8
+[1347][environment]   --no-report
+[1347][environment]   --results-dir
+[1347][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1347][environment]   --cluster
+[1347][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl102.cluster
+[1347][environment]   /Contents of '/tmp/args_.tmp.e67883'
+[1347][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl102.cluster
+[1347][environment] Analyzer: checkers
+[1347][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1347][   progress] F......
+
+[1352][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1352][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1352][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1352][environment] INFER_ARGS = @/tmp/args_.tmp.4c7b26
+[1352][environment]   Contents of '/tmp/args_.tmp.4c7b26'
+[1352][environment]   @/tmp/args_.tmp.98b0d8
+[1352][environment]   --no-report
+[1352][environment]   --results-dir
+[1352][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1352][environment]   --cluster
+[1352][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl103.cluster
+[1352][environment]   /Contents of '/tmp/args_.tmp.4c7b26'
+[1352][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl103.cluster
+[1352][environment] Analyzer: checkers
+[1352][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1354][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1354][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1354][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1354][environment] INFER_ARGS = @/tmp/args_.tmp.c8fed3
+[1354][environment]   Contents of '/tmp/args_.tmp.c8fed3'
+[1354][environment]   @/tmp/args_.tmp.98b0d8
+[1354][environment]   --no-report
+[1354][environment]   --results-dir
+[1354][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1354][environment]   --cluster
+[1354][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl104.cluster
+[1354][environment]   /Contents of '/tmp/args_.tmp.c8fed3'
+[1354][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl104.cluster
+[1354][environment] Analyzer: checkers
+[1354][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1352][   progress] F.[1354][   progress] F.....
+[1345][environment] Starting analysis of cluster xcl100.cluster...
+
+.
+[1372][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1372][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1372][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1372][environment] INFER_ARGS = @/tmp/args_.tmp.d8ce81
+[1372][environment]   Contents of '/tmp/args_.tmp.d8ce81'
+[1372][environment]   @/tmp/args_.tmp.98b0d8
+[1372][environment]   --no-report
+[1372][environment]   --results-dir
+[1372][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1372][environment]   --cluster
+[1372][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl107.cluster
+[1372][environment]   /Contents of '/tmp/args_.tmp.d8ce81'
+[1372][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl107.cluster
+[1372][environment] Analyzer: checkers
+[1372][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1368][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1368][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1368][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1368][environment] INFER_ARGS = @/tmp/args_.tmp.a75ec1
+[1368][environment]   Contents of '/tmp/args_.tmp.a75ec1'
+[1368][environment]   @/tmp/args_.tmp.98b0d8
+[1368][environment]   --no-report
+[1368][environment]   --results-dir
+[1368][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1368][environment]   --cluster
+[1368][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl105.cluster
+[1368][environment]   /Contents of '/tmp/args_.tmp.a75ec1'
+[1368][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl105.cluster
+[1368][environment] Analyzer: checkers
+[1368][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1372][   progress] F[1370][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1370][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1370][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1370][environment] INFER_ARGS = @/tmp/args_.tmp.529d68
+[1370][environment]   Contents of '/tmp/args_.tmp.529d68'
+[1370][environment]   @/tmp/args_.tmp.98b0d8
+[1370][environment]   --no-report
+[1370][environment]   --results-dir
+[1370][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1370][environment]   --cluster
+[1370][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl106.cluster
+[1370][environment]   /Contents of '/tmp/args_.tmp.529d68'
+[1370][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl106.cluster
+[1370][environment] Analyzer: checkers
+[1370][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+
+[1372][environment] Starting analysis of cluster xcl107.cluster.[1368][   progress] F..[1370][   progress] F...................
+[1335][environment] Starting analysis of cluster xcl97.cluster...
+[1337][environment] Starting analysis of cluster xcl98.cluster.....
+[1383][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1383][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1383][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1383][environment] INFER_ARGS = @/tmp/args_.tmp.535905
+[1383][environment]   Contents of '/tmp/args_.tmp.535905'
+[1383][environment]   @/tmp/args_.tmp.98b0d8
+[1383][environment]   --no-report
+[1383][environment]   --results-dir
+[1383][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1383][environment]   --cluster
+[1383][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl108.cluster
+[1383][environment]   /Contents of '/tmp/args_.tmp.535905'
+[1383][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl108.cluster
+[1383][environment] Analyzer: checkers
+[1383][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1383][   progress] F...
+[1346][environment] Starting analysis of cluster xcl101.cluster.
+[1386][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1386][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1386][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1386][environment] INFER_ARGS = @/tmp/args_.tmp.2119da
+[1386][environment]   Contents of '/tmp/args_.tmp.2119da'
+[1386][environment]   @/tmp/args_.tmp.98b0d8
+[1386][environment]   --no-report
+[1386][environment]   --results-dir
+[1386][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1386][environment]   --cluster
+[1386][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl109.cluster
+[1386][environment]   /Contents of '/tmp/args_.tmp.2119da'
+[1386][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl109.cluster
+[1386][environment] Analyzer: checkers
+[1386][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1386][   progress] F...........
+
+[1205][environment] Starting analysis of cluster xcl65.cluster[1390][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1390][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1390][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1390][environment] INFER_ARGS = @/tmp/args_.tmp.17b01a
+[1390][environment]   Contents of '/tmp/args_.tmp.17b01a'
+[1390][environment]   @/tmp/args_.tmp.98b0d8
+[1390][environment]   --no-report
+[1390][environment]   --results-dir
+[1390][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1390][environment]   --cluster
+[1390][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl110.cluster
+[1390][environment]   /Contents of '/tmp/args_.tmp.17b01a'
+[1390][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl110.cluster
+[1390][environment] Analyzer: checkers
+[1390][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1390][   progress] F....
+.[1393][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1393][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1393][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1393][environment] INFER_ARGS = @/tmp/args_.tmp.6f5db4
+[1393][environment]   Contents of '/tmp/args_.tmp.6f5db4'
+[1393][environment]   @/tmp/args_.tmp.98b0d8
+[1393][environment]   --no-report
+[1393][environment]   --results-dir
+[1393][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1393][environment]   --cluster
+[1393][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl111.cluster
+[1393][environment]   /Contents of '/tmp/args_.tmp.6f5db4'
+[1393][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl111.cluster
+[1393][environment] Analyzer: checkers
+[1393][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+
+[1390][environment] Starting analysis of cluster xcl110.cluster.[1393][   progress] F..................
+[1386][environment] Starting analysis of cluster xcl109.cluster..
+
+[1401][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1401][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1401][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1401][environment] INFER_ARGS = @/tmp/args_.tmp.576507
+[1401][environment]   Contents of '/tmp/args_.tmp.576507'
+[1401][environment]   @/tmp/args_.tmp.98b0d8
+[1401][environment]   --no-report
+[1401][environment]   --results-dir
+[1401][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1401][environment]   --cluster
+[1401][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl113.cluster
+[1401][environment]   /Contents of '/tmp/args_.tmp.576507'
+[1401][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl113.cluster
+[1401][environment] Analyzer: checkers
+[1401][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1398][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1398][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1398][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1398][environment] INFER_ARGS = @/tmp/args_.tmp.b71a13
+[1398][environment]   Contents of '/tmp/args_.tmp.b71a13'
+[1398][environment]   @/tmp/args_.tmp.98b0d8
+[1398][environment]   --no-report
+[1398][environment]   --results-dir
+[1398][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1398][environment]   --cluster
+[1398][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl112.cluster
+[1398][environment]   /Contents of '/tmp/args_.tmp.b71a13'
+[1398][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl112.cluster
+[1398][environment] Analyzer: checkers
+[1398][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1401][   progress] F..[1398][   progress] F........
+[1158][environment] Starting analysis of cluster xcl54.cluster........
+[1404][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1404][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1404][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1404][environment] INFER_ARGS = @/tmp/args_.tmp.dd57b7
+[1404][environment]   Contents of '/tmp/args_.tmp.dd57b7'
+[1404][environment]   @/tmp/args_.tmp.98b0d8
+[1404][environment]   --no-report
+[1404][environment]   --results-dir
+[1404][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1404][environment]   --cluster
+[1404][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl114.cluster
+[1404][environment]   /Contents of '/tmp/args_.tmp.dd57b7'
+[1404][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl114.cluster
+[1404][environment] Analyzer: checkers
+[1404][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1404][   progress] F...
+[1401][environment] Starting analysis of cluster xcl113.cluster..
+[1354][environment] Starting analysis of cluster xcl104.cluster........
+.[1410][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1410][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1410][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1410][environment] INFER_ARGS = @/tmp/args_.tmp.4205d4
+[1410][environment]   Contents of '/tmp/args_.tmp.4205d4'
+[1410][environment]   @/tmp/args_.tmp.98b0d8
+[1410][environment]   --no-report
+[1410][environment]   --results-dir
+[1410][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1410][environment]   --cluster
+[1410][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl115.cluster
+[1410][environment]   /Contents of '/tmp/args_.tmp.4205d4'
+[1410][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl115.cluster
+[1410][environment] Analyzer: checkers
+[1410][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+..[1410][   progress] F.
+[1305][environment] Starting analysis of cluster xcl91.cluster.....
+[1404][environment] Starting analysis of cluster xcl114.cluster.....
+
+.[1416][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1416][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1416][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1416][environment] INFER_ARGS = @/tmp/args_.tmp.a86437
+[1416][environment]   Contents of '/tmp/args_.tmp.a86437'
+[1416][environment]   @/tmp/args_.tmp.98b0d8
+[1416][environment]   --no-report
+[1416][environment]   --results-dir
+[1416][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1416][environment]   --cluster
+[1416][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl117.cluster
+[1416][environment]   /Contents of '/tmp/args_.tmp.a86437'
+[1416][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl117.cluster
+[1416][environment] Analyzer: checkers
+[1414][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1414][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1414][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1414][environment] INFER_ARGS = @/tmp/args_.tmp.ac8d61
+[1414][environment]   Contents of '/tmp/args_.tmp.ac8d61'
+[1414][environment]   @/tmp/args_.tmp.98b0d8
+[1414][environment]   --no-report
+[1414][environment]   --results-dir
+[1414][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1414][environment]   --cluster
+[1414][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl116.cluster
+[1414][environment]   /Contents of '/tmp/args_.tmp.ac8d61'
+[1414][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl116.cluster
+[1414][environment] Analyzer: checkers
+[1416][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1414][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1414][   progress] F[1416][   progress] F.........
+[1393][environment] Starting analysis of cluster xcl111.cluster...
+[1420][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1420][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1420][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1420][environment] INFER_ARGS = @/tmp/args_.tmp.f47724
+[1420][environment]   Contents of '/tmp/args_.tmp.f47724'
+[1420][environment]   @/tmp/args_.tmp.98b0d8
+[1420][environment]   --no-report
+[1420][environment]   --results-dir
+[1420][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1420][environment]   --cluster
+[1420][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl118.cluster
+[1420][environment]   /Contents of '/tmp/args_.tmp.f47724'
+[1420][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl118.cluster
+[1420][environment] Analyzer: checkers
+[1420][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1420][   progress] F.....
+
+.[1428][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1428][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1428][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1428][environment] INFER_ARGS = @/tmp/args_.tmp.40427c
+[1428][environment]   Contents of '/tmp/args_.tmp.40427c'
+[1428][environment]   @/tmp/args_.tmp.98b0d8
+[1428][environment]   --no-report
+[1428][environment]   --results-dir
+[1428][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1428][environment]   --cluster
+[1428][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl120.cluster
+[1428][environment]   /Contents of '/tmp/args_.tmp.40427c'
+[1428][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl120.cluster
+[1428][environment] Analyzer: checkers
+[1428][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1426][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1426][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1426][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1426][environment] INFER_ARGS = @/tmp/args_.tmp.87cce6
+[1426][environment]   Contents of '/tmp/args_.tmp.87cce6'
+[1426][environment]   @/tmp/args_.tmp.98b0d8
+[1426][environment]   --no-report
+[1426][environment]   --results-dir
+[1426][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1426][environment]   --cluster
+[1426][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl119.cluster
+[1426][environment]   /Contents of '/tmp/args_.tmp.87cce6'
+[1426][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl119.cluster
+[1426][environment] Analyzer: checkers
+[1426][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+.[1426][   progress] F.
+[1398][environment] Starting analysis of cluster xcl112.cluster[1428][   progress] F.......
+.[1432][environment] CWD = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore
+[1432][environment] Read configuration in /home/weimer/src/infer-linux64-v0.13.0/.inferconfig
+[1432][environment] Project root = /home/weimer/src/infer-linux64-v0.13.0/infer/models/java
+[1432][environment] INFER_ARGS = @/tmp/args_.tmp.0ffda0
+[1432][environment]   Contents of '/tmp/args_.tmp.0ffda0'
+[1432][environment]   @/tmp/args_.tmp.98b0d8
+[1432][environment]   --no-report
+[1432][environment]   --results-dir
+[1432][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer
+[1432][environment]   --cluster
+[1432][environment]   /home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl121.cluster
+[1432][environment]   /Contents of '/tmp/args_.tmp.0ffda0'
+[1432][environment] command line arguments: /home/weimer/src/infer-linux64-v0.13.0/infer/bin/infer-analyze^--no-report^--results-dir^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer^--cluster^/home/weimer/src/infer-linux64-v0.13.0/infer/models/java/models/infer/multicore/xcl121.cluster
+[1432][environment] Analyzer: checkers
+[1432][environment] Active checkers: biabduction (C/C++/ObjC, Java)
+[1432][   progress] F.....
+[1383][environment] Starting analysis of cluster xcl108.cluster..
+[1414][environment] Starting analysis of cluster xcl116.cluster.
+[1370][environment] Starting analysis of cluster xcl106.cluster..
+[1368][environment] Starting analysis of cluster xcl105.cluster
+[1410][environment] Starting analysis of cluster xcl115.cluster.....
+[1416][environment] Starting analysis of cluster xcl117.cluster............
+[1420][environment] Starting analysis of cluster xcl118.cluster......
+[1426][environment] Starting analysis of cluster xcl119.cluster.
+[1347][environment] Starting analysis of cluster xcl102.cluster.......
+[1352][environment] Starting analysis of cluster xcl103.cluster...
+[1432][environment] Starting analysis of cluster xcl121.cluster..............
+[1334][environment] Starting analysis of cluster xcl96.cluster....
+[1428][environment] Starting analysis of cluster xcl120.cluster
+[919][environment] Infer version v0.13.0
+[919][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[919][environment] 

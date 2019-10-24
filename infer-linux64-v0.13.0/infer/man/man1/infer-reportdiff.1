@@ -1,0 +1,94 @@
+.\" Pipe this output to groff -Tutf8 | less
+.\"
+.mso an.tmac
+.TH "infer-reportdiff" 1 "2017-10-18" "v0.13.0" "Infer Report Difference"
+.\" Disable hyphenation and ragged-right
+.nh
+.ad l
+.SH NAME
+.P
+.nf
+infer\N'45'reportdiff \N'45' compute the differences between two infer reports
+.fi
+.SH SYNOPSIS
+.P
+.nf
+\fBinfer\fR \fBreportdiff\fR \fB\N'45'\N'45'report\N'45'current\fR \fIfile\fR \fB\N'45'\N'45'report\N'45'previous\fR \fIfile\fR \fI[options]\fR
+.fi
+.SH DESCRIPTION
+.P
+Given two infer reports \fIprevious\fR and \fIcurrent\fR, compute the following three reports and store them inside the "differential/" subdirectory of the results directory:
+.sp -1
+.P
+\N'45' \fBintroduced\N'46'json\fR contains the issues found in \fIcurrent\fR but not \fIprevious\fR;
+.sp -1
+.P
+\N'45' \fBfixed\N'46'json\fR contains the issues found in \fIprevious\fR but not \fIcurrent\fR;
+.sp -1
+.P
+\N'45' \fBpreexisting\N'46'json\fR contains the issues found in both \fIprevious\fR and \fIcurrent\fR\N'46'
+.P
+All three files follow the same format as normal infer reports\N'46'
+.SH OPTIONS
+.TP 4
+\fB\N'45'\N'45'debug\fR,\fB\N'45'g\fR
+Activates: Debug mode (also sets \fB\N'45'\N'45'debug\N'45'level 2\fR, \fB\N'45'\N'45'developer\N'45'mode\fR, \fB\N'45'\N'45'no\N'45'filtering\fR, \fB\N'45'\N'45'print\N'45'buckets\fR, \fB\N'45'\N'45'print\N'45'types\fR, \fB\N'45'\N'45'reports\N'45'include\N'45'ml\N'45'loc\fR, \fB\N'45'\N'45'no\N'45'only\N'45'cheap\N'45'debug\fR, \fB\N'45'\N'45'trace\N'45'error\fR, \fB\N'45'\N'45'write\N'45'dotty\fR, \fB\N'45'\N'45'write\N'45'html\fR) (Conversely: \fB\N'45'\N'45'no\N'45'debug\fR | \fB\N'45'G\fR)
+.TP 4
+\fB\N'45'\N'45'debug\N'45'level\fR \fIlevel\fR
+Debug level (sets \fB\N'45'\N'45'bo\N'45'debug\fR \fIlevel\fR, \fB\N'45'\N'45'debug\N'45'level\N'45'analysis\fR \fIlevel\fR, \fB\N'45'\N'45'debug\N'45'level\N'45'capture\fR \fIlevel\fR, \fB\N'45'\N'45'debug\N'45'level\N'45'linters\fR \fIlevel\fR):
+.sp -1
+.P
+.nf
+      \N'45' 0: only basic debugging enabled
+.fi
+.sp -1
+.P
+.nf
+      \N'45' 1: verbose debugging enabled
+.fi
+.sp -1
+.P
+.nf
+      \N'45' 2: very verbose debugging enabled
+.fi
+.TP 4
+\fB\N'45'\N'45'debug\N'45'level\N'45'analysis\fR \fIint\fR
+Debug level for the analysis\N'46' See \fB\N'45'\N'45'debug\N'45'level\fR for accepted values\N'46' (default: \fI0\fR)
+.TP 4
+\fB\N'45'\N'45'debug\N'45'level\N'45'capture\fR \fIint\fR
+Debug level for the capture\N'46' See \fB\N'45'\N'45'debug\N'45'level\fR for accepted values\N'46' (default: \fI0\fR)
+.TP 4
+\fB\N'45'\N'45'debug\N'45'level\N'45'linters\fR \fIint\fR
+Debug level for the linters\N'46' See \fB\N'45'\N'45'debug\N'45'level\fR for accepted values\N'46' (default: \fI0\fR)
+.TP 4
+\fB\N'45'\N'45'file\N'45'renamings\fR \fIpath\fR
+JSON with a list of file renamings to use while computing differential reports
+.TP 4
+\fB\N'45'\N'45'help\fR
+Show this manual
+.TP 4
+\fB\N'45'\N'45'help\N'45'format\fR \fI{ auto | groff | pager | plain }\fR
+Show this help in the specified format\N'46' \fBauto\fR sets the format to \fBplain\fR if the environment variable \fBTERM\fR is "dumb" or undefined, and to \fBpager\fR otherwise\N'46' (default: \fIauto\fR)
+.TP 4
+\fB\N'45'\N'45'help\N'45'full\fR
+Show this manual with all internal options in the INTERNAL OPTIONS section
+.TP 4
+\fB\N'45'\N'45'report\N'45'current\fR \fIpath\fR
+report of the latest revision
+.TP 4
+\fB\N'45'\N'45'report\N'45'previous\fR \fIpath\fR
+Report of the base revision to use for comparison
+.TP 4
+\fB\N'45'\N'45'no\N'45'skip\N'45'duplicated\N'45'types\fR
+Deactivates: Skip fixed\N'45'then\N'45'introduced duplicated types while computing differential reports (Conversely: \fB\N'45'\N'45'skip\N'45'duplicated\N'45'types\fR)
+.SH ENVIRONMENT
+.TP 4
+\fBINFER_ARGS\fR, \fBINFERCONFIG\fR, \fBINFER_STRICT_MODE\fR
+See the ENVIRONMENT section in the manual of \fBinfer\fR(1)\N'46'
+.SH FILES
+.TP 4
+\fB\N'46'inferconfig\fR
+See the FILES section in the manual of \fBinfer\fR(1)\N'46'
+.SH SEE ALSO
+.P
+\fBinfer\N'45'report\fR(1)
